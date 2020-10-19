@@ -207,5 +207,11 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
             
 
         }
+
+        private void btnGrafico_Click(object sender, EventArgs e)
+        {
+            GraficoAvance avance = new GraficoAvance(idCurso, idUsuario);
+            avance.ShowDialog();
+        }
     }
 }

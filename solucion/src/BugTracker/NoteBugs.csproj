@@ -170,11 +170,29 @@
     <Compile Include="GUILayer\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\frmMenuModerno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmMenuModerno.Designer.cs">
+      <DependentUpon>frmMenuModerno.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUILayer\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\NewFolder1\EstadisticoCantUsuariosCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\NewFolder1\EstadisticoCantUsuariosCursos.Designer.cs">
+      <DependentUpon>EstadisticoCantUsuariosCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\NewFolder1\EstadisticoPerfilesCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\NewFolder1\EstadisticoPerfilesCurso.Designer.cs">
+      <DependentUpon>EstadisticoPerfilesCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\Objetivos\frmABMObjetivos.cs">
       <SubType>Form</SubType>
@@ -193,6 +211,12 @@
     </Compile>
     <Compile Include="GUILayer\ReporteFechaFinCurso\frmGeneradorReporteFechaFinCurso.Designer.cs">
       <DependentUpon>frmGeneradorReporteFechaFinCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ReporteFechaFinCurso\Grafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ReporteFechaFinCurso\Grafico.Designer.cs">
+      <DependentUpon>Grafico.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\Reportes\AvanceCursoUsuario.cs">
       <SubType>Form</SubType>
@@ -217,12 +241,6 @@
     </Compile>
     <Compile Include="GUILayer\Reportes\ListadoUsuarios.Designer.cs">
       <DependentUpon>ListadoUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUILayer\Reportes\ReporteCursosFinalizadosPorFecha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUILayer\Reportes\ReporteCursosFinalizadosPorFecha.Designer.cs">
-      <DependentUpon>ReporteCursosFinalizadosPorFecha.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\Reportes\ReporteCursosPorUsuario.cs">
       <SubType>Form</SubType>
@@ -266,9 +284,19 @@
     <Compile Include="GUILayer\Usuarios\frmUsuarios.designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\Usuario_Curso_Avance\GraficoAvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Usuario_Curso_Avance\GraficoAvance.Designer.cs">
+      <DependentUpon>GraficoAvance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Avance.rdlc" />
+    <EmbeddedResource Include="EstadisticoCantUsuarioCurso.rdlc" />
+    <EmbeddedResource Include="EstadisticoPerfilesCurso.rdlc" />
+    <EmbeddedResource Include="GraficoAvance.rdlc" />
+    <EmbeddedResource Include="GraficoCursosFinalizados.rdlc" />
     <EmbeddedResource Include="GUILayer\Actividades\frmABMActividad.resx">
       <DependentUpon>frmABMActividad.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,8 +324,17 @@
     <EmbeddedResource Include="GUILayer\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmMenuModerno.resx">
+      <DependentUpon>frmMenuModerno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\NewFolder1\EstadisticoCantUsuariosCursos.resx">
+      <DependentUpon>EstadisticoCantUsuariosCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\NewFolder1\EstadisticoPerfilesCurso.resx">
+      <DependentUpon>EstadisticoPerfilesCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Objetivos\frmABMObjetivos.resx">
       <DependentUpon>frmABMObjetivos.cs</DependentUpon>
@@ -307,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\ReporteFechaFinCurso\frmGeneradorReporteFechaFinCurso.resx">
       <DependentUpon>frmGeneradorReporteFechaFinCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\ReporteFechaFinCurso\Grafico.resx">
+      <DependentUpon>Grafico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Reportes\AvanceCursoUsuario.resx">
       <DependentUpon>AvanceCursoUsuario.cs</DependentUpon>
@@ -319,9 +359,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Reportes\ListadoUsuarios.resx">
       <DependentUpon>ListadoUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\Reportes\ReporteCursosFinalizadosPorFecha.resx">
-      <DependentUpon>ReporteCursosFinalizadosPorFecha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Reportes\ReporteCursosPorUsuario.resx">
       <DependentUpon>ReporteCursosPorUsuario.cs</DependentUpon>
@@ -343,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Usuarios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Usuario_Curso_Avance\GraficoAvance.resx">
+      <DependentUpon>GraficoAvance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoActividades.rdlc" />
     <EmbeddedResource Include="ListadoCursos.rdlc" />

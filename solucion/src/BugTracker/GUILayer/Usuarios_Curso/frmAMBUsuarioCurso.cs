@@ -267,5 +267,10 @@ namespace BugTracker.GUILayer.Usuarios_Curso
         {
 
         }
+
+        private void cboCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

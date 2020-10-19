@@ -195,6 +195,9 @@ namespace BugTracker.GUILayer.Usuarios
             btnQuitar.Enabled = x;
         }
 
+        private void cboPerfiles_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

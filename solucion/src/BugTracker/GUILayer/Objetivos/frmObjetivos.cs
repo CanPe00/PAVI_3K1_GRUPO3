@@ -35,6 +35,8 @@ namespace BugTracker.GUILayer.Objetivos
         private void frmObjetivos_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
+            habilitar(false);
+            
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

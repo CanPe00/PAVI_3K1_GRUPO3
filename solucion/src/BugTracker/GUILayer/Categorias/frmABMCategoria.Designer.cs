@@ -40,78 +40,84 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(20, 61);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
+            this.txtNombre.Location = new System.Drawing.Point(15, 30);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(461, 37);
+            this.txtNombre.Size = new System.Drawing.Size(232, 22);
             this.txtNombre.TabIndex = 79;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(250, 399);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(139, 216);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(160, 77);
+            this.btnCancelar.Size = new System.Drawing.Size(108, 40);
             this.btnCancelar.TabIndex = 78;
             this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(82, 399);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.Location = new System.Drawing.Point(15, 216);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(156, 77);
+            this.btnAceptar.Size = new System.Drawing.Size(118, 40);
             this.btnAceptar.TabIndex = 77;
             this.btnAceptar.Text = "&Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(20, 149);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(6);
+            this.txtDescripcion.Location = new System.Drawing.Point(15, 82);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(461, 225);
+            this.txtDescripcion.Size = new System.Drawing.Size(232, 119);
             this.txtDescripcion.TabIndex = 76;
             // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(198, 44);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(6);
+            this.textBox5.Location = new System.Drawing.Point(99, 23);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(0, 37);
+            this.textBox5.Size = new System.Drawing.Size(2, 22);
             this.textBox5.TabIndex = 75;
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(41, 113);
-            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(21, 64);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(137, 25);
+            this.lblDescripcion.Size = new System.Drawing.Size(78, 15);
             this.lblDescripcion.TabIndex = 74;
             this.lblDescripcion.Text = "Descripción: ";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(42, 27);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(21, 14);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(93, 25);
+            this.lblNombre.Size = new System.Drawing.Size(55, 15);
             this.lblNombre.TabIndex = 73;
             this.lblNombre.Text = "Nombre:";
             // 
             // frmABMCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 502);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.ClientSize = new System.Drawing.Size(266, 268);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -119,7 +125,10 @@
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmABMCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmABMCategoria";
             this.Load += new System.EventHandler(this.frmABMCategoria_Load);
             this.ResumeLayout(false);

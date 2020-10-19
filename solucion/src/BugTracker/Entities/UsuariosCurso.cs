@@ -16,6 +16,7 @@ namespace BugTracker.Entities
         private DateTime fecha_inicio;
         private DateTime fecha_fin;
         private Boolean borrado;
+        private Boolean terminado;
 
         
         public int Puntuacion { get => puntuacion; set => puntuacion = value; }

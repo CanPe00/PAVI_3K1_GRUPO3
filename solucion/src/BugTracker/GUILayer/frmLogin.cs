@@ -71,6 +71,11 @@ namespace BugTracker.GUILayer
             //Mostramos el formulario al centro del formulario padre.
             this.CenterToParent();
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

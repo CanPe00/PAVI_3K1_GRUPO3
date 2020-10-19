@@ -44,124 +44,131 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(255, 418);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(134, 250);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(160, 77);
+            this.btnCancelar.Size = new System.Drawing.Size(114, 40);
             this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(83, 418);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.Location = new System.Drawing.Point(16, 250);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(160, 77);
+            this.btnAceptar.Size = new System.Drawing.Size(112, 40);
             this.btnAceptar.TabIndex = 33;
             this.btnAceptar.Text = "&Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
             // 
             // cboPerfil
             // 
+            this.cboPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
             this.cboPerfil.FormattingEnabled = true;
-            this.cboPerfil.Location = new System.Drawing.Point(19, 357);
-            this.cboPerfil.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cboPerfil.Location = new System.Drawing.Point(16, 210);
             this.cboPerfil.Name = "cboPerfil";
-            this.cboPerfil.Size = new System.Drawing.Size(461, 33);
+            this.cboPerfil.Size = new System.Drawing.Size(232, 21);
             this.cboPerfil.TabIndex = 38;
             // 
             // Label5
             // 
             this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(32, 328);
-            this.Label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label5.Location = new System.Drawing.Point(22, 195);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(89, 25);
+            this.Label5.Size = new System.Drawing.Size(51, 15);
             this.Label5.TabIndex = 37;
             this.Label5.Text = "Perfil(*):";
             // 
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(32, 254);
-            this.Label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label4.Location = new System.Drawing.Point(22, 151);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(226, 25);
+            this.Label4.Size = new System.Drawing.Size(129, 15);
             this.Label4.TabIndex = 36;
             this.Label4.Text = "Repetir Contraseña(*):";
             // 
             // txtConfirmarPass
             // 
-            this.txtConfirmarPass.Location = new System.Drawing.Point(19, 284);
-            this.txtConfirmarPass.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtConfirmarPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtConfirmarPass.Location = new System.Drawing.Point(16, 169);
             this.txtConfirmarPass.Name = "txtConfirmarPass";
             this.txtConfirmarPass.PasswordChar = '*';
-            this.txtConfirmarPass.Size = new System.Drawing.Size(461, 31);
+            this.txtConfirmarPass.Size = new System.Drawing.Size(232, 20);
             this.txtConfirmarPass.TabIndex = 31;
             // 
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(32, 179);
-            this.Label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.Location = new System.Drawing.Point(22, 106);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(151, 25);
+            this.Label3.Size = new System.Drawing.Size(86, 15);
             this.Label3.TabIndex = 35;
             this.Label3.Text = "Contraseña(*):";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(19, 211);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtPassword.Location = new System.Drawing.Point(16, 123);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(461, 31);
+            this.txtPassword.Size = new System.Drawing.Size(232, 20);
             this.txtPassword.TabIndex = 30;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(19, 135);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtEmail.Location = new System.Drawing.Point(16, 77);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(461, 31);
+            this.txtEmail.Size = new System.Drawing.Size(232, 20);
             this.txtEmail.TabIndex = 28;
             // 
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(32, 104);
-            this.Label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Location = new System.Drawing.Point(22, 61);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(71, 25);
+            this.Label2.Size = new System.Drawing.Size(42, 15);
             this.Label2.TabIndex = 32;
             this.Label2.Text = "Email:";
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(32, 25);
-            this.Label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Location = new System.Drawing.Point(22, 14);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(115, 25);
+            this.Label1.Size = new System.Drawing.Size(68, 15);
             this.Label1.TabIndex = 29;
             this.Label1.Text = "Nombre(*):";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(19, 61);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtNombre.Location = new System.Drawing.Point(16, 32);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(461, 31);
+            this.txtNombre.Size = new System.Drawing.Size(232, 20);
             this.txtNombre.TabIndex = 27;
             // 
             // frmABMUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 524);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.ClientSize = new System.Drawing.Size(266, 307);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cboPerfil);
@@ -174,10 +181,11 @@
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.txtNombre);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmABMUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Usuario";
             this.Load += new System.EventHandler(this.frmABMUsuario_Load);
             this.ResumeLayout(false);

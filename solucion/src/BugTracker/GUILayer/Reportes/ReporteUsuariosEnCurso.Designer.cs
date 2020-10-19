@@ -63,14 +63,17 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             reportDataSource2.Name = "DataSet1";
             reportDataSource2.Value = this.usuariosEnCursoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "BugTracker.UsuariosEnCurso.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(-1, 49);
+            this.reportViewer1.Location = new System.Drawing.Point(-1, 88);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(664, 338);
+            this.reportViewer1.Size = new System.Drawing.Size(616, 353);
             this.reportViewer1.TabIndex = 0;
             // 
             // usuariosTableAdapter
@@ -83,18 +86,24 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Image = global::BugTracker.Properties.Resources.BUSCAR01;
-            this.btnBuscar.Location = new System.Drawing.Point(579, 2);
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(220, 51);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(41, 41);
+            this.btnBuscar.Size = new System.Drawing.Size(151, 31);
             this.btnBuscar.TabIndex = 10;
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Text = "Generar reporte";
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dtpFecha_Hasta
             // 
             this.dtpFecha_Hasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha_Hasta.Location = new System.Drawing.Point(422, 16);
+            this.dtpFecha_Hasta.Location = new System.Drawing.Point(462, 12);
             this.dtpFecha_Hasta.Name = "dtpFecha_Hasta";
             this.dtpFecha_Hasta.Size = new System.Drawing.Size(103, 20);
             this.dtpFecha_Hasta.TabIndex = 9;
@@ -102,7 +111,7 @@
             // dtpFecha_Desde
             // 
             this.dtpFecha_Desde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha_Desde.Location = new System.Drawing.Point(107, 15);
+            this.dtpFecha_Desde.Location = new System.Drawing.Point(114, 12);
             this.dtpFecha_Desde.Name = "dtpFecha_Desde";
             this.dtpFecha_Desde.Size = new System.Drawing.Size(103, 20);
             this.dtpFecha_Desde.TabIndex = 8;
@@ -110,20 +119,21 @@
             // lblFecha_hasta
             // 
             this.lblFecha_hasta.AutoSize = true;
-            this.lblFecha_hasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha_hasta.Location = new System.Drawing.Point(335, 16);
+            this.lblFecha_hasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha_hasta.Location = new System.Drawing.Point(371, 16);
             this.lblFecha_hasta.Name = "lblFecha_hasta";
-            this.lblFecha_hasta.Size = new System.Drawing.Size(81, 13);
+            this.lblFecha_hasta.Size = new System.Drawing.Size(85, 16);
             this.lblFecha_hasta.TabIndex = 7;
             this.lblFecha_hasta.Text = "Fecha hasta:";
+            this.lblFecha_hasta.Click += new System.EventHandler(this.lblFecha_hasta_Click);
             // 
             // lblFecha_desde
             // 
             this.lblFecha_desde.AutoSize = true;
-            this.lblFecha_desde.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha_desde.Location = new System.Drawing.Point(17, 16);
+            this.lblFecha_desde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha_desde.Location = new System.Drawing.Point(24, 16);
             this.lblFecha_desde.Name = "lblFecha_desde";
-            this.lblFecha_desde.Size = new System.Drawing.Size(84, 13);
+            this.lblFecha_desde.Size = new System.Drawing.Size(91, 16);
             this.lblFecha_desde.TabIndex = 6;
             this.lblFecha_desde.Text = "Fecha desde:";
             // 
@@ -131,14 +141,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 337);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.ClientSize = new System.Drawing.Size(616, 389);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dtpFecha_Hasta);
             this.Controls.Add(this.dtpFecha_Desde);
             this.Controls.Add(this.lblFecha_hasta);
             this.Controls.Add(this.lblFecha_desde);
             this.Controls.Add(this.reportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ReporteUsuariosEnCurso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteUsuariosEnCurso";
             this.Load += new System.EventHandler(this.ReporteUsuariosEnCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuariosEnCursoBindingSource)).EndInit();

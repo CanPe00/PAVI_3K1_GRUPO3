@@ -257,5 +257,15 @@ namespace BugTracker.GUILayer.Usuarios_Curso
             cboUsuario.SelectedIndex = -1;
 
         }
+
+        private void lblN_Curso_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblN_Usuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

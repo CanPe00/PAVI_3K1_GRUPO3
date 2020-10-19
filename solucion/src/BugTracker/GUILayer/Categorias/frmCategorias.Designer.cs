@@ -45,55 +45,74 @@
             // 
             // btnQuitar
             // 
+            this.btnQuitar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnQuitar.FlatAppearance.BorderSize = 0;
+            this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitar.Image")));
-            this.btnQuitar.Location = new System.Drawing.Point(100, 326);
+            this.btnQuitar.Location = new System.Drawing.Point(147, 495);
             this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(40, 40);
+            this.btnQuitar.Size = new System.Drawing.Size(60, 55);
             this.btnQuitar.TabIndex = 36;
-            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.UseVisualStyleBackColor = false;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click_1);
             // 
             // btnSalir
             // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(380, 326);
+            this.btnSalir.Location = new System.Drawing.Point(612, 497);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(40, 40);
+            this.btnSalir.Size = new System.Drawing.Size(60, 55);
             this.btnSalir.TabIndex = 37;
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // btnEditar
             // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(54, 326);
+            this.btnEditar.Location = new System.Drawing.Point(81, 495);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(40, 40);
+            this.btnEditar.Size = new System.Drawing.Size(60, 55);
             this.btnEditar.TabIndex = 35;
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(8, 326);
+            this.btnNuevo.Location = new System.Drawing.Point(15, 495);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(40, 40);
+            this.btnNuevo.Size = new System.Drawing.Size(60, 55);
             this.btnNuevo.TabIndex = 34;
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
             // pnlFiltros
             // 
+            this.pnlFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFiltros.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlFiltros.Controls.Add(this.dgvCategorias);
             this.pnlFiltros.Controls.Add(this.chkTodos);
             this.pnlFiltros.Controls.Add(this.Label3);
             this.pnlFiltros.Controls.Add(this.txtNombreCat);
             this.pnlFiltros.Controls.Add(this.btnConsultar);
-            this.pnlFiltros.Location = new System.Drawing.Point(7, 7);
+            this.pnlFiltros.Location = new System.Drawing.Point(12, 10);
             this.pnlFiltros.Name = "pnlFiltros";
-            this.pnlFiltros.Size = new System.Drawing.Size(413, 313);
+            this.pnlFiltros.Size = new System.Drawing.Size(660, 479);
             this.pnlFiltros.TabIndex = 33;
             this.pnlFiltros.TabStop = false;
             this.pnlFiltros.Text = "Categorías";
@@ -103,23 +122,29 @@
             // 
             this.dgvCategorias.AllowUserToAddRows = false;
             this.dgvCategorias.AllowUserToDeleteRows = false;
-            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategorias.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvCategorias.Location = new System.Drawing.Point(3, 103);
+            this.dgvCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCategorias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.dgvCategorias.ColumnHeadersHeight = 30;
+            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvCategorias.Location = new System.Drawing.Point(3, 179);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.ReadOnly = true;
             this.dgvCategorias.RowHeadersWidth = 82;
             this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCategorias.Size = new System.Drawing.Size(407, 207);
+            this.dgvCategorias.Size = new System.Drawing.Size(654, 297);
             this.dgvCategorias.TabIndex = 8;
             this.dgvCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellContentClick_1);
             // 
             // chkTodos
             // 
+            this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chkTodos.AutoSize = true;
-            this.chkTodos.Location = new System.Drawing.Point(74, 57);
+            this.chkTodos.Location = new System.Drawing.Point(162, 84);
             this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(56, 17);
+            this.chkTodos.Size = new System.Drawing.Size(60, 19);
             this.chkTodos.TabIndex = 2;
             this.chkTodos.Text = "Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
@@ -127,41 +152,53 @@
             // 
             // Label3
             // 
+            this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(23, 25);
+            this.Label3.Location = new System.Drawing.Point(101, 60);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(47, 13);
+            this.Label3.Size = new System.Drawing.Size(55, 15);
             this.Label3.TabIndex = 17;
             this.Label3.Text = "Nombre:";
             // 
             // txtNombreCat
             // 
-            this.txtNombreCat.Location = new System.Drawing.Point(74, 23);
+            this.txtNombreCat.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNombreCat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtNombreCat.Location = new System.Drawing.Point(162, 57);
             this.txtNombreCat.Name = "txtNombreCat";
-            this.txtNombreCat.Size = new System.Drawing.Size(181, 20);
+            this.txtNombreCat.Size = new System.Drawing.Size(213, 21);
             this.txtNombreCat.TabIndex = 0;
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(292, 23);
+            this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.Location = new System.Drawing.Point(401, 54);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(87, 44);
+            this.btnConsultar.Size = new System.Drawing.Size(129, 50);
             this.btnConsultar.TabIndex = 3;
             this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click_1);
             // 
             // frmCategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 372);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.ClientSize = new System.Drawing.Size(684, 561);
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.pnlFiltros);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Categorías";

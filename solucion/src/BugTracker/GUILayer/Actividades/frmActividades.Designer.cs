@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActividades));
             this.pnlFiltros = new System.Windows.Forms.GroupBox();
             this.dgvActividades = new System.Windows.Forms.DataGridView();
@@ -45,16 +48,20 @@
             // 
             // pnlFiltros
             // 
+            this.pnlFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFiltros.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlFiltros.BackColor = System.Drawing.SystemColors.Window;
+            this.pnlFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.pnlFiltros.Controls.Add(this.dgvActividades);
             this.pnlFiltros.Controls.Add(this.chkTodos);
             this.pnlFiltros.Controls.Add(this.Label3);
             this.pnlFiltros.Controls.Add(this.txtNombreAct);
             this.pnlFiltros.Controls.Add(this.btnConsultar);
-            this.pnlFiltros.Location = new System.Drawing.Point(7, 7);
+            this.pnlFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlFiltros.Location = new System.Drawing.Point(12, 12);
             this.pnlFiltros.Name = "pnlFiltros";
-            this.pnlFiltros.Size = new System.Drawing.Size(413, 313);
+            this.pnlFiltros.Size = new System.Drawing.Size(660, 479);
             this.pnlFiltros.TabIndex = 38;
             this.pnlFiltros.TabStop = false;
             this.pnlFiltros.Text = "Actividades";
@@ -64,24 +71,55 @@
             // 
             this.dgvActividades.AllowUserToAddRows = false;
             this.dgvActividades.AllowUserToDeleteRows = false;
-            this.dgvActividades.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvActividades.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvActividades.Location = new System.Drawing.Point(3, 103);
+            this.dgvActividades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvActividades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvActividades.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.dgvActividades.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvActividades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvActividades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvActividades.ColumnHeadersHeight = 30;
+            this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvActividades.GridColor = System.Drawing.Color.Gray;
+            this.dgvActividades.Location = new System.Drawing.Point(3, 166);
             this.dgvActividades.Name = "dgvActividades";
             this.dgvActividades.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvActividades.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvActividades.RowHeadersWidth = 82;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvActividades.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvActividades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvActividades.Size = new System.Drawing.Size(407, 207);
+            this.dgvActividades.Size = new System.Drawing.Size(654, 310);
             this.dgvActividades.TabIndex = 8;
             this.dgvActividades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvActividades_CellContentClick);
             // 
             // chkTodos
             // 
+            this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chkTodos.AutoSize = true;
-            this.chkTodos.Location = new System.Drawing.Point(74, 57);
+            this.chkTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTodos.Location = new System.Drawing.Point(153, 84);
             this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(56, 17);
+            this.chkTodos.Size = new System.Drawing.Size(60, 19);
             this.chkTodos.TabIndex = 2;
             this.chkTodos.Text = "Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
@@ -89,81 +127,109 @@
             // 
             // Label3
             // 
+            this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(23, 25);
+            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.Location = new System.Drawing.Point(91, 59);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(47, 13);
+            this.Label3.Size = new System.Drawing.Size(55, 15);
             this.Label3.TabIndex = 17;
             this.Label3.Text = "Nombre:";
             // 
             // txtNombreAct
             // 
-            this.txtNombreAct.Location = new System.Drawing.Point(74, 23);
+            this.txtNombreAct.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNombreAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtNombreAct.Location = new System.Drawing.Point(153, 58);
             this.txtNombreAct.Name = "txtNombreAct";
-            this.txtNombreAct.Size = new System.Drawing.Size(181, 20);
+            this.txtNombreAct.Size = new System.Drawing.Size(213, 21);
             this.txtNombreAct.TabIndex = 0;
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(292, 23);
+            this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.Location = new System.Drawing.Point(388, 53);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(87, 44);
+            this.btnConsultar.Size = new System.Drawing.Size(129, 50);
             this.btnConsultar.TabIndex = 3;
             this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnQuitar
             // 
+            this.btnQuitar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnQuitar.FlatAppearance.BorderSize = 0;
+            this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitar.Image")));
-            this.btnQuitar.Location = new System.Drawing.Point(100, 326);
+            this.btnQuitar.Location = new System.Drawing.Point(147, 497);
             this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(40, 40);
+            this.btnQuitar.Size = new System.Drawing.Size(60, 55);
             this.btnQuitar.TabIndex = 41;
-            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.UseVisualStyleBackColor = false;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
             // btnSalir
             // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(380, 326);
+            this.btnSalir.Location = new System.Drawing.Point(609, 497);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(40, 40);
+            this.btnSalir.Size = new System.Drawing.Size(60, 55);
             this.btnSalir.TabIndex = 42;
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEditar
             // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(54, 326);
+            this.btnEditar.Location = new System.Drawing.Point(81, 497);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(40, 40);
+            this.btnEditar.Size = new System.Drawing.Size(60, 55);
             this.btnEditar.TabIndex = 40;
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(8, 326);
+            this.btnNuevo.Location = new System.Drawing.Point(15, 497);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(40, 40);
+            this.btnNuevo.Size = new System.Drawing.Size(60, 55);
             this.btnNuevo.TabIndex = 39;
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmActividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 372);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.ClientSize = new System.Drawing.Size(684, 561);
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.pnlFiltros);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmActividades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actividades";
@@ -182,10 +248,10 @@
         internal System.Windows.Forms.Button btnEditar;
         internal System.Windows.Forms.Button btnNuevo;
         internal System.Windows.Forms.GroupBox pnlFiltros;
-        internal System.Windows.Forms.DataGridView dgvActividades;
         internal System.Windows.Forms.CheckBox chkTodos;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.TextBox txtNombreAct;
         internal System.Windows.Forms.Button btnConsultar;
+        internal System.Windows.Forms.DataGridView dgvActividades;
     }
 }

@@ -37,55 +37,69 @@
             this.cboUsuario = new System.Windows.Forms.ComboBox();
             this.cboCurso = new System.Windows.Forms.ComboBox();
             this.UsuarioCurso = new System.Windows.Forms.GroupBox();
+            this.btnReiniciarCombos = new System.Windows.Forms.Button();
             this.btnReporteUsuarioCurso = new System.Windows.Forms.Button();
             this.btnReporteCursosPorUsuario = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnReiniciarCombos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCurso)).BeginInit();
             this.UsuarioCurso.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblN_Curso
             // 
+            this.lblN_Curso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblN_Curso.AutoSize = true;
-            this.lblN_Curso.Location = new System.Drawing.Point(15, 33);
+            this.lblN_Curso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblN_Curso.Location = new System.Drawing.Point(77, 33);
             this.lblN_Curso.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblN_Curso.Name = "lblN_Curso";
-            this.lblN_Curso.Size = new System.Drawing.Size(79, 13);
+            this.lblN_Curso.Size = new System.Drawing.Size(91, 15);
             this.lblN_Curso.TabIndex = 0;
             this.lblN_Curso.Text = "Nombre curso: ";
+            this.lblN_Curso.Click += new System.EventHandler(this.lblN_Curso_Click);
             // 
             // lblN_Usuario
             // 
+            this.lblN_Usuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblN_Usuario.AutoSize = true;
-            this.lblN_Usuario.Location = new System.Drawing.Point(7, 63);
+            this.lblN_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblN_Usuario.Location = new System.Drawing.Point(66, 65);
             this.lblN_Usuario.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblN_Usuario.Name = "lblN_Usuario";
-            this.lblN_Usuario.Size = new System.Drawing.Size(87, 13);
+            this.lblN_Usuario.Size = new System.Drawing.Size(102, 15);
             this.lblN_Usuario.TabIndex = 1;
             this.lblN_Usuario.Text = "Nombre usuario: ";
+            this.lblN_Usuario.Click += new System.EventHandler(this.lblN_Usuario_Click);
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(329, 35);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.Location = new System.Drawing.Point(424, 35);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(6);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(85, 41);
+            this.btnConsultar.Size = new System.Drawing.Size(129, 50);
             this.btnConsultar.TabIndex = 4;
             this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // chkTodos
             // 
+            this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chkTodos.AutoSize = true;
-            this.chkTodos.Location = new System.Drawing.Point(98, 96);
-            this.chkTodos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chkTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTodos.Location = new System.Drawing.Point(180, 98);
+            this.chkTodos.Margin = new System.Windows.Forms.Padding(6);
             this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(56, 17);
+            this.chkTodos.Size = new System.Drawing.Size(60, 19);
             this.chkTodos.TabIndex = 5;
             this.chkTodos.Text = "Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
@@ -95,42 +109,53 @@
             // 
             this.dgvUsuarioCurso.AllowUserToAddRows = false;
             this.dgvUsuarioCurso.AllowUserToDeleteRows = false;
-            this.dgvUsuarioCurso.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.dgvUsuarioCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvUsuarioCurso.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUsuarioCurso.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
             this.dgvUsuarioCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarioCurso.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvUsuarioCurso.Location = new System.Drawing.Point(0, 125);
-            this.dgvUsuarioCurso.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvUsuarioCurso.Location = new System.Drawing.Point(12, 155);
+            this.dgvUsuarioCurso.Margin = new System.Windows.Forms.Padding(6);
             this.dgvUsuarioCurso.MultiSelect = false;
             this.dgvUsuarioCurso.Name = "dgvUsuarioCurso";
             this.dgvUsuarioCurso.ReadOnly = true;
             this.dgvUsuarioCurso.RowHeadersWidth = 82;
             this.dgvUsuarioCurso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarioCurso.Size = new System.Drawing.Size(426, 184);
+            this.dgvUsuarioCurso.Size = new System.Drawing.Size(636, 312);
             this.dgvUsuarioCurso.TabIndex = 6;
             this.dgvUsuarioCurso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarioCurso_CellContentClick);
             // 
             // cboUsuario
             // 
+            this.cboUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
             this.cboUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUsuario.FormattingEnabled = true;
-            this.cboUsuario.Location = new System.Drawing.Point(98, 63);
-            this.cboUsuario.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cboUsuario.Location = new System.Drawing.Point(180, 65);
+            this.cboUsuario.Margin = new System.Windows.Forms.Padding(6);
             this.cboUsuario.Name = "cboUsuario";
             this.cboUsuario.Size = new System.Drawing.Size(210, 21);
             this.cboUsuario.TabIndex = 7;
             // 
             // cboCurso
             // 
+            this.cboCurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
             this.cboCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCurso.FormattingEnabled = true;
-            this.cboCurso.Location = new System.Drawing.Point(98, 30);
-            this.cboCurso.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cboCurso.Location = new System.Drawing.Point(180, 32);
+            this.cboCurso.Margin = new System.Windows.Forms.Padding(6);
             this.cboCurso.Name = "cboCurso";
             this.cboCurso.Size = new System.Drawing.Size(210, 21);
             this.cboCurso.TabIndex = 8;
             // 
             // UsuarioCurso
             // 
+            this.UsuarioCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UsuarioCurso.Controls.Add(this.btnReiniciarCombos);
             this.UsuarioCurso.Controls.Add(this.cboCurso);
             this.UsuarioCurso.Controls.Add(this.cboUsuario);
@@ -140,109 +165,150 @@
             this.UsuarioCurso.Controls.Add(this.lblN_Usuario);
             this.UsuarioCurso.Controls.Add(this.lblN_Curso);
             this.UsuarioCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UsuarioCurso.Location = new System.Drawing.Point(13, 11);
-            this.UsuarioCurso.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.UsuarioCurso.Location = new System.Drawing.Point(18, 15);
+            this.UsuarioCurso.Margin = new System.Windows.Forms.Padding(6);
             this.UsuarioCurso.Name = "UsuarioCurso";
-            this.UsuarioCurso.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.UsuarioCurso.Size = new System.Drawing.Size(426, 316);
+            this.UsuarioCurso.Padding = new System.Windows.Forms.Padding(6);
+            this.UsuarioCurso.Size = new System.Drawing.Size(660, 479);
             this.UsuarioCurso.TabIndex = 9;
             this.UsuarioCurso.TabStop = false;
             this.UsuarioCurso.Text = "Buscar Usuario en Curso";
             this.UsuarioCurso.Enter += new System.EventHandler(this.UsuarioCurso_Enter);
             // 
-            // btnReporteUsuarioCurso
-            // 
-            this.btnReporteUsuarioCurso.Location = new System.Drawing.Point(168, 336);
-            this.btnReporteUsuarioCurso.Name = "btnReporteUsuarioCurso";
-            this.btnReporteUsuarioCurso.Size = new System.Drawing.Size(100, 40);
-            this.btnReporteUsuarioCurso.TabIndex = 14;
-            this.btnReporteUsuarioCurso.Text = "Reporte Usuarios en Curso";
-            this.btnReporteUsuarioCurso.UseVisualStyleBackColor = true;
-            this.btnReporteUsuarioCurso.Click += new System.EventHandler(this.btnReporteUsuarioCurso_Click);
-            // 
-            // btnReporteCursosPorUsuario
-            // 
-            this.btnReporteCursosPorUsuario.Location = new System.Drawing.Point(279, 336);
-            this.btnReporteCursosPorUsuario.Name = "btnReporteCursosPorUsuario";
-            this.btnReporteCursosPorUsuario.Size = new System.Drawing.Size(101, 40);
-            this.btnReporteCursosPorUsuario.TabIndex = 15;
-            this.btnReporteCursosPorUsuario.Text = "Reporte Cursos por usuario";
-            this.btnReporteCursosPorUsuario.UseVisualStyleBackColor = true;
-            this.btnReporteCursosPorUsuario.Click += new System.EventHandler(this.btnReporteCursosPorUsuario_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(389, 336);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(6);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(40, 40);
-            this.btnSalir.TabIndex = 13;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnQuitar
-            // 
-            this.btnQuitar.Enabled = false;
-            this.btnQuitar.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitar.Image")));
-            this.btnQuitar.Location = new System.Drawing.Point(119, 336);
-            this.btnQuitar.Margin = new System.Windows.Forms.Padding(6);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(40, 40);
-            this.btnQuitar.TabIndex = 12;
-            this.btnQuitar.UseVisualStyleBackColor = true;
-            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Enabled = false;
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(67, 336);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(6);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(40, 40);
-            this.btnEditar.TabIndex = 11;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(15, 336);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(6);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(40, 40);
-            this.btnNuevo.TabIndex = 10;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
             // btnReiniciarCombos
             // 
+            this.btnReiniciarCombos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnReiniciarCombos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.btnReiniciarCombos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReiniciarCombos.Image = global::BugTracker.Properties.Resources.replyback_87524;
-            this.btnReiniciarCombos.Location = new System.Drawing.Point(372, 85);
+            this.btnReiniciarCombos.Location = new System.Drawing.Point(348, 98);
             this.btnReiniciarCombos.Name = "btnReiniciarCombos";
             this.btnReiniciarCombos.Size = new System.Drawing.Size(42, 39);
             this.btnReiniciarCombos.TabIndex = 9;
             this.btnReiniciarCombos.UseVisualStyleBackColor = false;
             this.btnReiniciarCombos.Click += new System.EventHandler(this.btnReiniciarCombos_Click);
             // 
+            // btnReporteUsuarioCurso
+            // 
+            this.btnReporteUsuarioCurso.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnReporteUsuarioCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnReporteUsuarioCurso.FlatAppearance.BorderSize = 0;
+            this.btnReporteUsuarioCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteUsuarioCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteUsuarioCurso.ForeColor = System.Drawing.Color.White;
+            this.btnReporteUsuarioCurso.Location = new System.Drawing.Point(274, 523);
+            this.btnReporteUsuarioCurso.Name = "btnReporteUsuarioCurso";
+            this.btnReporteUsuarioCurso.Size = new System.Drawing.Size(144, 55);
+            this.btnReporteUsuarioCurso.TabIndex = 14;
+            this.btnReporteUsuarioCurso.Text = "Reporte Usuarios en Curso";
+            this.btnReporteUsuarioCurso.UseVisualStyleBackColor = false;
+            this.btnReporteUsuarioCurso.Click += new System.EventHandler(this.btnReporteUsuarioCurso_Click);
+            // 
+            // btnReporteCursosPorUsuario
+            // 
+            this.btnReporteCursosPorUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnReporteCursosPorUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnReporteCursosPorUsuario.FlatAppearance.BorderSize = 0;
+            this.btnReporteCursosPorUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteCursosPorUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteCursosPorUsuario.ForeColor = System.Drawing.Color.White;
+            this.btnReporteCursosPorUsuario.Location = new System.Drawing.Point(424, 523);
+            this.btnReporteCursosPorUsuario.Name = "btnReporteCursosPorUsuario";
+            this.btnReporteCursosPorUsuario.Size = new System.Drawing.Size(144, 55);
+            this.btnReporteCursosPorUsuario.TabIndex = 15;
+            this.btnReporteCursosPorUsuario.Text = "Reporte Cursos por usuario";
+            this.btnReporteCursosPorUsuario.UseVisualStyleBackColor = false;
+            this.btnReporteCursosPorUsuario.Click += new System.EventHandler(this.btnReporteCursosPorUsuario_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(606, 523);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(60, 55);
+            this.btnSalir.TabIndex = 13;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnQuitar.Enabled = false;
+            this.btnQuitar.FlatAppearance.BorderSize = 0;
+            this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitar.ForeColor = System.Drawing.Color.White;
+            this.btnQuitar.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitar.Image")));
+            this.btnQuitar.Location = new System.Drawing.Point(174, 523);
+            this.btnQuitar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(60, 55);
+            this.btnQuitar.TabIndex = 12;
+            this.btnQuitar.UseVisualStyleBackColor = false;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnEditar.Enabled = false;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.Location = new System.Drawing.Point(102, 523);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(60, 55);
+            this.btnEditar.TabIndex = 11;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.Location = new System.Drawing.Point(30, 523);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(6);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(60, 55);
+            this.btnNuevo.TabIndex = 10;
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // frmUsuarioCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 382);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.ClientSize = new System.Drawing.Size(694, 593);
             this.Controls.Add(this.btnReporteCursosPorUsuario);
-            this.Controls.Add(this.btnReporteUsuarioCurso);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnQuitar);
+            this.Controls.Add(this.btnReporteUsuarioCurso);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.UsuarioCurso);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUsuarioCurso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios regitrados y activos en Cursos ";
             this.Load += new System.EventHandler(this.frmUsuarioCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCurso)).EndInit();

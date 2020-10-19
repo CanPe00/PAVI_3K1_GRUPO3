@@ -37,5 +37,10 @@ namespace BugTracker.GUILayer.Reportes
             this.usuariosEnCursoTableAdapter.FillBy(this.dataSet1.UsuariosEnCurso, idCurso, dtpFecha_Desde.Value, dtpFecha_Hasta.Value);
             this.reportViewer1.RefreshReport();
         }
+
+        private void lblFecha_hasta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

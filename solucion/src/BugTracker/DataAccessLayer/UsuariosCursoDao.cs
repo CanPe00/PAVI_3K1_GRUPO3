@@ -77,7 +77,7 @@ namespace BugTracker.DataAccessLayer
                                           "        UC.fecha_fin,",
                                           "        UC.borrado ",
                                           "   FROM UsuariosCurso UC",
-                                          "   INNER JOIN Usuarios U ON (UC.id_usuario = U.id_usuario) INNER JOIN Cursos C ON(UC.id_curso = C.id_curso) WHERE UC.borrado=0  AND UC.id_curso = @curso AND UC.id_usuario = @usuario");
+                                          "   INNER JOIN Usuarios U ON (UC.id_usuario = U.id_usuario) INNER JOIN Cursos C ON(UC.id_curso = C.id_curso) WHERE UC.borrado=0  AND UC.id_curso = @curso AND UC.id_usuario = @usuario ");
 
 
 
@@ -224,7 +224,7 @@ namespace BugTracker.DataAccessLayer
                                 " observaciones= " + "'" + oUsuariosCurso.Observaciones + "'," +
                                 " fecha_inicio= " + "'" + oUsuariosCurso.Fecha_inicio.ToString("yyyy-MM-dd") + "'," +
                                 " fecha_fin= " + "'" + oUsuariosCurso.Fecha_fin.ToString("yyyy-MM-dd") + "'" +
-                                " WHERE id_usuario=" + oUsuariosCurso.Usuario.IdUsuario + " AND id_curso=" + oUsuariosCurso.Curso.Id_curso + " AND  borrado=0";
+                                " WHERE id_usuario=" + oUsuariosCurso.Usuario.IdUsuario + " AND id_curso=" + oUsuariosCurso.Curso.Id_curso + " AND  borrado=0 ";
 
                 dm.EjecutarSQL(str_sql);
 

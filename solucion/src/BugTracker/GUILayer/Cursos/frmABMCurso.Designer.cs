@@ -47,144 +47,154 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(35, 112);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(18, 58);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(93, 25);
+            this.lblNombre.Size = new System.Drawing.Size(55, 15);
             this.lblNombre.TabIndex = 29;
             this.lblNombre.Text = "Nombre:";
             // 
             // dtpFechaVigencia
             // 
+            this.dtpFechaVigencia.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtpFechaVigencia.CalendarTitleForeColor = System.Drawing.Color.AliceBlue;
             this.dtpFechaVigencia.Enabled = false;
             this.dtpFechaVigencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaVigencia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaVigencia.Location = new System.Drawing.Point(15, 313);
-            this.dtpFechaVigencia.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dtpFechaVigencia.Location = new System.Drawing.Point(17, 167);
+            this.dtpFechaVigencia.MinDate = new System.DateTime(1760, 1, 29, 0, 0, 0, 0);
             this.dtpFechaVigencia.Name = "dtpFechaVigencia";
-            this.dtpFechaVigencia.Size = new System.Drawing.Size(461, 37);
+            this.dtpFechaVigencia.Size = new System.Drawing.Size(232, 22);
             this.dtpFechaVigencia.TabIndex = 45;
             this.dtpFechaVigencia.ValueChanged += new System.EventHandler(this.dtpFechaVigencia_ValueChanged);
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
             this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(16, 414);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDescripcion.Location = new System.Drawing.Point(17, 219);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(461, 225);
+            this.txtDescripcion.Size = new System.Drawing.Size(232, 119);
             this.txtDescripcion.TabIndex = 44;
             // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(232, 88);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox5.Location = new System.Drawing.Point(116, 46);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(0, 37);
+            this.textBox5.Size = new System.Drawing.Size(2, 22);
             this.textBox5.TabIndex = 43;
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(35, 371);
-            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(18, 193);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(137, 25);
+            this.lblDescripcion.Size = new System.Drawing.Size(78, 15);
             this.lblDescripcion.TabIndex = 42;
             this.lblDescripcion.Text = "Descripción: ";
             // 
             // lblFechaVigencia
             // 
             this.lblFechaVigencia.AutoSize = true;
-            this.lblFechaVigencia.Location = new System.Drawing.Point(35, 281);
-            this.lblFechaVigencia.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblFechaVigencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaVigencia.Location = new System.Drawing.Point(18, 146);
             this.lblFechaVigencia.Name = "lblFechaVigencia";
-            this.lblFechaVigencia.Size = new System.Drawing.Size(164, 25);
+            this.lblFechaVigencia.Size = new System.Drawing.Size(92, 15);
             this.lblFechaVigencia.TabIndex = 41;
             this.lblFechaVigencia.Text = "Fecha vigencia:";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(261, 662);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(131, 357);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(160, 77);
+            this.btnCancelar.Size = new System.Drawing.Size(114, 40);
             this.btnCancelar.TabIndex = 49;
             this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(78, 662);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.Location = new System.Drawing.Point(17, 357);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(156, 77);
+            this.btnAceptar.Size = new System.Drawing.Size(108, 40);
             this.btnAceptar.TabIndex = 48;
             this.btnAceptar.Text = "&Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(35, 195);
-            this.lblCategoria.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(18, 101);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(117, 25);
+            this.lblCategoria.Size = new System.Drawing.Size(66, 15);
             this.lblCategoria.TabIndex = 50;
             this.lblCategoria.Text = "Categoría: ";
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(15, 143);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtNombre.Location = new System.Drawing.Point(17, 79);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(461, 37);
+            this.txtNombre.Size = new System.Drawing.Size(232, 22);
             this.txtNombre.TabIndex = 52;
             // 
             // cboCategoria
             // 
+            this.cboCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
             this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(15, 226);
-            this.cboCategoria.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cboCategoria.Location = new System.Drawing.Point(17, 122);
             this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(461, 33);
+            this.cboCategoria.Size = new System.Drawing.Size(232, 21);
             this.cboCategoria.TabIndex = 54;
             // 
             // lblIdCurso
             // 
             this.lblIdCurso.AutoSize = true;
-            this.lblIdCurso.Location = new System.Drawing.Point(35, 25);
-            this.lblIdCurso.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblIdCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdCurso.Location = new System.Drawing.Point(18, 13);
             this.lblIdCurso.Name = "lblIdCurso";
-            this.lblIdCurso.Size = new System.Drawing.Size(92, 25);
+            this.lblIdCurso.Size = new System.Drawing.Size(52, 15);
             this.lblIdCurso.TabIndex = 40;
             this.lblIdCurso.Text = "Id Curso";
             this.lblIdCurso.Click += new System.EventHandler(this.lblId_Click);
             // 
             // txtIdCurso
             // 
+            this.txtIdCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
             this.txtIdCurso.Enabled = false;
             this.txtIdCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdCurso.Location = new System.Drawing.Point(16, 56);
-            this.txtIdCurso.Margin = new System.Windows.Forms.Padding(6);
+            this.txtIdCurso.Location = new System.Drawing.Point(17, 34);
             this.txtIdCurso.Name = "txtIdCurso";
-            this.txtIdCurso.Size = new System.Drawing.Size(461, 37);
+            this.txtIdCurso.Size = new System.Drawing.Size(232, 22);
             this.txtIdCurso.TabIndex = 53;
             this.txtIdCurso.TextChanged += new System.EventHandler(this.txtIdCurso_TextChanged);
             // 
             // frmABMCurso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 758);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.ClientSize = new System.Drawing.Size(266, 412);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.txtIdCurso);
             this.Controls.Add(this.txtNombre);
@@ -198,9 +208,11 @@
             this.Controls.Add(this.lblFechaVigencia);
             this.Controls.Add(this.lblIdCurso);
             this.Controls.Add(this.lblNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmABMCurso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edición Curso";
             this.Load += new System.EventHandler(this.frmABMCurso_Load);
             this.ResumeLayout(false);

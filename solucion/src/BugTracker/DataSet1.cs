@@ -4,6 +4,14 @@
 
     partial class DataSet1
     {
+        partial class EstadisticoUsuariosCursosDataTable
+        {
+        }
+
+        partial class GraficoCursosTerminadosDataTable
+        {
+        }
+
         partial class CursosPorUsuarioDataTable
         {
         }

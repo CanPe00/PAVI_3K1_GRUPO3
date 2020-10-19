@@ -190,5 +190,15 @@ namespace BugTracker.GUILayer.Objetivos
         {
 
         }
+
+        private void txtNombre_largo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

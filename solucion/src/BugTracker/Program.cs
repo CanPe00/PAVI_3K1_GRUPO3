@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BugTracker.GUILayer.NewFolder1;
 
 namespace BugTracker
 {
@@ -26,7 +27,8 @@ namespace BugTracker
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Configuramos el frmPrincipal para que inicie con la aplicacion.
-            Application.Run(new frmPrincipal());
+            Application.Run(new frmMenuModerno());
+            
         }
     }
 }
