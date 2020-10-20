@@ -155,6 +155,12 @@
     <Compile Include="Entities\Perfil.cs" />
     <Compile Include="Entities\Estado.cs" />
     <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="GUILayer\Estadisticas\EstadisticoCategoriasCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Estadisticas\EstadisticoCategoriasCursos.Designer.cs">
+      <DependentUpon>EstadisticoCategoriasCursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\frmConsultaBugs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,16 +188,16 @@
     <Compile Include="GUILayer\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\NewFolder1\EstadisticoCantUsuariosCursos.cs">
+    <Compile Include="GUILayer\Estadisticas\EstadisticoCantUsuariosCursos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\NewFolder1\EstadisticoCantUsuariosCursos.Designer.cs">
+    <Compile Include="GUILayer\Estadisticas\EstadisticoCantUsuariosCursos.Designer.cs">
       <DependentUpon>EstadisticoCantUsuariosCursos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\NewFolder1\EstadisticoPerfilesCurso.cs">
+    <Compile Include="GUILayer\Estadisticas\EstadisticoPerfilesCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\NewFolder1\EstadisticoPerfilesCurso.Designer.cs">
+    <Compile Include="GUILayer\Estadisticas\EstadisticoPerfilesCurso.Designer.cs">
       <DependentUpon>EstadisticoPerfilesCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\Objetivos\frmABMObjetivos.cs">
@@ -293,9 +299,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Avance.rdlc" />
-    <EmbeddedResource Include="EstadisticoCantUsuarioCurso.rdlc" />
+    <EmbeddedResource Include="CantUsuarios.rdlc" />
+    <EmbeddedResource Include="EstadisticoCategoriasCurso.rdlc" />
     <EmbeddedResource Include="EstadisticoPerfilesCurso.rdlc" />
-    <EmbeddedResource Include="GraficoAvance.rdlc" />
     <EmbeddedResource Include="GraficoCursosFinalizados.rdlc" />
     <EmbeddedResource Include="GUILayer\Actividades\frmABMActividad.resx">
       <DependentUpon>frmABMActividad.cs</DependentUpon>
@@ -315,6 +321,9 @@
     <EmbeddedResource Include="GUILayer\Cursos\frmCursos.resx">
       <DependentUpon>frmCursos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Estadisticas\EstadisticoCategoriasCursos.resx">
+      <DependentUpon>EstadisticoCategoriasCursos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\frmConsultaBugs.resx">
       <DependentUpon>frmConsultaBugs.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,10 +339,10 @@
     <EmbeddedResource Include="GUILayer\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\NewFolder1\EstadisticoCantUsuariosCursos.resx">
+    <EmbeddedResource Include="GUILayer\Estadisticas\EstadisticoCantUsuariosCursos.resx">
       <DependentUpon>EstadisticoCantUsuariosCursos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\NewFolder1\EstadisticoPerfilesCurso.resx">
+    <EmbeddedResource Include="GUILayer\Estadisticas\EstadisticoPerfilesCurso.resx">
       <DependentUpon>EstadisticoPerfilesCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Objetivos\frmABMObjetivos.resx">
@@ -387,6 +396,7 @@
     <EmbeddedResource Include="ListadoActividades.rdlc" />
     <EmbeddedResource Include="ListadoCursos.rdlc" />
     <EmbeddedResource Include="ListadoUsuarios.rdlc" />
+    <EmbeddedResource Include="PerfilesCurso.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

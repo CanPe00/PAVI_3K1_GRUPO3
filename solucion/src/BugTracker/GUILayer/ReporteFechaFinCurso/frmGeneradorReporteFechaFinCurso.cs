@@ -76,7 +76,7 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
             
             LlenarCombo(cbcCurso, oCursoService.ObtenerTodos(), "nombre", "id_curso");
             LlenarCombo(cbcUsuario, oUsuarioService.ObtenerTodos(), "nombreUsuario", "idUsuario");
-
+            chkTodos.Checked = true;
             this.dataTable1TableAdapter.FillBy(this.dataSet1.DataTable1);
             this.reportViewer1.RefreshReport();
 

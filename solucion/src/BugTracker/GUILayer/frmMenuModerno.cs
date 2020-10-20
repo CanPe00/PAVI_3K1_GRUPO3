@@ -15,6 +15,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BugTracker.GUILayer.NewFolder1;
+using BugTracker.GUILayer.Estadisticas;
 
 namespace BugTracker.GUILayer
 {
@@ -31,6 +33,7 @@ namespace BugTracker.GUILayer
             panelAgregarSubmenu.Visible = false;
             panelListadoSubmenu.Visible = false;
             panelSoporteSubmenu.Visible = false;
+            panelReportesSubmenu.Visible = false;
         }
 
         private void hideSubMenu()
@@ -46,6 +49,10 @@ namespace BugTracker.GUILayer
             if (panelListadoSubmenu.Visible == true)
             {
                 panelListadoSubmenu.Visible = false;
+            }
+            if (panelReportesSubmenu.Visible == true)
+            {
+                panelReportesSubmenu.Visible = false;
             }
         }
 
@@ -129,7 +136,7 @@ namespace BugTracker.GUILayer
 
         private void btnCursosFinalizadosXFecha_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmGeneradorReporteFechaFinCurso());
+            
             //
             //
             //
@@ -162,6 +169,38 @@ namespace BugTracker.GUILayer
         private void btnListadoUsuarios_Click(object sender, EventArgs e)
         {
             openChildForm(new ListadoUsuarios());
+            //
+            //
+            //
+            hideSubMenu();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelReportesSubmenu);
+        }
+
+        private void btnCursosFinalizadosFecha_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmGeneradorReporteFechaFinCurso());
+            //
+            //
+            //
+            hideSubMenu();
+        }
+
+        private void btnCantUsuariosCurso_Click(object sender, EventArgs e)
+        {
+            openChildForm(new EstadisticoCantUsuariosCursos());
+            //
+            //
+            //
+            hideSubMenu();
+        }
+
+        private void btnPerfilesXCurso_Click(object sender, EventArgs e)
+        {
+            openChildForm(new EstadisticoPerfilesCurso());
             //
             //
             //
@@ -217,6 +256,20 @@ namespace BugTracker.GUILayer
         private void btnNombre_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCategoriasXCurso_Click(object sender, EventArgs e)
+        {
+            openChildForm(new EstadisticoCategoriasCursos());
+            //
+            //
+            //
+            hideSubMenu();
         }
     }
 }
