@@ -31,18 +31,28 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EstadisticoCategoriasCursos));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.estadisticoCategoriasCursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new BugTracker.DataSet1();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.btnGrafico = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.estadisticoCategoriasCursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new BugTracker.DataSet1();
             this.chkTodos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.estadisticoCategoriasCursosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // estadisticoCategoriasCursosBindingSource
+            // 
+            this.estadisticoCategoriasCursosBindingSource.DataMember = "EstadisticoCategoriasCursos";
+            this.estadisticoCategoriasCursosBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -118,16 +128,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(660, 442);
             this.reportViewer1.TabIndex = 27;
-            // 
-            // estadisticoCategoriasCursosBindingSource
-            // 
-            this.estadisticoCategoriasCursosBindingSource.DataMember = "EstadisticoCategoriasCursos";
-            this.estadisticoCategoriasCursosBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // chkTodos
             // 

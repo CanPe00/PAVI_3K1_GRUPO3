@@ -21,9 +21,7 @@ namespace BugTracker.GUILayer.Estadisticas
 
         private void EstadisticoCategoriasCursos_Load(object sender, EventArgs e)
         {
-            chkTodos.Checked = true;
-            btnGrafico_Click(sender, e);
-            this.reportViewer1.RefreshReport();
+            
         }
 
         private void btnGrafico_Click(object sender, EventArgs e)

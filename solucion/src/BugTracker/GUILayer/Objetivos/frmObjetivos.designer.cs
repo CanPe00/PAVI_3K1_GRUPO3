@@ -183,12 +183,15 @@
             // 
             // dgvObjetivos
             // 
+            this.dgvObjetivos.AllowUserToAddRows = false;
+            this.dgvObjetivos.AllowUserToDeleteRows = false;
             this.dgvObjetivos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvObjetivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvObjetivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            this.dgvObjetivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvObjetivos.ColumnHeadersHeight = 30;
+            this.dgvObjetivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvObjetivos.Location = new System.Drawing.Point(6, 161);
             this.dgvObjetivos.Name = "dgvObjetivos";
             this.dgvObjetivos.RowHeadersWidth = 82;
