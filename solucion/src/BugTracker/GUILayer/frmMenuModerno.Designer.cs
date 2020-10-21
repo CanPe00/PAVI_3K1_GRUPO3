@@ -32,6 +32,7 @@
             this.panelSideMenuLateral = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panelReportesSubmenu = new System.Windows.Forms.Panel();
+            this.btnCategoriasXCurso = new System.Windows.Forms.Button();
             this.btnPerfilesXCurso = new System.Windows.Forms.Button();
             this.btnCantUsuariosCurso = new System.Windows.Forms.Button();
             this.btnCursosFinalizadosFecha = new System.Windows.Forms.Button();
@@ -59,7 +60,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelConenedor = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnCategoriasXCurso = new System.Windows.Forms.Button();
             this.panelSideMenuLateral.SuspendLayout();
             this.panelReportesSubmenu.SuspendLayout();
             this.panelListadoSubmenu.SuspendLayout();
@@ -105,7 +105,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSalir.Size = new System.Drawing.Size(233, 45);
-            this.btnSalir.TabIndex = 12;
+            this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -123,6 +123,24 @@
             this.panelReportesSubmenu.Name = "panelReportesSubmenu";
             this.panelReportesSubmenu.Size = new System.Drawing.Size(233, 164);
             this.panelReportesSubmenu.TabIndex = 11;
+            // 
+            // btnCategoriasXCurso
+            // 
+            this.btnCategoriasXCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.btnCategoriasXCurso.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCategoriasXCurso.FlatAppearance.BorderSize = 0;
+            this.btnCategoriasXCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategoriasXCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategoriasXCurso.ForeColor = System.Drawing.Color.Black;
+            this.btnCategoriasXCurso.Location = new System.Drawing.Point(0, 123);
+            this.btnCategoriasXCurso.Name = "btnCategoriasXCurso";
+            this.btnCategoriasXCurso.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnCategoriasXCurso.Size = new System.Drawing.Size(233, 43);
+            this.btnCategoriasXCurso.TabIndex = 3;
+            this.btnCategoriasXCurso.Text = "Categorías Por Curso";
+            this.btnCategoriasXCurso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategoriasXCurso.UseVisualStyleBackColor = false;
+            this.btnCategoriasXCurso.Click += new System.EventHandler(this.btnCategoriasXCurso_Click);
             // 
             // btnPerfilesXCurso
             // 
@@ -190,7 +208,7 @@
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnReportes.Size = new System.Drawing.Size(233, 45);
-            this.btnReportes.TabIndex = 9;
+            this.btnReportes.TabIndex = 3;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportes.UseVisualStyleBackColor = false;
@@ -208,7 +226,7 @@
             this.btnNombre.Name = "btnNombre";
             this.btnNombre.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnNombre.Size = new System.Drawing.Size(233, 45);
-            this.btnNombre.TabIndex = 8;
+            this.btnNombre.TabIndex = 5;
             this.btnNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNombre.UseVisualStyleBackColor = false;
             this.btnNombre.Click += new System.EventHandler(this.btnNombre_Click);
@@ -291,7 +309,7 @@
             this.btnListado.Name = "btnListado";
             this.btnListado.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnListado.Size = new System.Drawing.Size(233, 45);
-            this.btnListado.TabIndex = 5;
+            this.btnListado.TabIndex = 2;
             this.btnListado.Text = "Listados";
             this.btnListado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListado.UseVisualStyleBackColor = false;
@@ -357,7 +375,7 @@
             this.btnUsuariosXCurso.Name = "btnUsuariosXCurso";
             this.btnUsuariosXCurso.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnUsuariosXCurso.Size = new System.Drawing.Size(233, 40);
-            this.btnUsuariosXCurso.TabIndex = 0;
+            this.btnUsuariosXCurso.TabIndex = 1;
             this.btnUsuariosXCurso.Text = "Usuarios Por Curso";
             this.btnUsuariosXCurso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuariosXCurso.UseVisualStyleBackColor = false;
@@ -375,7 +393,7 @@
             this.btnSoporte.Name = "btnSoporte";
             this.btnSoporte.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSoporte.Size = new System.Drawing.Size(233, 45);
-            this.btnSoporte.TabIndex = 3;
+            this.btnSoporte.TabIndex = 1;
             this.btnSoporte.Text = "Soporte";
             this.btnSoporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSoporte.UseVisualStyleBackColor = false;
@@ -471,7 +489,10 @@
             // 
             this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
             this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.Black;
@@ -498,7 +519,7 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAgregar.Size = new System.Drawing.Size(233, 45);
-            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -555,24 +576,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnCategoriasXCurso
-            // 
-            this.btnCategoriasXCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            this.btnCategoriasXCurso.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCategoriasXCurso.FlatAppearance.BorderSize = 0;
-            this.btnCategoriasXCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategoriasXCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategoriasXCurso.ForeColor = System.Drawing.Color.Black;
-            this.btnCategoriasXCurso.Location = new System.Drawing.Point(0, 123);
-            this.btnCategoriasXCurso.Name = "btnCategoriasXCurso";
-            this.btnCategoriasXCurso.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCategoriasXCurso.Size = new System.Drawing.Size(233, 43);
-            this.btnCategoriasXCurso.TabIndex = 3;
-            this.btnCategoriasXCurso.Text = "Categorías Por Curso";
-            this.btnCategoriasXCurso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategoriasXCurso.UseVisualStyleBackColor = false;
-            this.btnCategoriasXCurso.Click += new System.EventHandler(this.btnCategoriasXCurso_Click);
             // 
             // frmMenuModerno
             // 

@@ -76,6 +76,11 @@ namespace BugTracker.GUILayer
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

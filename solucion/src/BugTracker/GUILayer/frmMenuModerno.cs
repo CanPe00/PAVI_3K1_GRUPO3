@@ -237,6 +237,7 @@ namespace BugTracker.GUILayer
             frmLogin login = new frmLogin();
             login.ShowDialog();
             btnNombre.Text = "Bienvenido " + login.UsuarioLogueado;
+            
         }
 
         private void btnCursos_Click(object sender, EventArgs e)
