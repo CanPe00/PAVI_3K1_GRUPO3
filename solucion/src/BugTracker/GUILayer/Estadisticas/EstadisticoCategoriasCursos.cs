@@ -26,6 +26,10 @@ namespace BugTracker.GUILayer.Estadisticas
 
         private void btnGrafico_Click(object sender, EventArgs e)
         {
+            reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                new ReportParameter("prFechaDesde", dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
+                new ReportParameter("prFechaHasta", dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
+
             DataManager oDm = new DataManager();
             oDm.Open();
             string sql = " SELECT COUNT(CA.id_categoria) AS Cantidad, CA.nombre AS Nombre " +

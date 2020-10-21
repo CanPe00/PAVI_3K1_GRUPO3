@@ -7217,7 +7217,8 @@ FROM            UsuariosCurso AS UC INNER JOIN
                          Cursos AS C ON UC.id_curso = C.id_curso INNER JOIN
                          Usuarios AS U ON UC.id_usuario = U.id_usuario
 WHERE        (UC.fecha_fin IS NOT NULL) AND (UC.borrado = 1)
-GROUP BY UC.id_curso, C.nombre";
+GROUP BY UC.id_curso, C.nombre
+ORDER BY COUNT(UC.id_curso) ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -7226,7 +7227,8 @@ FROM            UsuariosCurso AS UC INNER JOIN
                          Cursos AS C ON UC.id_curso = C.id_curso INNER JOIN
                          Usuarios AS U ON UC.id_usuario = U.id_usuario
 WHERE        (UC.fecha_fin IS NOT NULL) AND (UC.borrado = 1) AND (UC.fecha_fin BETWEEN @fecha_desde AND @fecha_hasta) AND (U.id_usuario = @id_usuario) AND (UC.id_curso = @id_curso)
-GROUP BY UC.id_curso, C.nombre";
+GROUP BY UC.id_curso, C.nombre
+ORDER BY COUNT(UC.id_curso)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_desde", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_hasta", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7239,7 +7241,8 @@ FROM            UsuariosCurso AS UC INNER JOIN
                          Cursos AS C ON UC.id_curso = C.id_curso INNER JOIN
                          Usuarios AS U ON UC.id_usuario = U.id_usuario
 WHERE        (UC.fecha_fin IS NOT NULL) AND (UC.borrado = 1) AND (UC.fecha_fin BETWEEN @fecha_desde AND @fecha_hasta) AND (C.id_curso = @id_curso)
-GROUP BY UC.id_curso, C.nombre";
+GROUP BY UC.id_curso, C.nombre
+ORDER BY COUNT(UC.id_curso)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_desde", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_hasta", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7251,7 +7254,8 @@ FROM            UsuariosCurso AS UC INNER JOIN
                          Cursos AS C ON UC.id_curso = C.id_curso INNER JOIN
                          Usuarios AS U ON UC.id_usuario = U.id_usuario
 WHERE        (UC.fecha_fin IS NOT NULL) AND (UC.borrado = 1) AND (UC.fecha_fin BETWEEN @fecha_desde AND @fecha_hasta)
-GROUP BY UC.id_curso, C.nombre";
+GROUP BY UC.id_curso, C.nombre
+ORDER BY COUNT(UC.id_curso) ";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_desde", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_hasta", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7262,7 +7266,8 @@ FROM            UsuariosCurso AS UC INNER JOIN
                          Cursos AS C ON UC.id_curso = C.id_curso INNER JOIN
                          Usuarios AS U ON UC.id_usuario = U.id_usuario
 WHERE        (UC.fecha_fin IS NOT NULL) AND (UC.borrado = 1) AND (UC.fecha_fin BETWEEN @fecha_desde AND @fecha_hasta) AND (U.id_usuario = @id_usuario)
-GROUP BY UC.id_curso, C.nombre";
+GROUP BY UC.id_curso, C.nombre
+ORDER BY COUNT(UC.id_curso)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_desde", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_hasta", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7638,7 +7643,8 @@ FROM            Usuarios INNER JOIN
                          UsuariosCurso ON Usuarios.id_usuario = UsuariosCurso.id_usuario INNER JOIN
                          Cursos ON UsuariosCurso.id_curso = Cursos.id_curso
 WHERE        (UsuariosCurso.borrado = 0) AND (UsuariosCurso.fecha_inicio BETWEEN @fecha_inicio AND @fecha_fin)
-GROUP BY Cursos.nombre";
+GROUP BY Cursos.nombre
+ORDER BY Count(usuario)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_inicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_inicio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_fin", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_inicio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7839,7 +7845,8 @@ FROM            UsuariosCurso INNER JOIN
                          Perfiles ON Usuarios.id_perfil = Perfiles.id_perfil INNER JOIN
                          Cursos ON UsuariosCurso.id_curso = Cursos.id_curso
 WHERE        (UsuariosCurso.borrado = 0) AND (UsuariosCurso.fecha_inicio BETWEEN @fecha_inicio AND @fecha_fin)
-GROUP BY Perfiles.nombre, Cursos.nombre";
+GROUP BY Perfiles.nombre, Cursos.nombre
+ORDER BY COUNT(Usuarios.usuario)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_inicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_inicio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_fin", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_inicio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
