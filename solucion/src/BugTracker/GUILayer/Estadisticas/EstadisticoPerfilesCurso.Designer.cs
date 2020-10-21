@@ -43,6 +43,7 @@
             this.estadisticoPerfilesEnCursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estadisticoPerfilesEnCursosTableAdapter = new BugTracker.DataSet1TableAdapters.EstadisticoPerfilesEnCursosTableAdapter();
             this.EstadisticoCategoriasCursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chkTodos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.estadisticoPerfilesEnCursosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadisticoCategoriasCursosBindingSource1)).BeginInit();
@@ -70,10 +71,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(295, 34);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(590, 65);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 17);
+            this.label2.Size = new System.Drawing.Size(177, 31);
             this.label2.TabIndex = 20;
             this.label2.Text = "Fecha Hasta:";
             // 
@@ -82,10 +83,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(100, 65);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 17);
+            this.label1.Size = new System.Drawing.Size(184, 31);
             this.label1.TabIndex = 19;
             this.label1.Text = "Fecha Desde:";
             // 
@@ -94,10 +95,10 @@
             this.dtpFechaDesde.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpFechaDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(150, 34);
-            this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(300, 65);
+            this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
-            this.dtpFechaDesde.Size = new System.Drawing.Size(124, 22);
+            this.dtpFechaDesde.Size = new System.Drawing.Size(244, 36);
             this.dtpFechaDesde.TabIndex = 17;
             // 
             // dtpFechaHasta
@@ -105,10 +106,10 @@
             this.dtpFechaHasta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpFechaHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(391, 34);
-            this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(782, 65);
+            this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
-            this.dtpFechaHasta.Size = new System.Drawing.Size(124, 22);
+            this.dtpFechaHasta.Size = new System.Drawing.Size(244, 36);
             this.dtpFechaHasta.TabIndex = 18;
             // 
             // reportViewer1
@@ -120,10 +121,11 @@
             reportDataSource1.Value = this.estadisticoPerfilesEnCursosBindingSource1;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "BugTracker.PerfilesCurso.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 94);
+            this.reportViewer1.Location = new System.Drawing.Point(24, 181);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(626, 320);
+            this.reportViewer1.Size = new System.Drawing.Size(1250, 614);
             this.reportViewer1.TabIndex = 22;
             // 
             // btnGrafico
@@ -133,9 +135,10 @@
             this.btnGrafico.FlatAppearance.BorderSize = 0;
             this.btnGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrafico.Image = ((System.Drawing.Image)(resources.GetObject("btnGrafico.Image")));
-            this.btnGrafico.Location = new System.Drawing.Point(571, 29);
+            this.btnGrafico.Location = new System.Drawing.Point(1142, 56);
+            this.btnGrafico.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnGrafico.Name = "btnGrafico";
-            this.btnGrafico.Size = new System.Drawing.Size(46, 37);
+            this.btnGrafico.Size = new System.Drawing.Size(92, 71);
             this.btnGrafico.TabIndex = 21;
             this.btnGrafico.UseVisualStyleBackColor = false;
             this.btnGrafico.Click += new System.EventHandler(this.btnGrafico_Click);
@@ -154,12 +157,26 @@
             this.EstadisticoCategoriasCursosBindingSource.DataMember = "EstadisticoCategoriasCursos";
             this.EstadisticoCategoriasCursosBindingSource.DataSource = this.dataSet1;
             // 
+            // chkTodos
+            // 
+            this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chkTodos.AutoSize = true;
+            this.chkTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTodos.Location = new System.Drawing.Point(904, 120);
+            this.chkTodos.Margin = new System.Windows.Forms.Padding(6);
+            this.chkTodos.Name = "chkTodos";
+            this.chkTodos.Size = new System.Drawing.Size(122, 35);
+            this.chkTodos.TabIndex = 23;
+            this.chkTodos.Text = "Todos";
+            this.chkTodos.UseVisualStyleBackColor = true;
+            // 
             // EstadisticoPerfilesCurso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(650, 426);
+            this.ClientSize = new System.Drawing.Size(1300, 819);
+            this.Controls.Add(this.chkTodos);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnGrafico);
             this.Controls.Add(this.label2);
@@ -167,6 +184,7 @@
             this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.dtpFechaDesde);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "EstadisticoPerfilesCurso";
             this.Text = "EstadisticoPerfilesCurso";
             this.Load += new System.EventHandler(this.EstadisticoPerfilesCurso_Load);
@@ -194,5 +212,6 @@
         private System.Windows.Forms.BindingSource EstadisticoCategoriasCursosBindingSource;
         private System.Windows.Forms.BindingSource estadisticoCategoriasCursosBindingSource1;
         private System.Windows.Forms.BindingSource estadisticoPerfilesEnCursosBindingSource1;
+        public System.Windows.Forms.CheckBox chkTodos;
     }
 }
