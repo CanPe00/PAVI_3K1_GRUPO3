@@ -407,6 +407,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ReporteCursosFinalizadosFecha.rdlc" />
     <EmbeddedResource Include="ReporteCursosPorUsuario.rdlc" />
     <EmbeddedResource Include="UsuariosEnCurso.rdlc" />

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BugTracker.DataSet1TableAdapters;
+using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +29,10 @@ namespace BugTracker.GUILayer.Reportes
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                new ReportParameter("prFechaDesde", dtpFecha_Desde.Value.ToString("dd/MM/yyyy")),
+                new ReportParameter("prFechaHasta", dtpFecha_Hasta.Value.ToString("dd/MM/yyyy")) });
+
             this.cursosPorUsuarioTableAdapter.FillBy(this.dataSet1.CursosPorUsuario, idUsuario, dtpFecha_Desde.Value, dtpFecha_Hasta.Value);
             this.reportViewer1.RefreshReport();
             //dtpFecha_Desde.Value;

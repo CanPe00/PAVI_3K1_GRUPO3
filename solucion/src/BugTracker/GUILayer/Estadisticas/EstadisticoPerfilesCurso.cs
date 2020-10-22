@@ -21,21 +21,23 @@ namespace BugTracker.GUILayer.NewFolder1
 
         private void EstadisticoPerfilesCurso_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dataSet1.EstadisticoPerfilesEnCursos' Puede moverla o quitarla según sea necesario.
-            //this.estadisticoPerfilesEnCursosTableAdapter.Fill(this.dataSet1.EstadisticoPerfilesEnCursos, dtpFechaDesde.Value, dtpFechaHasta.Value);
-
-           // this.reportViewer1.RefreshReport();
+            
         }
 
         private void btnGrafico_Click(object sender, EventArgs e)
         {
-            //reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
-            //    new ReportParameter("prFecha_Desde", dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
-            //    new ReportParameter("prFechaHasta", dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
+            reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                new ReportParameter("prFecha_Desde", dtpFecha_Desde.Value.ToString("dd/MM/yyyy")),
+                new ReportParameter("prFechaHasta", dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
 
-            this.estadisticoPerfilesEnCursosTableAdapter.Fill(this.dataSet1.EstadisticoPerfilesEnCursos, dtpFechaDesde.Value, dtpFechaHasta.Value);
+            this.estadisticoPerfilesEnCursosTableAdapter.Fill(this.dataSet1.EstadisticoPerfilesEnCursos, dtpFecha_Desde.Value, dtpFechaHasta.Value);
           
             this.reportViewer1.RefreshReport();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
