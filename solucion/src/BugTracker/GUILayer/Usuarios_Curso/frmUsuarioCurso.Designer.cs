@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarioCurso));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarioCurso));
             this.lblN_Curso = new System.Windows.Forms.Label();
             this.lblN_Usuario = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
@@ -39,6 +39,7 @@
             this.cboUsuario = new System.Windows.Forms.ComboBox();
             this.cboCurso = new System.Windows.Forms.ComboBox();
             this.UsuarioCurso = new System.Windows.Forms.GroupBox();
+            this.dgvUsuarioCurso = new System.Windows.Forms.DataGridView();
             this.btnReiniciarCombos = new System.Windows.Forms.Button();
             this.btnReporteUsuarioCurso = new System.Windows.Forms.Button();
             this.btnReporteCursosPorUsuario = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.dgvUsuarioCurso = new System.Windows.Forms.DataGridView();
             this.UsuarioCurso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCurso)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +56,7 @@
             this.lblN_Curso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblN_Curso.AutoSize = true;
             this.lblN_Curso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblN_Curso.ForeColor = System.Drawing.Color.Black;
             this.lblN_Curso.Location = new System.Drawing.Point(78, 33);
             this.lblN_Curso.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblN_Curso.Name = "lblN_Curso";
@@ -69,6 +70,7 @@
             this.lblN_Usuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblN_Usuario.AutoSize = true;
             this.lblN_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblN_Usuario.ForeColor = System.Drawing.Color.Black;
             this.lblN_Usuario.Location = new System.Drawing.Point(67, 65);
             this.lblN_Usuario.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblN_Usuario.Name = "lblN_Usuario";
@@ -99,6 +101,7 @@
             this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chkTodos.AutoSize = true;
             this.chkTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTodos.ForeColor = System.Drawing.Color.Black;
             this.chkTodos.Location = new System.Drawing.Point(181, 98);
             this.chkTodos.Margin = new System.Windows.Forms.Padding(6);
             this.chkTodos.Name = "chkTodos";
@@ -112,24 +115,22 @@
             // 
             this.cboUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            this.cboUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUsuario.FormattingEnabled = true;
             this.cboUsuario.Location = new System.Drawing.Point(181, 65);
             this.cboUsuario.Margin = new System.Windows.Forms.Padding(6);
             this.cboUsuario.Name = "cboUsuario";
-            this.cboUsuario.Size = new System.Drawing.Size(210, 21);
+            this.cboUsuario.Size = new System.Drawing.Size(210, 23);
             this.cboUsuario.TabIndex = 7;
             // 
             // cboCurso
             // 
             this.cboCurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            this.cboCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCurso.FormattingEnabled = true;
             this.cboCurso.Location = new System.Drawing.Point(181, 32);
             this.cboCurso.Margin = new System.Windows.Forms.Padding(6);
             this.cboCurso.Name = "cboCurso";
-            this.cboCurso.Size = new System.Drawing.Size(210, 21);
+            this.cboCurso.Size = new System.Drawing.Size(210, 23);
             this.cboCurso.TabIndex = 8;
             // 
             // UsuarioCurso
@@ -146,6 +147,8 @@
             this.UsuarioCurso.Controls.Add(this.lblN_Usuario);
             this.UsuarioCurso.Controls.Add(this.lblN_Curso);
             this.UsuarioCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UsuarioCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuarioCurso.ForeColor = System.Drawing.Color.Black;
             this.UsuarioCurso.Location = new System.Drawing.Point(15, 15);
             this.UsuarioCurso.Margin = new System.Windows.Forms.Padding(6);
             this.UsuarioCurso.Name = "UsuarioCurso";
@@ -155,6 +158,51 @@
             this.UsuarioCurso.TabStop = false;
             this.UsuarioCurso.Text = "Buscar Usuario en Curso";
             this.UsuarioCurso.Enter += new System.EventHandler(this.UsuarioCurso_Enter);
+            // 
+            // dgvUsuarioCurso
+            // 
+            this.dgvUsuarioCurso.AllowUserToAddRows = false;
+            this.dgvUsuarioCurso.AllowUserToDeleteRows = false;
+            this.dgvUsuarioCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvUsuarioCurso.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUsuarioCurso.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvUsuarioCurso.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.dgvUsuarioCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvUsuarioCurso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarioCurso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUsuarioCurso.ColumnHeadersHeight = 30;
+            this.dgvUsuarioCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvUsuarioCurso.EnableHeadersVisualStyles = false;
+            this.dgvUsuarioCurso.GridColor = System.Drawing.Color.Black;
+            this.dgvUsuarioCurso.Location = new System.Drawing.Point(9, 126);
+            this.dgvUsuarioCurso.Name = "dgvUsuarioCurso";
+            this.dgvUsuarioCurso.ReadOnly = true;
+            this.dgvUsuarioCurso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarioCurso.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUsuarioCurso.RowHeadersVisible = false;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvUsuarioCurso.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvUsuarioCurso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUsuarioCurso.Size = new System.Drawing.Size(645, 344);
+            this.dgvUsuarioCurso.TabIndex = 20;
             // 
             // btnReiniciarCombos
             // 
@@ -271,51 +319,6 @@
             this.btnNuevo.TabIndex = 10;
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // dgvUsuarioCurso
-            // 
-            this.dgvUsuarioCurso.AllowUserToAddRows = false;
-            this.dgvUsuarioCurso.AllowUserToDeleteRows = false;
-            this.dgvUsuarioCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvUsuarioCurso.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUsuarioCurso.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvUsuarioCurso.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.dgvUsuarioCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvUsuarioCurso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarioCurso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvUsuarioCurso.ColumnHeadersHeight = 30;
-            this.dgvUsuarioCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvUsuarioCurso.EnableHeadersVisualStyles = false;
-            this.dgvUsuarioCurso.GridColor = System.Drawing.Color.Black;
-            this.dgvUsuarioCurso.Location = new System.Drawing.Point(9, 126);
-            this.dgvUsuarioCurso.Name = "dgvUsuarioCurso";
-            this.dgvUsuarioCurso.ReadOnly = true;
-            this.dgvUsuarioCurso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarioCurso.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUsuarioCurso.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvUsuarioCurso.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvUsuarioCurso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarioCurso.Size = new System.Drawing.Size(645, 344);
-            this.dgvUsuarioCurso.TabIndex = 20;
             // 
             // frmUsuarioCurso
             // 

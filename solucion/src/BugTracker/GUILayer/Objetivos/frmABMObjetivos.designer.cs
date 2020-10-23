@@ -51,7 +51,7 @@
             // 
             // txtNombre_corto
             // 
-            this.txtNombre_corto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtNombre_corto.BackColor = System.Drawing.Color.White;
             this.txtNombre_corto.Location = new System.Drawing.Point(16, 40);
             this.txtNombre_corto.Name = "txtNombre_corto";
             this.txtNombre_corto.Size = new System.Drawing.Size(232, 20);
@@ -60,7 +60,7 @@
             // 
             // txtNombre_largo
             // 
-            this.txtNombre_largo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtNombre_largo.BackColor = System.Drawing.Color.White;
             this.txtNombre_largo.Location = new System.Drawing.Point(16, 86);
             this.txtNombre_largo.Name = "txtNombre_largo";
             this.txtNombre_largo.Size = new System.Drawing.Size(232, 20);
@@ -69,7 +69,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtDescripcion.BackColor = System.Drawing.Color.White;
             this.txtDescripcion.Location = new System.Drawing.Point(16, 139);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";

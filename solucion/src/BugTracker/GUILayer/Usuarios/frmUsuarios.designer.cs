@@ -111,6 +111,7 @@
             this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chkTodos.AutoSize = true;
             this.chkTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTodos.ForeColor = System.Drawing.Color.Black;
             this.chkTodos.Location = new System.Drawing.Point(197, 112);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Size = new System.Drawing.Size(60, 19);
@@ -124,6 +125,7 @@
             this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label3.AutoSize = true;
             this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.ForeColor = System.Drawing.Color.Black;
             this.Label3.Location = new System.Drawing.Point(117, 47);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(55, 15);
@@ -170,6 +172,7 @@
             this.lblEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.Color.Black;
             this.lblEstado.Location = new System.Drawing.Point(131, 79);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(38, 15);
@@ -190,6 +193,7 @@
             this.pnlFiltros.Controls.Add(this.cboPerfiles);
             this.pnlFiltros.Controls.Add(this.lblEstado);
             this.pnlFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlFiltros.ForeColor = System.Drawing.Color.Black;
             this.pnlFiltros.Location = new System.Drawing.Point(10, 9);
             this.pnlFiltros.Name = "pnlFiltros";
             this.pnlFiltros.Size = new System.Drawing.Size(670, 468);
@@ -212,7 +216,7 @@
             this.dgvUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;

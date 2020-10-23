@@ -68,8 +68,7 @@
             // 
             // cboUsuario
             // 
-            this.cboUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            this.cboUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUsuario.BackColor = System.Drawing.Color.White;
             this.cboUsuario.FormattingEnabled = true;
             this.cboUsuario.Location = new System.Drawing.Point(22, 35);
             this.cboUsuario.Name = "cboUsuario";
@@ -79,8 +78,7 @@
             // 
             // cboCurso
             // 
-            this.cboCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            this.cboCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCurso.BackColor = System.Drawing.Color.White;
             this.cboCurso.FormattingEnabled = true;
             this.cboCurso.Location = new System.Drawing.Point(22, 86);
             this.cboCurso.Name = "cboCurso";
@@ -129,7 +127,7 @@
             // 
             // txtObservaciones
             // 
-            this.txtObservaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtObservaciones.BackColor = System.Drawing.Color.White;
             this.txtObservaciones.Location = new System.Drawing.Point(22, 203);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
@@ -158,7 +156,7 @@
             // 
             // txtPuntuacion
             // 
-            this.txtPuntuacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtPuntuacion.BackColor = System.Drawing.Color.White;
             this.txtPuntuacion.Location = new System.Drawing.Point(22, 145);
             this.txtPuntuacion.Name = "txtPuntuacion";
             this.txtPuntuacion.Size = new System.Drawing.Size(246, 20);

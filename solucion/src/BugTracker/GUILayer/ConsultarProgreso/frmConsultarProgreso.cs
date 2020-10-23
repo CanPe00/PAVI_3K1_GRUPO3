@@ -91,9 +91,8 @@ namespace BugTracker.GUILayer
             // 
             // cboUsuarios
             // 
-            this.cboUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cboUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            this.cboUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboUsuarios.FormattingEnabled = true;
             this.cboUsuarios.Location = new System.Drawing.Point(255, 197);
@@ -103,9 +102,8 @@ namespace BugTracker.GUILayer
             // 
             // cboCursos
             // 
-            this.cboCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cboCursos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboCursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            this.cboCursos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCursos.FormattingEnabled = true;
             this.cboCursos.Location = new System.Drawing.Point(255, 279);
@@ -115,7 +113,7 @@ namespace BugTracker.GUILayer
             // 
             // lblUsuarios
             // 
-            this.lblUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUsuarios.AutoSize = true;
             this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarios.Location = new System.Drawing.Point(171, 195);
@@ -126,7 +124,7 @@ namespace BugTracker.GUILayer
             // 
             // lblCurso
             // 
-            this.lblCurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCurso.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCurso.AutoSize = true;
             this.lblCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurso.Location = new System.Drawing.Point(184, 280);
@@ -137,7 +135,7 @@ namespace BugTracker.GUILayer
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
             this.btnConsultar.FlatAppearance.BorderSize = 0;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

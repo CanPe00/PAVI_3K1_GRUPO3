@@ -72,7 +72,7 @@
             // 
             // cboPerfil
             // 
-            this.cboPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.cboPerfil.BackColor = System.Drawing.Color.White;
             this.cboPerfil.FormattingEnabled = true;
             this.cboPerfil.Location = new System.Drawing.Point(16, 210);
             this.cboPerfil.Name = "cboPerfil";
@@ -101,7 +101,7 @@
             // 
             // txtConfirmarPass
             // 
-            this.txtConfirmarPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtConfirmarPass.BackColor = System.Drawing.Color.White;
             this.txtConfirmarPass.Location = new System.Drawing.Point(16, 169);
             this.txtConfirmarPass.Name = "txtConfirmarPass";
             this.txtConfirmarPass.PasswordChar = '*';
@@ -120,7 +120,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(16, 123);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -129,7 +129,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(16, 77);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(232, 20);
@@ -157,7 +157,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.Location = new System.Drawing.Point(16, 32);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(232, 20);
