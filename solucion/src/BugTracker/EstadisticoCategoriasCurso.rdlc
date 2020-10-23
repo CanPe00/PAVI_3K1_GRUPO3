@@ -574,6 +574,7 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
+            <Top>0.14111cm</Top>
             <Height>10.28849cm</Height>
             <Width>17.89495cm</Width>
             <ZIndex>1</ZIndex>
@@ -586,49 +587,33 @@
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
-          <Textbox Name="Textbox1">
+          <Textbox Name="Textbox8">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Período: Desde:</Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
                     <Value>=Parameters!prFechaDesde.Value</Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
+                    <Style />
                   </TextRun>
                   <TextRun>
-                    <Value> - Hasta: </Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
+                    <Value xml:space="preserve">  </Value>
+                    <Style />
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!prFechaHasta.Value</Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>10.54902cm</Top>
-            <Left>0.42016cm</Left>
+            <rd:DefaultName>Textbox4</rd:DefaultName>
+            <Top>10.60599cm</Top>
+            <Left>5.85735cm</Left>
             <Height>0.6cm</Height>
-            <Width>12.66cm</Width>
+            <Width>10.69554cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>

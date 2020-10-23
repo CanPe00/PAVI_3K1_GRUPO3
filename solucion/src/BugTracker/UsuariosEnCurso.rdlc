@@ -360,10 +360,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>0.44662cm</Top>
-            <Left>2.51037cm</Left>
+            <Top>0.44083cm</Top>
+            <Left>2.16281cm</Left>
             <Height>0.59422cm</Height>
-            <Width>4.78896cm</Width>
+            <Width>7.23937cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -428,10 +428,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>1.33297cm</Top>
-            <Left>5.4737cm</Left>
+            <Top>1.3812cm</Top>
+            <Left>5.09086cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>4.31131cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -443,49 +443,47 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox1">
+          <Textbox Name="Textbox4">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Período: Desde: </Value>
+                    <Value>Período Desde:  </Value>
                     <Style>
-                      <FontSize>11pt</FontSize>
+                      <FontFamily>Arial Black</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!prFechaDesde.Value</Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
+                    <Style />
                   </TextRun>
                   <TextRun>
-                    <Value> Hasta: </Value>
+                    <Value xml:space="preserve">  </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>Hasta:  </Value>
                     <Style>
-                      <FontSize>11pt</FontSize>
+                      <FontFamily>Arial Black</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!prFechaHasta.Value</Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.5236cm</Top>
+            <rd:DefaultName>Textbox4</rd:DefaultName>
+            <Top>2.31606cm</Top>
             <Left>0.55357cm</Left>
             <Height>0.6cm</Height>
-            <Width>12.23667cm</Width>
+            <Width>11.45835cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -506,7 +504,7 @@
       <Width>6.5in</Width>
       <Page>
         <PageHeader>
-          <Height>2.36802cm</Height>
+          <Height>2.55806cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -582,7 +580,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>2.02406cm</Height>
+          <Height>2.07698cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>

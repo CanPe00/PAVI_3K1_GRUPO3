@@ -30,6 +30,7 @@ namespace BugTracker.GUILayer
 
         private void customizeDesing()
         {
+
             panelAgregarSubmenu.Visible = false;
             panelListadoSubmenu.Visible = false;
             panelSoporteSubmenu.Visible = false;
@@ -41,19 +42,25 @@ namespace BugTracker.GUILayer
             if (panelAgregarSubmenu.Visible == true)
             {
                 panelAgregarSubmenu.Visible = false;
+                
             }
             if (panelSoporteSubmenu.Visible == true)
+                
             {
                 panelSoporteSubmenu.Visible = false;
+
             }
             if (panelListadoSubmenu.Visible == true)
             {
                 panelListadoSubmenu.Visible = false;
+
             }
             if (panelReportesSubmenu.Visible == true)
             {
                 panelReportesSubmenu.Visible = false;
+
             }
+            
         }
 
         private void showSubMenu(Panel subMenu)
@@ -73,6 +80,7 @@ namespace BugTracker.GUILayer
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             showSubMenu(panelAgregarSubmenu);
+
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -114,6 +122,7 @@ namespace BugTracker.GUILayer
         private void btnSoporte_Click(object sender, EventArgs e)
         {
             showSubMenu(panelSoporteSubmenu);
+            
         }
 
         private void btnUsuariosXCurso_Click(object sender, EventArgs e)
@@ -261,7 +270,10 @@ namespace BugTracker.GUILayer
 
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnCategoriasXCurso_Click(object sender, EventArgs e)
@@ -271,6 +283,17 @@ namespace BugTracker.GUILayer
             //
             //
             hideSubMenu();
+        }
+
+        private void panelConenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tmFechaHora_Tick_1(object sender, EventArgs e)
+        {
+            lbFecha.Text = DateTime.Now.ToLongDateString();
+            lblHora.Text = DateTime.Now.ToString("HH:mm:ssss");
         }
     }
 }

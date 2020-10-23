@@ -63,17 +63,18 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             reportDataSource2.Name = "DataSet1";
             reportDataSource2.Value = this.usuariosEnCursoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "BugTracker.UsuariosEnCurso.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(-1, 88);
+            this.reportViewer1.Location = new System.Drawing.Point(-1, 105);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(616, 353);
+            this.reportViewer1.Size = new System.Drawing.Size(616, 336);
             this.reportViewer1.TabIndex = 0;
             // 
             // usuariosTableAdapter
@@ -92,9 +93,9 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(220, 51);
+            this.btnBuscar.Location = new System.Drawing.Point(224, 54);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(151, 31);
+            this.btnBuscar.Size = new System.Drawing.Size(151, 36);
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Generar reporte";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -103,7 +104,7 @@
             // dtpFecha_Hasta
             // 
             this.dtpFecha_Hasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha_Hasta.Location = new System.Drawing.Point(462, 12);
+            this.dtpFecha_Hasta.Location = new System.Drawing.Point(462, 19);
             this.dtpFecha_Hasta.Name = "dtpFecha_Hasta";
             this.dtpFecha_Hasta.Size = new System.Drawing.Size(103, 20);
             this.dtpFecha_Hasta.TabIndex = 9;
@@ -111,7 +112,7 @@
             // dtpFecha_Desde
             // 
             this.dtpFecha_Desde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha_Desde.Location = new System.Drawing.Point(114, 12);
+            this.dtpFecha_Desde.Location = new System.Drawing.Point(114, 19);
             this.dtpFecha_Desde.Name = "dtpFecha_Desde";
             this.dtpFecha_Desde.Size = new System.Drawing.Size(103, 20);
             this.dtpFecha_Desde.TabIndex = 8;
@@ -120,7 +121,7 @@
             // 
             this.lblFecha_hasta.AutoSize = true;
             this.lblFecha_hasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha_hasta.Location = new System.Drawing.Point(371, 16);
+            this.lblFecha_hasta.Location = new System.Drawing.Point(371, 23);
             this.lblFecha_hasta.Name = "lblFecha_hasta";
             this.lblFecha_hasta.Size = new System.Drawing.Size(85, 16);
             this.lblFecha_hasta.TabIndex = 7;
@@ -131,7 +132,7 @@
             // 
             this.lblFecha_desde.AutoSize = true;
             this.lblFecha_desde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha_desde.Location = new System.Drawing.Point(24, 16);
+            this.lblFecha_desde.Location = new System.Drawing.Point(24, 23);
             this.lblFecha_desde.Name = "lblFecha_desde";
             this.lblFecha_desde.Size = new System.Drawing.Size(91, 16);
             this.lblFecha_desde.TabIndex = 6;

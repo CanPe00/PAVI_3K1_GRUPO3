@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography.X509Certificates;
+using Microsoft.Reporting.WinForms;
 
 namespace BugTracker.GUILayer.ReporteFechaFinCurso
 {
@@ -29,6 +30,7 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
         
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            
 
             if (chkTodos.Checked)
             {
@@ -68,6 +70,20 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
                 }
                 
             }
+
+            if (!chkTodos.Checked)
+            {
+                reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                new ReportParameter("prFechaDesde", "Período Desde: " + dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
+                new ReportParameter("prFechaHasta", "  Hasta: " + dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
+            }
+
+            else
+            {
+                reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                new ReportParameter("prFechaDesde", " "),
+                new ReportParameter("prFechaHasta", " ") });
+            }
         }
 
         private void frmGeneradorReporteFechaFinCurso_Load(object sender, EventArgs e)
@@ -76,9 +92,12 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
             
             LlenarCombo(cbcCurso, oCursoService.ObtenerTodos(), "nombre", "id_curso");
             LlenarCombo(cbcUsuario, oUsuarioService.ObtenerTodos(), "nombreUsuario", "idUsuario");
-            
+            reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                new ReportParameter("prFechaDesde", " "),
+                new ReportParameter("prFechaHasta", " ") });
 
-            
+
+
         }
 
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)

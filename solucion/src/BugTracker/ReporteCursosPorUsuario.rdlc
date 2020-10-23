@@ -299,7 +299,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>3.70361cm</Top>
+            <Top>4.02111cm</Top>
             <Left>1.12464cm</Left>
             <Height>1.2cm</Height>
             <Width>14.26072cm</Width>
@@ -435,49 +435,47 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox4">
+          <Textbox Name="Textbox7">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Período: Desde:</Value>
+                    <Value>Período Desde:  </Value>
                     <Style>
-                      <FontSize>11pt</FontSize>
+                      <FontFamily>Arial Black</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!prFechaDesde.Value</Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
+                    <Style />
                   </TextRun>
                   <TextRun>
-                    <Value>- Hasta: </Value>
+                    <Value xml:space="preserve">  </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>Hasta:  </Value>
                     <Style>
-                      <FontSize>11pt</FontSize>
+                      <FontFamily>Arial Black</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!prFechaHasta.Value</Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>2.60297cm</Top>
-            <Left>0.47307cm</Left>
+            <Top>2.67188cm</Top>
+            <Left>0.43451cm</Left>
             <Height>0.6cm</Height>
-            <Width>12.58062cm</Width>
+            <Width>11.45835cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -490,7 +488,7 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>2.11458in</Height>
+        <Height>2.38541in</Height>
         <Style>
           <BackgroundColor>#fafafa</BackgroundColor>
         </Style>

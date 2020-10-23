@@ -39,6 +39,10 @@ namespace BugTracker.GUILayer.Estadisticas
             if (chkTodos.Checked)
             {
                 sql += " GROUP BY CA.id_categoria, CA.nombre ";
+                reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                new ReportParameter("prFechaDesde", " "),
+                new ReportParameter("prFechaHasta", " ") });
+
                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", oDm.ConsultaSQL(sql)));
                 reportViewer1.RefreshReport();
@@ -47,6 +51,10 @@ namespace BugTracker.GUILayer.Estadisticas
 
             else
             {
+                reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                new ReportParameter("prFechaDesde", "Período Desde: " + dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
+                new ReportParameter("prFechaHasta", "  Hasta: " + dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
+
                 if (dtpFechaDesde.Value > dtpFechaHasta.Value)
                 {
                     MessageBox.Show("Fechas erroneas!!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;
@@ -79,5 +87,7 @@ namespace BugTracker.GUILayer.Estadisticas
             }
             
         }
+
+        
     }
 }

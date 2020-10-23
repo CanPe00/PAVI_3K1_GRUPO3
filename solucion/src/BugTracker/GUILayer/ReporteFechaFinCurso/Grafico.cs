@@ -28,10 +28,14 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
         {
             // TODO: esta línea de código carga datos en la tabla 'dataSet1.GraficoCursosTerminados' Puede moverla o quitarla según sea necesario.
             frmGeneradorReporteFechaFinCurso rep = new frmGeneradorReporteFechaFinCurso();
-           
-            
+
+
             //this.graficoCursosTerminadosTableAdapter.FillByUsuario(this.dataSet1.GraficoCursosTerminados, FechaDesde, FechaHasta, Usuario);
-            
+            reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                new ReportParameter("prFechaDesde", "Período Desde: " + FechaDesde.ToString("dd/MM/yyyy")),
+                new ReportParameter("prFechaHasta", "  Hasta: " + FechaHasta.ToString("dd/MM/yyyy")) });
+
+
             if ((Curso == 0) && (Usuario == 0) && !rep.chkTodos.Checked)
             {
                 this.graficoCursosTerminadosTableAdapter.FillByFecha(this.dataSet1.GraficoCursosTerminados, FechaDesde, FechaHasta);
@@ -65,12 +69,17 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
                         {
                             this.graficoCursosTerminadosTableAdapter.FillByFecha(this.dataSet1.GraficoCursosTerminados, FechaDesde, FechaHasta);
                             this.reportViewer1.RefreshReport();
+
                         }
 
                         else
                         {
                             this.graficoCursosTerminadosTableAdapter.Fill(this.dataSet1.GraficoCursosTerminados);
                             this.reportViewer1.RefreshReport();
+                            reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                            new ReportParameter("prFechaDesde", " "),
+                            new ReportParameter("prFechaHasta", " ") });
+
                         }
                         
                     }
