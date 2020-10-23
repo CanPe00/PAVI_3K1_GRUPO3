@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarioCurso));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblN_Curso = new System.Windows.Forms.Label();
             this.lblN_Usuario = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.chkTodos = new System.Windows.Forms.CheckBox();
-            this.dgvUsuarioCurso = new System.Windows.Forms.DataGridView();
             this.cboUsuario = new System.Windows.Forms.ComboBox();
             this.cboCurso = new System.Windows.Forms.ComboBox();
             this.UsuarioCurso = new System.Windows.Forms.GroupBox();
@@ -44,8 +46,9 @@
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCurso)).BeginInit();
+            this.dgvUsuarioCurso = new System.Windows.Forms.DataGridView();
             this.UsuarioCurso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCurso)).BeginInit();
             this.SuspendLayout();
             // 
             // lblN_Curso
@@ -53,7 +56,7 @@
             this.lblN_Curso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblN_Curso.AutoSize = true;
             this.lblN_Curso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblN_Curso.Location = new System.Drawing.Point(77, 33);
+            this.lblN_Curso.Location = new System.Drawing.Point(78, 33);
             this.lblN_Curso.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblN_Curso.Name = "lblN_Curso";
             this.lblN_Curso.Size = new System.Drawing.Size(91, 15);
@@ -66,7 +69,7 @@
             this.lblN_Usuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblN_Usuario.AutoSize = true;
             this.lblN_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblN_Usuario.Location = new System.Drawing.Point(66, 65);
+            this.lblN_Usuario.Location = new System.Drawing.Point(67, 65);
             this.lblN_Usuario.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblN_Usuario.Name = "lblN_Usuario";
             this.lblN_Usuario.Size = new System.Drawing.Size(102, 15);
@@ -82,7 +85,7 @@
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(424, 35);
+            this.btnConsultar.Location = new System.Drawing.Point(426, 35);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(6);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(129, 50);
@@ -96,7 +99,7 @@
             this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chkTodos.AutoSize = true;
             this.chkTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkTodos.Location = new System.Drawing.Point(180, 98);
+            this.chkTodos.Location = new System.Drawing.Point(181, 98);
             this.chkTodos.Margin = new System.Windows.Forms.Padding(6);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Size = new System.Drawing.Size(60, 19);
@@ -105,35 +108,13 @@
             this.chkTodos.UseVisualStyleBackColor = true;
             this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
             // 
-            // dgvUsuarioCurso
-            // 
-            this.dgvUsuarioCurso.AllowUserToAddRows = false;
-            this.dgvUsuarioCurso.AllowUserToDeleteRows = false;
-            this.dgvUsuarioCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvUsuarioCurso.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUsuarioCurso.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            this.dgvUsuarioCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarioCurso.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvUsuarioCurso.Location = new System.Drawing.Point(12, 155);
-            this.dgvUsuarioCurso.Margin = new System.Windows.Forms.Padding(6);
-            this.dgvUsuarioCurso.MultiSelect = false;
-            this.dgvUsuarioCurso.Name = "dgvUsuarioCurso";
-            this.dgvUsuarioCurso.ReadOnly = true;
-            this.dgvUsuarioCurso.RowHeadersWidth = 82;
-            this.dgvUsuarioCurso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarioCurso.Size = new System.Drawing.Size(636, 312);
-            this.dgvUsuarioCurso.TabIndex = 6;
-            this.dgvUsuarioCurso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarioCurso_CellContentClick);
-            // 
             // cboUsuario
             // 
             this.cboUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
             this.cboUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUsuario.FormattingEnabled = true;
-            this.cboUsuario.Location = new System.Drawing.Point(180, 65);
+            this.cboUsuario.Location = new System.Drawing.Point(181, 65);
             this.cboUsuario.Margin = new System.Windows.Forms.Padding(6);
             this.cboUsuario.Name = "cboUsuario";
             this.cboUsuario.Size = new System.Drawing.Size(210, 21);
@@ -145,7 +126,7 @@
             this.cboCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
             this.cboCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCurso.FormattingEnabled = true;
-            this.cboCurso.Location = new System.Drawing.Point(180, 32);
+            this.cboCurso.Location = new System.Drawing.Point(181, 32);
             this.cboCurso.Margin = new System.Windows.Forms.Padding(6);
             this.cboCurso.Name = "cboCurso";
             this.cboCurso.Size = new System.Drawing.Size(210, 21);
@@ -156,20 +137,20 @@
             this.UsuarioCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.UsuarioCurso.Controls.Add(this.dgvUsuarioCurso);
             this.UsuarioCurso.Controls.Add(this.btnReiniciarCombos);
             this.UsuarioCurso.Controls.Add(this.cboCurso);
             this.UsuarioCurso.Controls.Add(this.cboUsuario);
-            this.UsuarioCurso.Controls.Add(this.dgvUsuarioCurso);
             this.UsuarioCurso.Controls.Add(this.chkTodos);
             this.UsuarioCurso.Controls.Add(this.btnConsultar);
             this.UsuarioCurso.Controls.Add(this.lblN_Usuario);
             this.UsuarioCurso.Controls.Add(this.lblN_Curso);
             this.UsuarioCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UsuarioCurso.Location = new System.Drawing.Point(18, 15);
+            this.UsuarioCurso.Location = new System.Drawing.Point(15, 15);
             this.UsuarioCurso.Margin = new System.Windows.Forms.Padding(6);
             this.UsuarioCurso.Name = "UsuarioCurso";
             this.UsuarioCurso.Padding = new System.Windows.Forms.Padding(6);
-            this.UsuarioCurso.Size = new System.Drawing.Size(660, 479);
+            this.UsuarioCurso.Size = new System.Drawing.Size(663, 479);
             this.UsuarioCurso.TabIndex = 9;
             this.UsuarioCurso.TabStop = false;
             this.UsuarioCurso.Text = "Buscar Usuario en Curso";
@@ -178,12 +159,13 @@
             // btnReiniciarCombos
             // 
             this.btnReiniciarCombos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnReiniciarCombos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.btnReiniciarCombos.BackColor = System.Drawing.Color.Transparent;
+            this.btnReiniciarCombos.FlatAppearance.BorderSize = 0;
             this.btnReiniciarCombos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReiniciarCombos.Image = global::BugTracker.Properties.Resources.replyback_87524;
-            this.btnReiniciarCombos.Location = new System.Drawing.Point(348, 98);
+            this.btnReiniciarCombos.Image = ((System.Drawing.Image)(resources.GetObject("btnReiniciarCombos.Image")));
+            this.btnReiniciarCombos.Location = new System.Drawing.Point(392, 45);
             this.btnReiniciarCombos.Name = "btnReiniciarCombos";
-            this.btnReiniciarCombos.Size = new System.Drawing.Size(42, 39);
+            this.btnReiniciarCombos.Size = new System.Drawing.Size(33, 30);
             this.btnReiniciarCombos.TabIndex = 9;
             this.btnReiniciarCombos.UseVisualStyleBackColor = false;
             this.btnReiniciarCombos.Click += new System.EventHandler(this.btnReiniciarCombos_Click);
@@ -290,6 +272,51 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // dgvUsuarioCurso
+            // 
+            this.dgvUsuarioCurso.AllowUserToAddRows = false;
+            this.dgvUsuarioCurso.AllowUserToDeleteRows = false;
+            this.dgvUsuarioCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvUsuarioCurso.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUsuarioCurso.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvUsuarioCurso.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.dgvUsuarioCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvUsuarioCurso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarioCurso.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUsuarioCurso.ColumnHeadersHeight = 30;
+            this.dgvUsuarioCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvUsuarioCurso.EnableHeadersVisualStyles = false;
+            this.dgvUsuarioCurso.GridColor = System.Drawing.Color.Black;
+            this.dgvUsuarioCurso.Location = new System.Drawing.Point(9, 126);
+            this.dgvUsuarioCurso.Name = "dgvUsuarioCurso";
+            this.dgvUsuarioCurso.ReadOnly = true;
+            this.dgvUsuarioCurso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarioCurso.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUsuarioCurso.RowHeadersVisible = false;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvUsuarioCurso.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvUsuarioCurso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUsuarioCurso.Size = new System.Drawing.Size(645, 344);
+            this.dgvUsuarioCurso.TabIndex = 20;
+            // 
             // frmUsuarioCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,9 +338,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios regitrados y activos en Cursos ";
             this.Load += new System.EventHandler(this.frmUsuarioCurso_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCurso)).EndInit();
             this.UsuarioCurso.ResumeLayout(false);
             this.UsuarioCurso.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCurso)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,7 +351,6 @@
         private System.Windows.Forms.Label lblN_Usuario;
         private System.Windows.Forms.Button btnConsultar;
         internal System.Windows.Forms.CheckBox chkTodos;
-        private System.Windows.Forms.DataGridView dgvUsuarioCurso;
         private System.Windows.Forms.ComboBox cboUsuario;
         private System.Windows.Forms.ComboBox cboCurso;
         private System.Windows.Forms.GroupBox UsuarioCurso;
@@ -335,5 +361,6 @@
         private System.Windows.Forms.Button btnReporteUsuarioCurso;
         private System.Windows.Forms.Button btnReporteCursosPorUsuario;
         internal System.Windows.Forms.Button btnReiniciarCombos;
+        private System.Windows.Forms.DataGridView dgvUsuarioCurso;
     }
 }

@@ -136,25 +136,25 @@ namespace BugTracker.GUILayer.Objetivos
             dgvObjetivos.AutoGenerateColumns = false;
 
             // Cambia el estilo de la cabecera de la grilla.
-            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+            //DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
 
-            columnHeaderStyle.BackColor = Color.Beige;
-            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
-            dgvObjetivos.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+            //columnHeaderStyle.BackColor = Color.Beige;
+            //columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
+            //dgvObjetivos.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
             dgvObjetivos.Columns[0].Name = "Nombre corto";
             dgvObjetivos.Columns[0].DataPropertyName = "Nombre_corto";
-            dgvObjetivos.Columns[0].Width = 115;
+            //dgvObjetivos.Columns[0].Width = 115;
             // Definimos el ancho de la columna.
 
             dgvObjetivos.Columns[1].Name = "Nombre largo";
             dgvObjetivos.Columns[1].DataPropertyName = "Nombre_largo";
-            dgvObjetivos.Columns[1].Width = 115;
+            //dgvObjetivos.Columns[1].Width = 115;
 
             dgvObjetivos.Columns[2].Name = "Descripcion";
             dgvObjetivos.Columns[2].DataPropertyName = "Descripcion";
-            dgvObjetivos.Columns[2].Width = 300;
+            //dgvObjetivos.Columns[2].Width = 300;
 
             // Cambia el tamaño de la altura de los encabezados de columna.
             //dgvObjetivos.AutoResizeColumnHeadersHeight();
@@ -181,6 +181,11 @@ namespace BugTracker.GUILayer.Objetivos
                 txtNombre_corto.Enabled = true;
                 txtNombre_largo.Enabled = true;
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -32,25 +32,25 @@ namespace BugTracker.GUILayer.Actividades
             dgvActividades.AutoGenerateColumns = false;
 
             // Cambia el estilo de la cabecera de la grilla.
-            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+            //DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
 
-            columnHeaderStyle.BackColor = Color.Beige;
-            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
-            dgvActividades.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+            //columnHeaderStyle.BackColor = Color.Beige;
+            //columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
+            //dgvActividades.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
             dgvActividades.Columns[0].Name = "Id Actividad";
             dgvActividades.Columns[0].DataPropertyName = "id_actividad";
-            dgvActividades.Columns[0].Width = 115;
+            //dgvActividades.Columns[0].Width = 115;
             // Definimos el ancho de la columna.
 
             dgvActividades.Columns[1].Name = "Nombre";
             dgvActividades.Columns[1].DataPropertyName = "nombre";
-            dgvActividades.Columns[1].Width = 115;
+            //dgvActividades.Columns[1].Width = 115;
 
             dgvActividades.Columns[2].Name = "Descripcion";
             dgvActividades.Columns[2].DataPropertyName = "descripcion";
-            dgvActividades.Columns[2].Width = 300;
+            //dgvActividades.Columns[2].Width = 300;
 
             // Cambia el tamaño de la altura de los encabezados de columna.
             //dgvObjetivos.AutoResizeColumnHeadersHeight();
@@ -175,6 +175,11 @@ namespace BugTracker.GUILayer.Actividades
         private void frmActividades_Load(object sender, EventArgs e)
         {
             habilitar(false);
+        }
+
+        private void dgvActividades_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

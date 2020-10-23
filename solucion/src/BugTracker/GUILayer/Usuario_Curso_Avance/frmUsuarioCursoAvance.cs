@@ -52,11 +52,11 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
             dgvUsuarioCursoAvance.AutoGenerateColumns = false;
 
             // Cambia el estilo de la cabecera de la grilla.
-            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+            //DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
 
-            columnHeaderStyle.BackColor = Color.Beige;
-            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
-            dgvUsuarioCursoAvance.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+            //columnHeaderStyle.BackColor = Color.Beige;
+            //columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
+            //dgvUsuarioCursoAvance.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
             dgvUsuarioCursoAvance.Columns[0].Name = "Actividades";
@@ -70,16 +70,11 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
 
 
             // Cambia el tamaño de la altura de los encabezados de columna.
-            dgvUsuarioCursoAvance.AutoResizeColumnHeadersHeight();
+            //dgvUsuarioCursoAvance.AutoResizeColumnHeadersHeight();
 
-            // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
-            dgvUsuarioCursoAvance.AutoResizeRows(
-                DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
-        }
-
-        private void lblN_Curso_Click(object sender, EventArgs e)
-        {
-
+            //// Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
+            //dgvUsuarioCursoAvance.AutoResizeRows(
+            //    DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
         }
 
         private void UsuarioCurso_Enter(object sender, EventArgs e)
@@ -88,11 +83,6 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
         }
 
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvUsuarioCursoAvance_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -169,20 +159,21 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
             //oUsuarioCursoAvanceService.ActualizarUsuarioCursoAvance(oUsuarioCursoAvance);
 
         }
-
-       
-
-        private void dgvUsuarioCursoAvance_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void btnReporte_Click(object sender, EventArgs e)
         {
+            AvanceCursoUsuario avance = new AvanceCursoUsuario(idCurso,idUsuario);
+            avance.ShowDialog();
+            
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnGrafico_Click(object sender, EventArgs e)
         {
-
+            GraficoAvance avance = new GraficoAvance(idCurso, idUsuario);
+            avance.ShowDialog();
         }
 
-        private void txtPorcentaje_TextChanged(object sender, EventArgs e)
+        private void dgvUsuarioCursoAvance_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -198,20 +189,6 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
                     e.FormattingApplied = true;
                 }
             }
-        }
-
-        private void btnReporte_Click(object sender, EventArgs e)
-        {
-            AvanceCursoUsuario avance = new AvanceCursoUsuario(idCurso,idUsuario);
-            avance.ShowDialog();
-            
-
-        }
-
-        private void btnGrafico_Click(object sender, EventArgs e)
-        {
-            GraficoAvance avance = new GraficoAvance(idCurso, idUsuario);
-            avance.ShowDialog();
         }
     }
 }

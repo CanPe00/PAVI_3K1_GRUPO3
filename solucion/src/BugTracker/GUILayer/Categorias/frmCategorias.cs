@@ -34,25 +34,25 @@ namespace BugTracker.GUILayer.Categorias
             dgvCategorias.AutoGenerateColumns = false;
 
             // Cambia el estilo de la cabecera de la grilla.
-            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+            //DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
 
-            columnHeaderStyle.BackColor = Color.Beige;
-            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
-            dgvCategorias.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+            
+            //columnHeaderStyle.Font = new Font("Verdana", 22, FontStyle.Bold);
+            //dgvCategorias.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
             dgvCategorias.Columns[0].Name = "Id Categoria";
             dgvCategorias.Columns[0].DataPropertyName = "id_categoria";
-            dgvCategorias.Columns[0].Width = 115;
+            // dgvCategorias.Columns[0].Width = 115;
             // Definimos el ancho de la columna.
 
             dgvCategorias.Columns[1].Name = "Nombre";
             dgvCategorias.Columns[1].DataPropertyName = "nombre";
-            dgvCategorias.Columns[1].Width = 115;
+            //dgvCategorias.Columns[1].Width = 115;
 
             dgvCategorias.Columns[2].Name = "Descripcion";
             dgvCategorias.Columns[2].DataPropertyName = "descripcion";
-            dgvCategorias.Columns[2].Width = 300;
+            //dgvCategorias.Columns[2].Width = 300;
 
             // Cambia el tamaño de la altura de los encabezados de columna.
             //dgvObjetivos.AutoResizeColumnHeadersHeight();

@@ -149,7 +149,7 @@ namespace BugTracker.DataAccessLayer
                 Borrado = Convert.ToBoolean(row["borrado"].ToString()),
                 
                 Descripcion = row["descripcion"].ToString(),
-                Fecha_vigencia = Convert.ToDateTime(row["fecha_vigencia"]),
+                Fecha_vigencia = Convert.ToDateTime(row["fecha_vigencia"].ToString()),
                 Categoria = new Categoria()
                 {
                     Id_categoria = Convert.ToInt32(row["id_categoria"].ToString()),
@@ -175,7 +175,7 @@ namespace BugTracker.DataAccessLayer
                             " VALUES (" +
                             "'" + oCurso.Nombre + "'" + "," +
                             "'" + oCurso.Descripcion + "'" + "," +
-                            "'" + oCurso.Fecha_vigencia + "'" + "," +
+                            "'" + oCurso.Fecha_vigencia.ToString("yyyy/MM/dd") + "'" + "," +
                             "'" + oCurso.Categoria.Id_categoria + "'" + "," +
                              "0)";
 
@@ -210,7 +210,7 @@ namespace BugTracker.DataAccessLayer
                 string str_sql = "UPDATE Cursos " +
                              "SET nombre =" + "'" + oCurso.Nombre + "'" + "," +
                              " descripcion =" + "'" + oCurso.Descripcion+ "'" + "," +
-                             " fecha_vigencia =" + "'" + oCurso.Fecha_vigencia + "'" + "," +
+                             " fecha_vigencia =" + "'" + oCurso.Fecha_vigencia.ToString("yyyy/MM/dd") + "'" + "," +
                              " id_categoria=" + oCurso.Categoria.Id_categoria +
                              " WHERE  id_curso =" + oCurso.Id_curso + " AND  borrado=0";
 

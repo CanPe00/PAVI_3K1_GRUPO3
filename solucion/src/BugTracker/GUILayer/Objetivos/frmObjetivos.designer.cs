@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmObjetivos));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvObjetivos = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblNombre_corto = new System.Windows.Forms.Label();
             this.lblNombre_largo = new System.Windows.Forms.Label();
             this.txtNombre_corto = new System.Windows.Forms.TextBox();
             this.txtNombre_largo = new System.Windows.Forms.TextBox();
-            this.dgvObjetivos = new System.Windows.Forms.DataGridView();
             this.chkTodos = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvObjetivos)).BeginInit();
@@ -106,12 +109,12 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.dgvObjetivos);
             this.groupBox1.Controls.Add(this.btnConsultar);
             this.groupBox1.Controls.Add(this.lblNombre_corto);
             this.groupBox1.Controls.Add(this.lblNombre_largo);
             this.groupBox1.Controls.Add(this.txtNombre_corto);
             this.groupBox1.Controls.Add(this.txtNombre_largo);
-            this.groupBox1.Controls.Add(this.dgvObjetivos);
             this.groupBox1.Controls.Add(this.chkTodos);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -120,6 +123,52 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Objetivos";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // dgvObjetivos
+            // 
+            this.dgvObjetivos.AllowUserToAddRows = false;
+            this.dgvObjetivos.AllowUserToDeleteRows = false;
+            this.dgvObjetivos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvObjetivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvObjetivos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvObjetivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.dgvObjetivos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvObjetivos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvObjetivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvObjetivos.ColumnHeadersHeight = 30;
+            this.dgvObjetivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvObjetivos.EnableHeadersVisualStyles = false;
+            this.dgvObjetivos.GridColor = System.Drawing.Color.Black;
+            this.dgvObjetivos.Location = new System.Drawing.Point(6, 141);
+            this.dgvObjetivos.Name = "dgvObjetivos";
+            this.dgvObjetivos.ReadOnly = true;
+            this.dgvObjetivos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvObjetivos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvObjetivos.RowHeadersVisible = false;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvObjetivos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvObjetivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvObjetivos.Size = new System.Drawing.Size(648, 332);
+            this.dgvObjetivos.TabIndex = 20;
             // 
             // btnConsultar
             // 
@@ -181,23 +230,6 @@
             this.txtNombre_largo.Size = new System.Drawing.Size(213, 21);
             this.txtNombre_largo.TabIndex = 3;
             // 
-            // dgvObjetivos
-            // 
-            this.dgvObjetivos.AllowUserToAddRows = false;
-            this.dgvObjetivos.AllowUserToDeleteRows = false;
-            this.dgvObjetivos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvObjetivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvObjetivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(214)))));
-            this.dgvObjetivos.ColumnHeadersHeight = 30;
-            this.dgvObjetivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvObjetivos.Location = new System.Drawing.Point(6, 161);
-            this.dgvObjetivos.Name = "dgvObjetivos";
-            this.dgvObjetivos.RowHeadersWidth = 82;
-            this.dgvObjetivos.Size = new System.Drawing.Size(648, 312);
-            this.dgvObjetivos.TabIndex = 5;
-            // 
             // chkTodos
             // 
             this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -247,7 +279,7 @@
         private System.Windows.Forms.Label lblNombre_largo;
         private System.Windows.Forms.TextBox txtNombre_corto;
         private System.Windows.Forms.TextBox txtNombre_largo;
-        private System.Windows.Forms.DataGridView dgvObjetivos;
         private System.Windows.Forms.CheckBox chkTodos;
+        private System.Windows.Forms.DataGridView dgvObjetivos;
     }
 }

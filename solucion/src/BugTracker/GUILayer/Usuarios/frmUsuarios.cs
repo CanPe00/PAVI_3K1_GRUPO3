@@ -164,11 +164,11 @@ namespace BugTracker.GUILayer.Usuarios
             dgvUsers.AutoGenerateColumns = false;
 
             // Cambia el estilo de la cabecera de la grilla.
-            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+            //DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
 
-            columnHeaderStyle.BackColor = Color.Beige;
-            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
-            dgvUsers.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+            //columnHeaderStyle.BackColor = Color.Beige;
+            //columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
+            //dgvUsers.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
             dgvUsers.Columns[0].Name = "Usuario";
@@ -182,11 +182,11 @@ namespace BugTracker.GUILayer.Usuarios
             dgvUsers.Columns[2].DataPropertyName = "Perfil";
 
             // Cambia el tamaño de la altura de los encabezados de columna.
-            dgvUsers.AutoResizeColumnHeadersHeight();
+            //dgvUsers.AutoResizeColumnHeadersHeight();
 
             // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
-            dgvUsers.AutoResizeRows(
-                DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+            //dgvUsers.AutoResizeRows(
+            //    DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
         }
 
         private void habilitar(bool x)
@@ -196,6 +196,11 @@ namespace BugTracker.GUILayer.Usuarios
         }
 
         private void cboPerfiles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlFiltros_Enter(object sender, EventArgs e)
         {
 
         }

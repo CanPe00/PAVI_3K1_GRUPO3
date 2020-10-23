@@ -245,8 +245,8 @@ namespace BugTracker.GUILayer
             this.WindowState = FormWindowState.Maximized;
             frmLogin login = new frmLogin();
             login.ShowDialog();
-            btnNombre.Text = "Bienvenido " + login.UsuarioLogueado;
-            
+            lblBienvenido.Text = "Bienvenido " + login.UsuarioLogueado;
+
         }
 
         private void btnCursos_Click(object sender, EventArgs e)
@@ -259,11 +259,6 @@ namespace BugTracker.GUILayer
         }
 
         private void lblNombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnNombre_Click(object sender, EventArgs e)
         {
 
         }
@@ -294,6 +289,11 @@ namespace BugTracker.GUILayer
         {
             lbFecha.Text = DateTime.Now.ToLongDateString();
             lblHora.Text = DateTime.Now.ToString("HH:mm:ssss");
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

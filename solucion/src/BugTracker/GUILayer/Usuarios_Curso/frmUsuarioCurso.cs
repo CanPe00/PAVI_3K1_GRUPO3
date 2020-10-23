@@ -66,11 +66,11 @@ namespace BugTracker.GUILayer.Usuarios_Curso
             dgvUsuarioCurso.AutoGenerateColumns = false;
 
             // Cambia el estilo de la cabecera de la grilla.
-            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+            //DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
 
-            columnHeaderStyle.BackColor = Color.Beige;
-            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
-            dgvUsuarioCurso.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+            //columnHeaderStyle.BackColor = Color.Beige;
+            //columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
+            //dgvUsuarioCurso.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
             dgvUsuarioCurso.Columns[0].Name = "Usuario";
@@ -87,11 +87,11 @@ namespace BugTracker.GUILayer.Usuarios_Curso
 
 
             // Cambia el tamaño de la altura de los encabezados de columna.
-            dgvUsuarioCurso.AutoResizeColumnHeadersHeight();
+            //dgvUsuarioCurso.AutoResizeColumnHeadersHeight();
 
-            // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
-            dgvUsuarioCurso.AutoResizeRows(
-                DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+            //// Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
+            //dgvUsuarioCurso.AutoResizeRows(
+            //    DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

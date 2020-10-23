@@ -59,13 +59,13 @@ namespace BugTracker.Cursos
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
             dgvCursos.AutoGenerateColumns = false;
-
+           
             // Cambia el estilo de la cabecera de la grilla.
-            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+            //DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
 
-            columnHeaderStyle.BackColor = Color.Beige;
-            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
-            dgvCursos.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+            //columnHeaderStyle.BackColor = Color.Beige;
+            //columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
+            //dgvCursos.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
 
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
             dgvCursos.Columns[0].Name = "Nombre";
@@ -81,11 +81,11 @@ namespace BugTracker.Cursos
 
 
             // Cambia el tamaño de la altura de los encabezados de columna.
-            dgvCursos.AutoResizeColumnHeadersHeight();
+            //dgvCursos.AutoResizeColumnHeadersHeight();
 
-            // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
-            dgvCursos.AutoResizeRows(
-                DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+            //// Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
+            //dgvCursos.AutoResizeRows(
+            //    DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
         }
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
