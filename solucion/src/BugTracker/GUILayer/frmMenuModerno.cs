@@ -21,12 +21,32 @@ using BugTracker.GUILayer.Estadisticas;
 namespace BugTracker.GUILayer
 {
     public partial class frmMenuModerno : Form
+
     {
+        private Panel leftBorderBtn;
         public frmMenuModerno()
         {
             InitializeComponent();
             customizeDesing();
+            leftBorderBtn = new Panel();
+            leftBorderBtn.Size = new Size(5, 45);
+            panelSideMenuLateral.Controls.Add(leftBorderBtn);
         }
+
+        private void ActivateButton(object senderBtn, int Y)
+        {
+            if (senderBtn != null)
+            {
+                //DisableButton();  
+                //Left border button
+                leftBorderBtn.BackColor = Color.FromArgb(250, 250, 250); 
+                leftBorderBtn.Location = new Point(0, Y);
+                leftBorderBtn.Visible = true;
+                leftBorderBtn.BringToFront();
+            }
+        }
+
+        
 
         private void customizeDesing()
         {
@@ -80,6 +100,7 @@ namespace BugTracker.GUILayer
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             showSubMenu(panelAgregarSubmenu);
+            ActivateButton(sender,107);
 
         }
 
@@ -122,7 +143,8 @@ namespace BugTracker.GUILayer
         private void btnSoporte_Click(object sender, EventArgs e)
         {
             showSubMenu(panelSoporteSubmenu);
-            
+            ActivateButton(sender, 152);
+
         }
 
         private void btnUsuariosXCurso_Click(object sender, EventArgs e)
@@ -155,6 +177,7 @@ namespace BugTracker.GUILayer
         private void btnListado_Click(object sender, EventArgs e)
         {
             showSubMenu(panelListadoSubmenu);
+            ActivateButton(sender, 197);
         }
 
         private void btnListadoCursos_Click(object sender, EventArgs e)
@@ -187,6 +210,7 @@ namespace BugTracker.GUILayer
         private void btnReportes_Click(object sender, EventArgs e)
         {
             showSubMenu(panelReportesSubmenu);
+            ActivateButton(sender, 242);
         }
 
         private void btnCursosFinalizadosFecha_Click(object sender, EventArgs e)
@@ -265,6 +289,7 @@ namespace BugTracker.GUILayer
 
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
+            ActivateButton(sender, 287);
             if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
