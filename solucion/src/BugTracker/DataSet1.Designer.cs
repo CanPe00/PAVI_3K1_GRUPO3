@@ -6807,7 +6807,7 @@ WHERE        (UC.fecha_fin BETWEEN @fecha_desde AND @fecha_hasta) AND (U.id_usua
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_curso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_curso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        U.usuario, C.nombre, UC.fecha_inicio, UC.fecha_fin
+            this._commandCollection[1].CommandText = @"SELECT        U.usuario, C.nombre, CAST(UC.fecha_inicio AS Date) AS fecha_inicio, CAST(UC.fecha_fin AS Date) AS fecha_fin
 FROM            UsuariosCurso AS UC INNER JOIN
                          Usuarios AS U ON UC.id_usuario = U.id_usuario INNER JOIN
                          Cursos AS C ON UC.id_curso = C.id_curso

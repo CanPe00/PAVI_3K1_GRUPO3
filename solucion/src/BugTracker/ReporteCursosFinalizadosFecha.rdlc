@@ -36,10 +36,10 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\franc\Downloads\REPO_PAV_3K1_2020\PAV_3K1_2020\PAVI_3K1_2020_TRABAJO\solucion\src\BugTracker\DataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\franc\OneDrive\Escritorio\REPO\PAVI_3K1_GRUPO3\solucion\src\BugTracker\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>DataTable1</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterFillMethod>FillTodos</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetDataTodos</rd:TableAdapterGetDataMethod>
         <rd:TableAdapterName>DataTable1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
@@ -248,6 +248,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -293,7 +294,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!fecha_inicio.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>D</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -326,7 +329,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!fecha_fin.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>D</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -373,7 +378,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Top>1.76953cm</Top>
-            <Left>1.13565cm</Left>
+            <Left>1.13566cm</Left>
             <Height>1.2cm</Height>
             <Width>14.26072cm</Width>
             <Style>

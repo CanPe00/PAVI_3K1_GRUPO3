@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BugTracker.GUILayer.Usuario_Curso_Avance
 { 
     public partial class frmUsuarioCursoAvance : Form
@@ -20,7 +21,7 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
         private UsuarioCursoAvance oUsuarioCursoAvance;
         public int idCurso;
         public int idUsuario;
-        private UsuarioCursoAvance oUsuarioCursoAvanceSelected;
+        
        
        
         public frmUsuarioCursoAvance()
@@ -180,6 +181,20 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
 
         private void dgvUsuarioCursoAvance_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            if (this.dgvUsuarioCursoAvance.Columns[e.ColumnIndex].Name == "Finalizado")
+            {
+                if (e.Value is true)
+                {
+                    e.CellStyle.BackColor = Color.Green;
+                    e.CellStyle.ForeColor = Color.White;
+                 
+                }
+                else
+                {
+                    e.CellStyle.BackColor = Color.Red;
+                    e.CellStyle.ForeColor = Color.White;
+                }
+            }
             if (e.ColumnIndex == 2)
             {
                 if (e.Value is bool)
@@ -187,6 +202,8 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
                     bool value = (bool)e.Value;
                     e.Value = (value) ? "Si" : "No";
                     e.FormattingApplied = true;
+                    
+
                 }
             }
         }
