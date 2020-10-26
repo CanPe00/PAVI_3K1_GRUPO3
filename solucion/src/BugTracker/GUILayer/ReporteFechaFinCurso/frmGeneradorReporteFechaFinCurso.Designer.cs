@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGeneradorReporteFechaFinCurso));
+            this.dataTable1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new BugTracker.DataSet1();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
@@ -44,14 +46,22 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnGrafico = new System.Windows.Forms.Button();
-            this.dataTable1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new BugTracker.DataSet1();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable1TableAdapter = new BugTracker.DataSet1TableAdapters.DataTable1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataTable1BindingSource1
+            // 
+            this.dataTable1BindingSource1.DataMember = "DataTable1";
+            this.dataTable1BindingSource1.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -187,6 +197,7 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(695, 430);
             this.reportViewer1.TabIndex = 10;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // btnSalir
             // 
@@ -218,16 +229,6 @@
             this.btnGrafico.TabIndex = 15;
             this.btnGrafico.UseVisualStyleBackColor = false;
             this.btnGrafico.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dataTable1BindingSource1
-            // 
-            this.dataTable1BindingSource1.DataMember = "DataTable1";
-            this.dataTable1BindingSource1.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataTable1BindingSource
             // 

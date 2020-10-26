@@ -212,6 +212,17 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>finalizado</rd:DefaultName>
+                      <ToolTip>if (e.ColumnIndex == 2)
+            {
+                if (e.Value is bool)
+                {
+                    bool value = (bool)e.Value;
+                    e.Value = (value) ? "Si" : "No";
+                    e.FormattingApplied = true;
+                    
+
+                }
+            }</ToolTip>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -449,7 +460,7 @@
             </Image>
           </ReportItems>
           <KeepTogether>true</KeepTogether>
-          <Top>0.6988cm</Top>
+          <Top>0.68557cm</Top>
           <Left>1.51285cm</Left>
           <Height>1.19531cm</Height>
           <Width>14.26073cm</Width>

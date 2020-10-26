@@ -169,5 +169,10 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
             gra.Usuario = Convert.ToInt32(cbcUsuario.SelectedValue);
             gra.ShowDialog();
         }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
