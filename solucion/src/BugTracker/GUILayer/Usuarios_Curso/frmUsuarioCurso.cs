@@ -80,7 +80,7 @@ namespace BugTracker.GUILayer.Usuarios_Curso
             dgvUsuarioCurso.Columns[1].Name = "Curso";
             dgvUsuarioCurso.Columns[1].DataPropertyName = "Curso";
 
-            dgvUsuarioCurso.Columns[2].Name = "Puntuacion";
+            dgvUsuarioCurso.Columns[2].Name = "Puntuación";
             dgvUsuarioCurso.Columns[2].DataPropertyName = "Puntuacion";
 
          
@@ -134,7 +134,7 @@ namespace BugTracker.GUILayer.Usuarios_Curso
                     //si agrego alguna condicion
                     //SIN PARAMETROS
 
-                    MessageBox.Show("condiciones para el where del sql " + condiciones, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("condiciones para el where del sql " + condiciones, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                     dgvUsuarioCurso.DataSource = oUsuariosCursoService.ConsultarConFiltrosSinParametros(condiciones);
                     int filas = dgvUsuarioCurso.RowCount;
@@ -151,7 +151,7 @@ namespace BugTracker.GUILayer.Usuarios_Curso
                     //dgvCursos.DataSource = oCursoService.ConsultarConFiltrosConParametros(filters);
                 }
                 else
-                    MessageBox.Show("Debe ingresar al menos un criterio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe ingresar al menos un criterio.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {   //selecciono el checkbox(todos)
@@ -205,19 +205,7 @@ namespace BugTracker.GUILayer.Usuarios_Curso
             btnConsultar_Click(sender, e);
         }
 
-
-        
-        private void dgvUsuariosCurso_CellClick(object sender, System.Windows.Forms.DataGridViewCellEventArgs e)
-        {
-            habilitar(true);
-        }
-
         private void UsuarioCurso_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvUsuarioCurso_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -230,7 +218,7 @@ namespace BugTracker.GUILayer.Usuarios_Curso
                 formulario.ShowDialog();
             }
             else
-                MessageBox.Show("Debe ingresar al menos un curso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar al menos un Curso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void btnReporteCursosPorUsuario_Click(object sender, EventArgs e)
@@ -241,7 +229,7 @@ namespace BugTracker.GUILayer.Usuarios_Curso
                 formulario.ShowDialog();
             }
             else
-                MessageBox.Show("Debe ingresar al menos un usuario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar al menos un Usuario.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
 

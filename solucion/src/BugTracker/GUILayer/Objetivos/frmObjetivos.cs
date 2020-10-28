@@ -85,7 +85,7 @@ namespace BugTracker.GUILayer.Objetivos
                     //si agrego alguna condicion
                     //SIN PARAMETROS
 
-                    MessageBox.Show("Condiciones para el where del sql " + condiciones, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Condiciones para el where del sql " + condiciones, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     dgvObjetivos.DataSource = oObjetivoService.ConsultarConFiltrosSinParametros(condiciones);
                     int filas = dgvObjetivos.RowCount;
@@ -101,7 +101,7 @@ namespace BugTracker.GUILayer.Objetivos
                     //dgvUsers.DataSource = oUsuarioService.ConsultarConFiltrosConParametros(filters);
                 }
                 else
-                    MessageBox.Show("Debe ingresar al menos un criterio de búsqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe ingresar al menos un criterio de búsqueda.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -152,7 +152,7 @@ namespace BugTracker.GUILayer.Objetivos
             dgvObjetivos.Columns[1].DataPropertyName = "Nombre_largo";
             //dgvObjetivos.Columns[1].Width = 115;
 
-            dgvObjetivos.Columns[2].Name = "Descripcion";
+            dgvObjetivos.Columns[2].Name = "Descripción";
             dgvObjetivos.Columns[2].DataPropertyName = "Descripcion";
             //dgvObjetivos.Columns[2].Width = 300;
 
@@ -186,6 +186,12 @@ namespace BugTracker.GUILayer.Objetivos
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReiniciarCombos_Click(object sender, EventArgs e)
+        {
+            txtNombre_corto.Text = "";
+            txtNombre_largo.Text = "";
         }
     }
 }

@@ -102,7 +102,7 @@ namespace BugTracker.GUILayer.Usuarios
                     //si agrego alguna condicion
                     //SIN PARAMETROS
 
-                    MessageBox.Show("condiciones para el where del sql " + condiciones, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("condiciones para el where del sql " + condiciones, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                     dgvUsers.DataSource = oUsuarioService.ConsultarConFiltrosSinParametros(condiciones);
                     int filas = dgvUsers.RowCount;
@@ -120,7 +120,7 @@ namespace BugTracker.GUILayer.Usuarios
                     //dgvUsers.DataSource = oUsuarioService.ConsultarConFiltrosConParametros(filters);
                 }
                 else
-                    MessageBox.Show("Debe ingresar al menos un criterio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe ingresar al menos un criterio.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -203,6 +203,12 @@ namespace BugTracker.GUILayer.Usuarios
         private void pnlFiltros_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReiniciarCombos_Click(object sender, EventArgs e)
+        {
+            txtNombre.Text = "";
+            cboPerfiles.SelectedIndex = -1;
         }
     }
 }

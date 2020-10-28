@@ -48,7 +48,7 @@ namespace BugTracker.GUILayer.Actividades
             dgvActividades.Columns[1].DataPropertyName = "nombre";
             //dgvActividades.Columns[1].Width = 115;
 
-            dgvActividades.Columns[2].Name = "Descripcion";
+            dgvActividades.Columns[2].Name = "Descripción";
             dgvActividades.Columns[2].DataPropertyName = "descripcion";
             //dgvActividades.Columns[2].Width = 300;
 
@@ -85,7 +85,7 @@ namespace BugTracker.GUILayer.Actividades
                     //si agrego alguna condicion
                     //SIN PARAMETROS
 
-                    MessageBox.Show("condiciones para el where del sql " + condiciones, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("condiciones para el where del sql " + condiciones, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                     dgvActividades.DataSource = oActividadService.ConsultarConFiltrosSinParametros(condiciones);
                     int filas = dgvActividades.RowCount;
@@ -102,7 +102,7 @@ namespace BugTracker.GUILayer.Actividades
                     //dgvCursos.DataSource = oCursoService.ConsultarConFiltrosConParametros(filters);
                 }
                 else
-                    MessageBox.Show("Debe ingresar al menos un criterio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe ingresar al menos un criterio.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     
 
             }
@@ -180,6 +180,11 @@ namespace BugTracker.GUILayer.Actividades
         private void dgvActividades_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnReiniciarCombos_Click(object sender, EventArgs e)
+        {
+            txtNombreAct.Text = "";
         }
     }
 }

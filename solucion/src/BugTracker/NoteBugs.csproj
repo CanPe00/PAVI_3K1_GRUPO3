@@ -301,7 +301,6 @@
     <EmbeddedResource Include="Avance.rdlc" />
     <EmbeddedResource Include="CantUsuarios.rdlc" />
     <EmbeddedResource Include="EstadisticoCategoriasCurso.rdlc" />
-    <EmbeddedResource Include="EstadisticoPerfilesCurso.rdlc" />
     <EmbeddedResource Include="GraficoCursosFinalizados.rdlc" />
     <EmbeddedResource Include="GUILayer\Actividades\frmABMActividad.resx">
       <DependentUpon>frmABMActividad.cs</DependentUpon>
@@ -407,7 +406,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ReporteCursosFinalizadosFecha.rdlc" />
     <EmbeddedResource Include="ReporteCursosPorUsuario.rdlc" />
     <EmbeddedResource Include="UsuariosEnCurso.rdlc" />
@@ -490,6 +488,9 @@
     <None Include="Resources\atras.png" />
     <None Include="Resources\atras1.png" />
     <None Include="Resources\replyback_87524.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUILayer\Actividades_Curso\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

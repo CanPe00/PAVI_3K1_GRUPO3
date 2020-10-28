@@ -115,15 +115,27 @@ namespace BugTracker.Cursos
             // campos obligatorios
             if (txtNombre.Text == string.Empty)
             {
-                txtNombre.BackColor = Color.Red;
+                txtNombre.BackColor = Color.FromArgb(255, 181, 66);
                 txtNombre.Focus();
                 return false;
             }
-            else
-                txtNombre.BackColor = Color.White;
 
-            return true;
-        }
+            if (cboCategoria.SelectedIndex == -1)
+                {
+                    txtNombre.BackColor = Color.White;
+                    cboCategoria.BackColor = Color.FromArgb(255, 181, 66);
+                    cboCategoria.Focus();
+                    return false;
+                }
+
+            else
+                {
+                    cboCategoria.BackColor = Color.White;
+                    txtNombre.BackColor = Color.White;
+                    return true;
+                    }
+        }    
+        
 
         private bool ExisteCurso()
         {
@@ -167,13 +179,13 @@ namespace BugTracker.Cursos
                                 
                                 if (oCursoService.CrearCurso(oCurso))
                                 {
-                                    MessageBox.Show("Curso insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Curso insertado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
                             }
                         }
                         else
-                            MessageBox.Show("Nombre de curso encontrado!. Ingrese un nombre diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Nombre de curso existente, ingrese un nombre diferente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
@@ -190,11 +202,11 @@ namespace BugTracker.Cursos
                            
                             if (oCursoService.ActualizarCurso(oCursoSelected))
                             {
-                                MessageBox.Show("Curso actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Curso actualizado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el curso!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el curso.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;
@@ -202,16 +214,16 @@ namespace BugTracker.Cursos
 
                 case FormMode.delete:
                     {
-                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar el curso seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        if (MessageBox.Show("¿Seguro que desea habilitar/deshabilitar el curso seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
 
                             if (oCursoService.BorrarCurso(oCursoSelected))
                             {
-                                MessageBox.Show("Curso Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Curso Habilitado/Deshabilitado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el curso!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el curso.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;
@@ -230,6 +242,46 @@ namespace BugTracker.Cursos
         }
 
         private void dtpFechaVigencia_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCategoria_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDescripcion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFechaVigencia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNombre_Click(object sender, EventArgs e)
         {
 
         }

@@ -99,12 +99,54 @@ namespace BugTracker.GUILayer.Usuarios
             // campos obligatorios
             if (txtNombre.Text == string.Empty)
             {
-                txtNombre.BackColor = Color.Red;
+                txtNombre.BackColor = Color.FromArgb(255, 181, 66);
                 txtNombre.Focus();
                 return false;
             }
             else
                 txtNombre.BackColor = Color.White;
+
+            if (txtEmail.Text == string.Empty)
+            {
+                txtEmail.BackColor = Color.FromArgb(255, 181, 66);
+                txtEmail.Focus();
+                return false;
+            }
+            else
+                txtEmail.BackColor = Color.White;
+
+            if ((txtPassword.Text == string.Empty) || (txtConfirmarPass.Text == string.Empty))
+            {
+                txtConfirmarPass.BackColor = Color.FromArgb(255, 181, 66);
+                txtPassword.BackColor = Color.FromArgb(255, 181, 66);
+                return false;
+            }
+
+            else
+            {
+                if (txtPassword.Text != txtConfirmarPass.Text)
+                {
+                    txtConfirmarPass.BackColor = Color.Red;
+                    txtPassword.BackColor = Color.Red;
+                    MessageBox.Show("Las contraseñas no coinciden.");
+                }
+                else
+                {
+                    txtConfirmarPass.BackColor = Color.White;
+                    txtPassword.BackColor = Color.White;
+                }
+
+            }
+
+            if (cboPerfil.SelectedIndex == -1)
+            {
+                cboPerfil.BackColor = Color.FromArgb(255, 181, 66);
+                return false;
+            }
+            else
+            {
+                cboPerfil.BackColor = Color.White;
+            }
 
             return true;
         }
@@ -150,13 +192,13 @@ namespace BugTracker.GUILayer.Usuarios
 
                                 if (oUsuarioService.CrearUsuario(oUsuario))
                                 {
-                                    MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Usuario insertado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
                             }
                         }
                         else
-                            MessageBox.Show("Nombre de usuario encontrado!. Ingrese un nombre diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Nombre de usuario existente, ingrese un nombre diferente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
@@ -172,11 +214,11 @@ namespace BugTracker.GUILayer.Usuarios
 
                             if (oUsuarioService.ActualizarUsuario(oUsuarioSelected))
                             {
-                                MessageBox.Show("Usuario actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Usuario actualizado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el usuario.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;
@@ -184,16 +226,16 @@ namespace BugTracker.GUILayer.Usuarios
 
                 case FormMode.delete:
                     {
-                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar el usuario seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        if (MessageBox.Show("¿Seguro que desea habilitar/deshabilitar el usuario seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
 
                             if (oUsuarioService.BorrarUsuario(oUsuarioSelected))
                             {
-                                MessageBox.Show("Usuario Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Usuario Habilitado/Deshabilitado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar usuario.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;

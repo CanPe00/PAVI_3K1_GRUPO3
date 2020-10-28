@@ -42,7 +42,7 @@ namespace BugTracker.GUILayer.Categorias
             {
                 case FormMode.insert:
                     {
-                        this.Text = "Nueva Categoria";
+                        this.Text = "Nueva Categoría";
                         txtNombre.Enabled = true;
                         txtDescripcion.Enabled = true;
                         break;
@@ -50,7 +50,7 @@ namespace BugTracker.GUILayer.Categorias
                 case FormMode.update:
                     {
                         MostrarDatos();
-                        this.Text = "Actualizar Curso";
+                        this.Text = "Actualizar Categoría";
                         txtNombre.Enabled = true;
                         txtDescripcion.Enabled = true;
                         break;
@@ -58,7 +58,7 @@ namespace BugTracker.GUILayer.Categorias
                 case FormMode.delete:
                     {
                         MostrarDatos();
-                        this.Text = "Habilitar/Deshabilitar Categoria";
+                        this.Text = "Habilitar/Deshabilitar Categoría";
                         txtNombre.Enabled = false;
                         txtDescripcion.Enabled = false;
                         break;
@@ -87,7 +87,7 @@ namespace BugTracker.GUILayer.Categorias
             // campos obligatorios
             if (txtNombre.Text == string.Empty)
             {
-                txtNombre.BackColor = Color.Red;
+                txtNombre.BackColor = Color.FromArgb(255, 181, 66);
                 txtNombre.Focus();
                 return false;
             }
@@ -129,7 +129,7 @@ namespace BugTracker.GUILayer.Categorias
 
                                 if (oCategoriaService.CrearCategoria(oCategoria))
                                 {
-                                    MessageBox.Show("Categoria insertada!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Categoría insertada con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
 
 
@@ -137,7 +137,7 @@ namespace BugTracker.GUILayer.Categorias
                             }
                         }
                         else
-                            MessageBox.Show("Nombre de categoria encontrado!. Ingrese un nombre diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Nombre de categoría existente, ingrese un nombre diferente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
@@ -150,11 +150,11 @@ namespace BugTracker.GUILayer.Categorias
 
                             if (oCategoriaService.ActualizarCategoria(oCategoriaSelected))
                             {
-                                MessageBox.Show("Categoria actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Categoría actualizada con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar la categoria!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar categoría.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;
@@ -162,16 +162,16 @@ namespace BugTracker.GUILayer.Categorias
 
                 case FormMode.delete:
                     {
-                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar la categoria seleccionada?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        if (MessageBox.Show("¿Seguro que desea habilitar/deshabilitar la categoría seleccionada?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
 
                             if (oCategoriaService.BorrarCategoria(oCategoriaSelected))
                             {
-                                MessageBox.Show("Categoria Habilitada/Deshabilitada!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Categoría Habilitada/Deshabilitada con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Error al actualizar la categoria!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar la categoría.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;

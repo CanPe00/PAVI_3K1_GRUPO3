@@ -4,6 +4,10 @@
 
     partial class DataSet1
     {
+        partial class AvanceDataTable
+        {
+        }
+
         partial class DataTable1DataTable
         {
         }
@@ -36,6 +40,10 @@
 
 namespace BugTracker.DataSet1TableAdapters
 {
+    partial class EstadisticoPerfilesEnCursosTableAdapter
+    {
+    }
+
     partial class UsuariosEnCursoTableAdapter
     {
 

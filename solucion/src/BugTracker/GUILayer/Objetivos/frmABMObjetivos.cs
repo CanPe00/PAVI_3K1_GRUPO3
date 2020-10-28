@@ -86,7 +86,7 @@ namespace BugTracker.GUILayer.Objetivos
             // campos obligatorios
             if (txtNombre_corto.Text == string.Empty)
             {
-                txtNombre_corto.BackColor = Color.Red;
+                txtNombre_corto.BackColor = Color.FromArgb(255, 181, 66);
                 txtNombre_corto.Focus();
                 return false;
             }
@@ -95,7 +95,7 @@ namespace BugTracker.GUILayer.Objetivos
 
             if (txtNombre_largo.Text == string.Empty)
             {
-                txtNombre_largo.BackColor = Color.Red;
+                txtNombre_largo.BackColor = Color.FromArgb(255, 181, 66);
                 txtNombre_largo.Focus();
                 return false;
             }
@@ -132,13 +132,13 @@ namespace BugTracker.GUILayer.Objetivos
 
                                 if (oObjetivoService.CrearObjetivo(oObjetivo))
                                 {
-                                    MessageBox.Show("Objetivo registrado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Objetivo registrado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
                             }
                         }
                         else
-                            MessageBox.Show("Nombre largo de objetivo ya existente. Ingrese un nombre diferente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Nombre largo de objetivo existente, ingrese un nombre diferente.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         break;
                     }
 
@@ -152,11 +152,11 @@ namespace BugTracker.GUILayer.Objetivos
 
                             if (oObjetivoService.ActualizarObjetivo(oObjetivoSelected))
                             {
-                                MessageBox.Show("Objetivo actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Objetivo actualizado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el objetivo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Error al actualizar el objetivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
                         break;
@@ -173,7 +173,7 @@ namespace BugTracker.GUILayer.Objetivos
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el objetivo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Error al actualizar el objetivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
                         break;

@@ -87,7 +87,7 @@ namespace BugTracker.GUILayer.Actividades
             // campos obligatorios
             if (txtNombre.Text == string.Empty)
             {
-                txtNombre.BackColor = Color.Red;
+                txtNombre.BackColor = Color.FromArgb(255, 181, 66);
                 txtNombre.Focus();
                 return false;
             }
@@ -121,13 +121,13 @@ namespace BugTracker.GUILayer.Actividades
 
                                 if (oActividadService.CrearActividad(oActividad))
                                 {
-                                    MessageBox.Show("Actividad insertada!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Actividad insertada con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
                             }
                         }
                         else
-                            MessageBox.Show("Nombre de actividad encontrado!. Ingrese un nombre diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Nombre de actividad existente, ingrese un nombre diferente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
@@ -140,11 +140,11 @@ namespace BugTracker.GUILayer.Actividades
 
                             if (oActividadService.ActualizarActividad(oActividadSelected))
                             {
-                                MessageBox.Show("Actividad actualizada!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Actividad actualizada con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar la actividad!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar actividad.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;
@@ -152,16 +152,16 @@ namespace BugTracker.GUILayer.Actividades
 
                 case FormMode.delete:
                     {
-                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar la actividad seleccionada?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        if (MessageBox.Show("¿Seguro que desea habilitar/deshabilitar la actividad seleccionada?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
 
                             if (oActividadService.BorrarActividad(oActividadSelected))
                             {
-                                MessageBox.Show("Actividad Habilitada/Deshabilitada!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Actividad Habilitada/Deshabilitada con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Error al actualizar la actividad!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar la actividad.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;

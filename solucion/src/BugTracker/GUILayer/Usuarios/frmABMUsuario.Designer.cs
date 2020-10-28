@@ -73,10 +73,11 @@
             // cboPerfil
             // 
             this.cboPerfil.BackColor = System.Drawing.Color.White;
+            this.cboPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPerfil.FormattingEnabled = true;
             this.cboPerfil.Location = new System.Drawing.Point(16, 210);
             this.cboPerfil.Name = "cboPerfil";
-            this.cboPerfil.Size = new System.Drawing.Size(232, 21);
+            this.cboPerfil.Size = new System.Drawing.Size(232, 23);
             this.cboPerfil.TabIndex = 38;
             // 
             // Label5
@@ -85,9 +86,9 @@
             this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label5.Location = new System.Drawing.Point(22, 195);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(51, 15);
+            this.Label5.Size = new System.Drawing.Size(38, 15);
             this.Label5.TabIndex = 37;
-            this.Label5.Text = "Perfil(*):";
+            this.Label5.Text = "Perfil:";
             // 
             // Label4
             // 
@@ -95,17 +96,18 @@
             this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label4.Location = new System.Drawing.Point(22, 151);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(129, 15);
+            this.Label4.Size = new System.Drawing.Size(116, 15);
             this.Label4.TabIndex = 36;
-            this.Label4.Text = "Repetir Contraseña(*):";
+            this.Label4.Text = "Repetir Contraseña:";
             // 
             // txtConfirmarPass
             // 
             this.txtConfirmarPass.BackColor = System.Drawing.Color.White;
+            this.txtConfirmarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmarPass.Location = new System.Drawing.Point(16, 169);
             this.txtConfirmarPass.Name = "txtConfirmarPass";
             this.txtConfirmarPass.PasswordChar = '*';
-            this.txtConfirmarPass.Size = new System.Drawing.Size(232, 20);
+            this.txtConfirmarPass.Size = new System.Drawing.Size(232, 21);
             this.txtConfirmarPass.TabIndex = 31;
             // 
             // Label3
@@ -114,25 +116,27 @@
             this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.Location = new System.Drawing.Point(22, 106);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(86, 15);
+            this.Label3.Size = new System.Drawing.Size(73, 15);
             this.Label3.TabIndex = 35;
-            this.Label3.Text = "Contraseña(*):";
+            this.Label3.Text = "Contraseña:";
             // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.White;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(16, 123);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(232, 20);
+            this.txtPassword.Size = new System.Drawing.Size(232, 21);
             this.txtPassword.TabIndex = 30;
             // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(16, 77);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(232, 20);
+            this.txtEmail.Size = new System.Drawing.Size(232, 21);
             this.txtEmail.TabIndex = 28;
             // 
             // Label2
@@ -151,16 +155,17 @@
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(22, 14);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(68, 15);
+            this.Label1.Size = new System.Drawing.Size(55, 15);
             this.Label1.TabIndex = 29;
-            this.Label1.Text = "Nombre(*):";
+            this.Label1.Text = "Nombre:";
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(16, 32);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(232, 20);
+            this.txtNombre.Size = new System.Drawing.Size(232, 21);
             this.txtNombre.TabIndex = 27;
             // 
             // frmABMUsuario

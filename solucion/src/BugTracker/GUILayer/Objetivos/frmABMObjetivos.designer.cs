@@ -52,24 +52,27 @@
             // txtNombre_corto
             // 
             this.txtNombre_corto.BackColor = System.Drawing.Color.White;
+            this.txtNombre_corto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre_corto.Location = new System.Drawing.Point(16, 40);
             this.txtNombre_corto.Name = "txtNombre_corto";
-            this.txtNombre_corto.Size = new System.Drawing.Size(232, 20);
+            this.txtNombre_corto.Size = new System.Drawing.Size(232, 21);
             this.txtNombre_corto.TabIndex = 1;
             this.txtNombre_corto.TextChanged += new System.EventHandler(this.txtNombre_corto_TextChanged);
             // 
             // txtNombre_largo
             // 
             this.txtNombre_largo.BackColor = System.Drawing.Color.White;
+            this.txtNombre_largo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre_largo.Location = new System.Drawing.Point(16, 86);
             this.txtNombre_largo.Name = "txtNombre_largo";
-            this.txtNombre_largo.Size = new System.Drawing.Size(232, 20);
+            this.txtNombre_largo.Size = new System.Drawing.Size(232, 21);
             this.txtNombre_largo.TabIndex = 2;
             this.txtNombre_largo.TextChanged += new System.EventHandler(this.txtNombre_largo_TextChanged);
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.White;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(16, 139);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";

@@ -36,7 +36,7 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
                 new ReportParameter("prFechaHasta", "  Hasta: " + FechaHasta.ToString("dd/MM/yyyy")) });
 
 
-            if ((Curso == 0) && (Usuario == 0) && !rep.chkTodos.Checked)
+            if ((Curso == 0) && (Usuario == 0) && !rep.chkTodo.Checked)
             {
                 this.graficoCursosTerminadosTableAdapter.FillByFecha(this.dataSet1.GraficoCursosTerminados, FechaDesde, FechaHasta);
                 this.reportViewer1.RefreshReport();

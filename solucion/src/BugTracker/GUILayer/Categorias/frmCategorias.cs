@@ -50,7 +50,7 @@ namespace BugTracker.GUILayer.Categorias
             dgvCategorias.Columns[1].DataPropertyName = "nombre";
             //dgvCategorias.Columns[1].Width = 115;
 
-            dgvCategorias.Columns[2].Name = "Descripcion";
+            dgvCategorias.Columns[2].Name = "Descripción";
             dgvCategorias.Columns[2].DataPropertyName = "descripcion";
             //dgvCategorias.Columns[2].Width = 300;
 
@@ -86,7 +86,7 @@ namespace BugTracker.GUILayer.Categorias
                     //si agrego alguna condicion
                     //SIN PARAMETROS
 
-                    MessageBox.Show("condiciones para el where del sql " + condiciones, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("condiciones para el where del sql " + condiciones, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                     dgvCategorias.DataSource = oCategoriaService.ConsultarConFiltrosSinParametros(condiciones);
                     int filas = dgvCategorias.RowCount;
@@ -194,6 +194,11 @@ namespace BugTracker.GUILayer.Categorias
         private void frmCategorias_Load(object sender, EventArgs e)
         {
             habilitar(false);
+        }
+
+        private void btnReiniciarCombos_Click(object sender, EventArgs e)
+        {
+            txtNombreCat.Text = "";
         }
     }
 

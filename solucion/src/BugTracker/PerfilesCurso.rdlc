@@ -668,49 +668,33 @@
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
-          <Textbox Name="Textbox1">
+          <Textbox Name="Textbox8">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Período: Desde:</Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
                     <Value>=Parameters!prFecha_Desde.Value</Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
+                    <Style />
                   </TextRun>
                   <TextRun>
-                    <Value>- Hasta: </Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
+                    <Value xml:space="preserve">  </Value>
+                    <Style />
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!prFechaHasta.Value</Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>10.09068cm</Top>
-            <Left>0.44662cm</Left>
+            <rd:DefaultName>Textbox4</rd:DefaultName>
+            <Top>10.12974cm</Top>
+            <Left>4.90642cm</Left>
             <Height>0.6cm</Height>
-            <Width>12.47479cm</Width>
+            <Width>10.69554cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>

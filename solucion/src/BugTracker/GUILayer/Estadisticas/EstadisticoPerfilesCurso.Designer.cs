@@ -156,6 +156,7 @@
             this.chkTodos.TabIndex = 23;
             this.chkTodos.Text = "Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
+            this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
             // 
             // dtpFecha_Desde
             // 

@@ -49,7 +49,7 @@ namespace BugTracker.GUILayer.Usuarios_Curso
             {
                 case FormMode.insert:
                     {
-                        this.Text = "Nuevo Usuario en curso";
+                        this.Text = "Nuevo Usuario en Curso";
                         dtpFecha_fin.Enabled = false;
                         break;
                     }
@@ -73,7 +73,7 @@ namespace BugTracker.GUILayer.Usuarios_Curso
                 case FormMode.delete:
                     {
                         MostrarDatos();
-                        this.Text = "Habilitar/Deshabilitar Usuario en curso";
+                        this.Text = "Habilitar/Deshabilitar Usuario en Curso";
                         cboCurso.Enabled = false;
                         cboUsuario.Enabled = false;
                         txtPuntuacion.Enabled = false;
@@ -116,30 +116,38 @@ namespace BugTracker.GUILayer.Usuarios_Curso
 
         private bool ValidarCampos()
         {
-            int numero;
+            
             // campos obligatorios
-            if (cboCurso.Text == string.Empty)
+            if (cboUsuario.SelectedIndex == -1)
             {
-                cboCurso.BackColor = Color.Red;
+                cboUsuario.BackColor = Color.FromArgb(255, 181, 66);
+                cboUsuario.Focus();
+                return false;
+            }
+            else
+            {
+                cboUsuario.BackColor = Color.White;
+            }
+
+            if (cboCurso.SelectedIndex == -1)
+            {
+                cboCurso.BackColor = Color.FromArgb(255, 181, 66); 
                 cboCurso.Focus();
                 return false;
             }
             else
                 cboCurso.BackColor = Color.White;
 
-            if(cboUsuario.Text==string.Empty)
+            if (txtPuntuacion.Text == "") 
             {
-                cboUsuario.BackColor = Color.Red;
-                cboUsuario.Focus();
+                txtPuntuacion.BackColor = Color.FromArgb(255, 181, 66);
+                txtPuntuacion.Focus();
+                MessageBox.Show("Debe ingresar un valor numérico en Puntuación.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-
-
-            if (txtPuntuacion.Text == "" && !(Int32.TryParse(txtPuntuacion.Text, out numero)))
+            else
             {
-                txtPuntuacion.BackColor = Color.Red;
-                txtPuntuacion.Focus();
-                return false;
+                txtPuntuacion.BackColor = Color.White;
             }
 
             return true;
@@ -159,45 +167,38 @@ namespace BugTracker.GUILayer.Usuarios_Curso
             {
                 case FormMode.insert:
                     {
-                        if (ExisteUsuarioEnCurso() == false)
+                        if (ValidarCampos())
                         {
-                                int numero;
-                                if (txtPuntuacion.Text != "" && (Int32.TryParse(txtPuntuacion.Text, out numero)))
+
+                            if (ExisteUsuarioEnCurso() == false)
+                            {
+                                var oUsuarioCurso = new UsuariosCurso();
+                                oUsuarioCurso.Curso = new Curso();
+                                oUsuarioCurso.Curso.Id_curso = (int)cboCurso.SelectedValue;
+                                oUsuarioCurso.Usuario = new Usuario();
+                                oUsuarioCurso.Usuario.IdUsuario = (int)cboUsuario.SelectedValue;
+
+                                oUsuarioCurso.Puntuacion = Convert.ToInt32(txtPuntuacion.Text.ToString());
+                                oUsuarioCurso.Observaciones = txtObservaciones.Text;
+                                oUsuarioCurso.Fecha_inicio = dtpFechaInicio.Value;
+
+                                if (oUsuariosCursoService.CrearUsuarioCurso(oUsuarioCurso))
                                 {
-                                    var oUsuarioCurso = new UsuariosCurso();
-                                    oUsuarioCurso.Curso = new Curso();
-                                    oUsuarioCurso.Curso.Id_curso = (int)cboCurso.SelectedValue;
-                                    oUsuarioCurso.Usuario = new Usuario();
-                                    oUsuarioCurso.Usuario.IdUsuario = (int)cboUsuario.SelectedValue;
+                                    MessageBox.Show("Usuario en curso insertado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                    oUsuarioCurso.Puntuacion = Convert.ToInt32(txtPuntuacion.Text.ToString());
-                                    oUsuarioCurso.Observaciones = txtObservaciones.Text;
-                                    oUsuarioCurso.Fecha_inicio = dtpFechaInicio.Value;
+                                    frmUsuarioCursoAvance avance = new frmUsuarioCursoAvance((int)cboCurso.SelectedValue, (int)cboUsuario.SelectedValue);
+                                    avance.ShowDialog();
+                                    this.Close();
 
-                                    if (oUsuariosCursoService.CrearUsuarioCurso(oUsuarioCurso))
-                                    {
-                                        MessageBox.Show("Usuario en curso insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                        frmUsuarioCursoAvance avance = new frmUsuarioCursoAvance((int)cboCurso.SelectedValue, (int)cboUsuario.SelectedValue);
-                                        avance.ShowDialog();
-                                        this.Close();
-
-
-                                    }
                                 }
                                 else
-                                {
-                                    txtPuntuacion.BackColor = Color.Red;
-                                    txtPuntuacion.Focus();
-                                    MessageBox.Show("Falta ingresar una puntuación (debe ser numérica)!!");
 
-
+                                    MessageBox.Show("Relación Usuario-Curso con éxito, ingrese un nombre de Usuario o Curso diferente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                
                             }
+                            
 
                         }
-                    
-                        else
-                            MessageBox.Show("Relacion usuario-curso encontrado!. Ingrese un nombre de usuario o curso diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
@@ -216,11 +217,11 @@ namespace BugTracker.GUILayer.Usuarios_Curso
 
                             if (oUsuariosCursoService.ActualizarUsuarioCurso(oUsuarioCursoSelected))
                             {
-                                MessageBox.Show("Usuario-Curso actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Usuario-Curso actualizado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el Usuario-Curso!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el Usuario-Curso.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;
@@ -228,16 +229,16 @@ namespace BugTracker.GUILayer.Usuarios_Curso
 
                 case FormMode.delete:
                     {
-                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar el usuario en curso seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        if (MessageBox.Show("¿Seguro que desea habilitar/deshabilitar el usuario en curso seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
 
                             if (oUsuariosCursoService.BorrarUsuarioCurso(oUsuarioCursoSelected))
                             {
-                                MessageBox.Show("Usuario en curso Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Usuario en curso Habilitado/Deshabilitado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el usuario y/o curso!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el Usuario y/o Curso.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;
@@ -249,8 +250,7 @@ namespace BugTracker.GUILayer.Usuarios_Curso
         {
             string usuario = cboUsuario.SelectedValue.ToString();
             string curso = cboCurso.SelectedValue.ToString();
-
-            return oUsuariosCursoService.ObtenerUsuariosCurso(curso,usuario) != null;
+            return oUsuariosCursoService.ObtenerUsuariosCurso(curso , usuario) != null;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -271,6 +271,30 @@ namespace BugTracker.GUILayer.Usuarios_Curso
         private void cboCurso_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPuntuacion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPuntuacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+
+            if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan
+                e.Handled = true;
+            }
         }
     }
 }

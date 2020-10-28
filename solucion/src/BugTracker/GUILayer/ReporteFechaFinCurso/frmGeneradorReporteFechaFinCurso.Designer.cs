@@ -42,12 +42,13 @@
             this.cbcUsuario = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.chkTodos = new System.Windows.Forms.CheckBox();
+            this.chkTodo = new System.Windows.Forms.CheckBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnGrafico = new System.Windows.Forms.Button();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable1TableAdapter = new BugTracker.DataSet1TableAdapters.DataTable1TableAdapter();
+            this.btnReiniciarCombos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
@@ -170,18 +171,18 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Usuario:";
             // 
-            // chkTodos
+            // chkTodo
             // 
-            this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.chkTodos.AutoSize = true;
-            this.chkTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkTodos.Location = new System.Drawing.Point(567, 98);
-            this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(67, 21);
-            this.chkTodos.TabIndex = 9;
-            this.chkTodos.Text = "Todos";
-            this.chkTodos.UseVisualStyleBackColor = true;
-            this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
+            this.chkTodo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chkTodo.AutoSize = true;
+            this.chkTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTodo.Location = new System.Drawing.Point(567, 98);
+            this.chkTodo.Name = "chkTodo";
+            this.chkTodo.Size = new System.Drawing.Size(67, 21);
+            this.chkTodo.TabIndex = 9;
+            this.chkTodo.Text = "Todos";
+            this.chkTodo.UseVisualStyleBackColor = true;
+            this.chkTodo.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
             // 
             // reportViewer1
             // 
@@ -239,16 +240,31 @@
             // 
             this.dataTable1TableAdapter.ClearBeforeFill = true;
             // 
+            // btnReiniciarCombos
+            // 
+            this.btnReiniciarCombos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnReiniciarCombos.BackColor = System.Drawing.Color.Transparent;
+            this.btnReiniciarCombos.FlatAppearance.BorderSize = 0;
+            this.btnReiniciarCombos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReiniciarCombos.Image = ((System.Drawing.Image)(resources.GetObject("btnReiniciarCombos.Image")));
+            this.btnReiniciarCombos.Location = new System.Drawing.Point(423, 111);
+            this.btnReiniciarCombos.Name = "btnReiniciarCombos";
+            this.btnReiniciarCombos.Size = new System.Drawing.Size(33, 30);
+            this.btnReiniciarCombos.TabIndex = 16;
+            this.btnReiniciarCombos.UseVisualStyleBackColor = false;
+            this.btnReiniciarCombos.Click += new System.EventHandler(this.btnReiniciarCombos_Click);
+            // 
             // frmGeneradorReporteFechaFinCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(694, 593);
+            this.Controls.Add(this.btnReiniciarCombos);
             this.Controls.Add(this.btnGrafico);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.reportViewer1);
-            this.Controls.Add(this.chkTodos);
+            this.Controls.Add(this.chkTodo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbcUsuario);
@@ -287,8 +303,9 @@
         private System.Windows.Forms.BindingSource dataTable1BindingSource1;
         internal System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnGrafico;
-        public System.Windows.Forms.CheckBox chkTodos;
+        public System.Windows.Forms.CheckBox chkTodo;
         public System.Windows.Forms.ComboBox cbcCurso;
         public System.Windows.Forms.ComboBox cbcUsuario;
+        internal System.Windows.Forms.Button btnReiniciarCombos;
     }
 }

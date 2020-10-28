@@ -30,48 +30,59 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
         
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            
 
-            if (chkTodos.Checked)
+
+            if (chkTodo.Checked)
             {
                 this.dataTable1TableAdapter.FillBy(this.dataSet1.DataTable1);
                 this.reportViewer1.RefreshReport();
             }
+
             else
             {
-                if ((cbcCurso.SelectedIndex == -1) && (cbcUsuario.SelectedIndex == -1) && (!chkTodos.Checked))
+                if (dtpFechaDesde.Value > dtpFechaHasta.Value)
                 {
-                    this.dataTable1TableAdapter.FillByFechas(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value);
-                    this.reportViewer1.RefreshReport();
+                    MessageBox.Show("Fechas erróneas, por favor ingrese fechas válidas.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;
+                    dtpFechaDesde.Focus();
+                    return;
                 }
 
                 else
                 {
-                    if ((cbcCurso.SelectedIndex == -1) && (cbcUsuario.SelectedIndex != -1) && (!chkTodos.Checked))
+                    if ((cbcCurso.SelectedIndex == -1) && (cbcUsuario.SelectedIndex == -1) && (!chkTodo.Checked))
                     {
-                        this.dataTable1TableAdapter.FillBy1(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value, Convert.ToInt32(cbcUsuario.SelectedValue));
+                        this.dataTable1TableAdapter.FillByFechas(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value);
                         this.reportViewer1.RefreshReport();
                     }
 
                     else
                     {
-                        if ((cbcUsuario.SelectedIndex == -1) && (cbcCurso.SelectedIndex != -1) && (!chkTodos.Checked))
+                        if ((cbcCurso.SelectedIndex == -1) && (cbcUsuario.SelectedIndex != -1) && (!chkTodo.Checked))
                         {
-                            this.dataTable1TableAdapter.FillBy2(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value, Convert.ToInt32(cbcCurso.SelectedValue));
+                            this.dataTable1TableAdapter.FillBy1(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value, Convert.ToInt32(cbcUsuario.SelectedValue));
                             this.reportViewer1.RefreshReport();
                         }
 
                         else
                         {
-                            this.dataTable1TableAdapter.FillTodos(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value, Convert.ToInt32(cbcUsuario.SelectedValue), Convert.ToInt32(cbcCurso.SelectedValue));
-                            this.reportViewer1.RefreshReport();
+                            if ((cbcUsuario.SelectedIndex == -1) && (cbcCurso.SelectedIndex != -1) && (!chkTodo.Checked))
+                            {
+                                this.dataTable1TableAdapter.FillBy2(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value, Convert.ToInt32(cbcCurso.SelectedValue));
+                                this.reportViewer1.RefreshReport();
+                            }
+
+                            else
+                            {
+                                this.dataTable1TableAdapter.FillTodos(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value, Convert.ToInt32(cbcUsuario.SelectedValue), Convert.ToInt32(cbcCurso.SelectedValue));
+                                this.reportViewer1.RefreshReport();
+                            }
                         }
                     }
                 }
-                
+
             }
 
-            if (!chkTodos.Checked)
+            if (!chkTodo.Checked)
             {
                 reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
                 new ReportParameter("prFechaDesde", "Período Desde: " + dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
@@ -108,16 +119,6 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
             cbo.SelectedIndex = -1;
         }
 
-        private void dtpFecha_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void dtpFechaDesde_ValueChanged(object sender, EventArgs e)
         {
 
@@ -132,16 +133,16 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
 
         private void chkTodos_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkTodos.Checked)
+            if (chkTodo.Checked)
             {
                 cbcCurso.Enabled = false;
                 cbcUsuario.Enabled = false;
                 dtpFechaHasta.Enabled = false;
                 dtpFechaDesde.Enabled = false;
-                cbcCurso.SelectedIndex = -1;
-                cbcUsuario.SelectedIndex = -1;
-                dtpFechaDesde.Value = Convert.ToDateTime("17/10/2020 12:16");
-                dtpFechaHasta.Value = Convert.ToDateTime("17/10/2020 12:16");
+                //cbcCurso.SelectedIndex = -1;
+                //cbcUsuario.SelectedIndex = -1;
+                //dtpFechaDesde.Value = Convert.ToDateTime("17/10/2020 12:16");
+                //dtpFechaHasta.Value = Convert.ToDateTime("17/10/2020 12:16");
                 //btnGrafico.Enabled = true;
 
             }
@@ -173,6 +174,14 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
         private void reportViewer1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReiniciarCombos_Click(object sender, EventArgs e)
+        {
+            cbcCurso.SelectedIndex = -1;
+            cbcUsuario.SelectedIndex = -1;
+             
+            frmGeneradorReporteFechaFinCurso_Load(sender, e);
         }
     }
 }

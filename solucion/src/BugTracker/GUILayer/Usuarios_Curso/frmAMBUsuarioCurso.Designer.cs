@@ -31,9 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboUsuario = new System.Windows.Forms.ComboBox();
             this.cboCurso = new System.Windows.Forms.ComboBox();
-            this.dtpFecha_fin = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.lblFecha_Fin = new System.Windows.Forms.Label();
             this.lblFecha_Inicio = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.lblObservaciones = new System.Windows.Forms.Label();
@@ -41,6 +39,8 @@
             this.txtPuntuacion = new System.Windows.Forms.TextBox();
             this.lblCurso = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.dtpFecha_fin = new System.Windows.Forms.DateTimePicker();
+            this.lblFecha_Fin = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -50,9 +50,7 @@
             // 
             this.panel1.Controls.Add(this.cboUsuario);
             this.panel1.Controls.Add(this.cboCurso);
-            this.panel1.Controls.Add(this.dtpFecha_fin);
             this.panel1.Controls.Add(this.dtpFechaInicio);
-            this.panel1.Controls.Add(this.lblFecha_Fin);
             this.panel1.Controls.Add(this.lblFecha_Inicio);
             this.panel1.Controls.Add(this.txtObservaciones);
             this.panel1.Controls.Add(this.lblObservaciones);
@@ -60,60 +58,46 @@
             this.panel1.Controls.Add(this.txtPuntuacion);
             this.panel1.Controls.Add(this.lblCurso);
             this.panel1.Controls.Add(this.lblUsuario);
+            this.panel1.Controls.Add(this.dtpFecha_fin);
+            this.panel1.Controls.Add(this.lblFecha_Fin);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 449);
+            this.panel1.Size = new System.Drawing.Size(291, 409);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // cboUsuario
             // 
             this.cboUsuario.BackColor = System.Drawing.Color.White;
+            this.cboUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboUsuario.FormattingEnabled = true;
             this.cboUsuario.Location = new System.Drawing.Point(22, 35);
             this.cboUsuario.Name = "cboUsuario";
-            this.cboUsuario.Size = new System.Drawing.Size(246, 21);
+            this.cboUsuario.Size = new System.Drawing.Size(246, 23);
             this.cboUsuario.TabIndex = 1;
             this.cboUsuario.SelectedIndexChanged += new System.EventHandler(this.cboUsuario_SelectedIndexChanged);
             // 
             // cboCurso
             // 
             this.cboCurso.BackColor = System.Drawing.Color.White;
+            this.cboCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCurso.FormattingEnabled = true;
             this.cboCurso.Location = new System.Drawing.Point(22, 86);
             this.cboCurso.Name = "cboCurso";
-            this.cboCurso.Size = new System.Drawing.Size(246, 21);
+            this.cboCurso.Size = new System.Drawing.Size(246, 23);
             this.cboCurso.TabIndex = 2;
             this.cboCurso.SelectedIndexChanged += new System.EventHandler(this.cboCurso_SelectedIndexChanged);
             // 
-            // dtpFecha_fin
-            // 
-            this.dtpFecha_fin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha_fin.Location = new System.Drawing.Point(22, 354);
-            this.dtpFecha_fin.Name = "dtpFecha_fin";
-            this.dtpFecha_fin.Size = new System.Drawing.Size(246, 20);
-            this.dtpFecha_fin.TabIndex = 6;
-            this.dtpFecha_fin.Value = new System.DateTime(2020, 9, 20, 0, 0, 0, 0);
-            // 
             // dtpFechaInicio
             // 
+            this.dtpFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaInicio.Location = new System.Drawing.Point(22, 306);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(246, 20);
+            this.dtpFechaInicio.Size = new System.Drawing.Size(246, 21);
             this.dtpFechaInicio.TabIndex = 5;
             this.dtpFechaInicio.Value = new System.DateTime(2020, 9, 20, 0, 0, 0, 0);
             this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged);
-            // 
-            // lblFecha_Fin
-            // 
-            this.lblFecha_Fin.AutoSize = true;
-            this.lblFecha_Fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha_Fin.Location = new System.Drawing.Point(33, 336);
-            this.lblFecha_Fin.Name = "lblFecha_Fin";
-            this.lblFecha_Fin.Size = new System.Drawing.Size(60, 15);
-            this.lblFecha_Fin.TabIndex = 11;
-            this.lblFecha_Fin.Text = "Fecha fin:";
             // 
             // lblFecha_Inicio
             // 
@@ -128,6 +112,7 @@
             // txtObservaciones
             // 
             this.txtObservaciones.BackColor = System.Drawing.Color.White;
+            this.txtObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObservaciones.Location = new System.Drawing.Point(22, 203);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
@@ -152,15 +137,20 @@
             this.lblPuntuacion.Name = "lblPuntuacion";
             this.lblPuntuacion.Size = new System.Drawing.Size(72, 15);
             this.lblPuntuacion.TabIndex = 7;
-            this.lblPuntuacion.Text = "Puntuacion:";
+            this.lblPuntuacion.Text = "Puntuación:";
             // 
             // txtPuntuacion
             // 
+            this.txtPuntuacion.AutoCompleteCustomSource.AddRange(new string[] {
+            ""});
             this.txtPuntuacion.BackColor = System.Drawing.Color.White;
+            this.txtPuntuacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPuntuacion.Location = new System.Drawing.Point(22, 145);
             this.txtPuntuacion.Name = "txtPuntuacion";
-            this.txtPuntuacion.Size = new System.Drawing.Size(246, 20);
+            this.txtPuntuacion.Size = new System.Drawing.Size(246, 21);
             this.txtPuntuacion.TabIndex = 3;
+            this.txtPuntuacion.TextChanged += new System.EventHandler(this.txtPuntuacion_TextChanged);
+            this.txtPuntuacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPuntuacion_KeyPress);
             // 
             // lblCurso
             // 
@@ -168,9 +158,9 @@
             this.lblCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurso.Location = new System.Drawing.Point(33, 68);
             this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(58, 15);
+            this.lblCurso.Size = new System.Drawing.Size(42, 15);
             this.lblCurso.TabIndex = 3;
-            this.lblCurso.Text = "Curso (*):";
+            this.lblCurso.Text = "Curso:";
             // 
             // lblUsuario
             // 
@@ -178,9 +168,31 @@
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(33, 17);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(69, 15);
+            this.lblUsuario.Size = new System.Drawing.Size(53, 15);
             this.lblUsuario.TabIndex = 0;
-            this.lblUsuario.Text = "Usuario (*):";
+            this.lblUsuario.Text = "Usuario:";
+            // 
+            // dtpFecha_fin
+            // 
+            this.dtpFecha_fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha_fin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha_fin.Location = new System.Drawing.Point(22, 306);
+            this.dtpFecha_fin.Name = "dtpFecha_fin";
+            this.dtpFecha_fin.Size = new System.Drawing.Size(246, 21);
+            this.dtpFecha_fin.TabIndex = 6;
+            this.dtpFecha_fin.Value = new System.DateTime(2020, 9, 20, 0, 0, 0, 0);
+            this.dtpFecha_fin.Visible = false;
+            // 
+            // lblFecha_Fin
+            // 
+            this.lblFecha_Fin.AutoSize = true;
+            this.lblFecha_Fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha_Fin.Location = new System.Drawing.Point(33, 288);
+            this.lblFecha_Fin.Name = "lblFecha_Fin";
+            this.lblFecha_Fin.Size = new System.Drawing.Size(60, 15);
+            this.lblFecha_Fin.TabIndex = 11;
+            this.lblFecha_Fin.Text = "Fecha fin:";
+            this.lblFecha_Fin.Visible = false;
             // 
             // btnCancelar
             // 
@@ -189,7 +201,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(157, 410);
+            this.btnCancelar.Location = new System.Drawing.Point(157, 359);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(123, 40);
             this.btnCancelar.TabIndex = 8;
@@ -204,7 +216,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(34, 410);
+            this.btnAceptar.Location = new System.Drawing.Point(34, 359);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(117, 40);
             this.btnAceptar.TabIndex = 7;
@@ -217,7 +229,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(313, 473);
+            this.ClientSize = new System.Drawing.Size(313, 433);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel1);

@@ -26,9 +26,6 @@ namespace BugTracker.GUILayer.Estadisticas
 
         private void btnGrafico_Click(object sender, EventArgs e)
         {
-            reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
-                new ReportParameter("prFechaDesde", dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
-                new ReportParameter("prFechaHasta", dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
 
             DataManager oDm = new DataManager();
             oDm.Open();
@@ -57,7 +54,7 @@ namespace BugTracker.GUILayer.Estadisticas
 
                 if (dtpFechaDesde.Value > dtpFechaHasta.Value)
                 {
-                    MessageBox.Show("Fechas erroneas!!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;
+                    MessageBox.Show("Fechas erróneas, por favor ingrese fechas válidas.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;
                     dtpFechaDesde.Focus();
                     return;
                 }
@@ -65,6 +62,11 @@ namespace BugTracker.GUILayer.Estadisticas
                 {
                     sql += " AND (C.fecha_vigencia BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd") + "'" +
                         ") GROUP BY CA.id_categoria, CA.nombre ";
+
+                    reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                new ReportParameter("prFechaDesde", dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
+                new ReportParameter("prFechaHasta", dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
+
                     reportViewer1.LocalReport.DataSources.Clear();
                     reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", oDm.ConsultaSQL(sql)));
                     reportViewer1.RefreshReport();

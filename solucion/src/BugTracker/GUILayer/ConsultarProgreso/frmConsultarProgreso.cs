@@ -22,6 +22,7 @@ namespace BugTracker.GUILayer
         private Label lblUsuarios;
         private Label lblCurso;
         private Button btnConsultar;
+        internal Button btnSalir;
         private UsuariosCursoService oUsuarioCursoService;
 
 
@@ -61,16 +62,24 @@ namespace BugTracker.GUILayer
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-           
-            if (ExisteUsuarioEnCurso())
-            {   
-                frmUsuarioCursoAvance frmDetalle = new frmUsuarioCursoAvance((int)cboCursos.SelectedValue, (int)cboUsuarios.SelectedValue);
-            
-                frmDetalle.ShowDialog();
+            if ((cboCursos.SelectedIndex == -1) || (cboUsuarios.SelectedIndex == -1))
+            {
+                MessageBox.Show("Debe ingresar Usuario y Curso.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
+
             else
-                MessageBox.Show("Relacion usuario-curso no encontrado!. Ingrese un nombre de usuario o curso diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                if (ExisteUsuarioEnCurso())
+                {
+                    frmUsuarioCursoAvance frmDetalle = new frmUsuarioCursoAvance((int)cboCursos.SelectedValue, (int)cboUsuarios.SelectedValue);
+
+                    frmDetalle.ShowDialog();
+
+                }
+                else
+                    MessageBox.Show("Relacion Usuario-Curso no encontrado, ingrese un nombre de Usuario o Curso diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
         private bool ExisteUsuarioEnCurso()
@@ -82,11 +91,13 @@ namespace BugTracker.GUILayer
         }
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarProgreso));
             this.cboUsuarios = new System.Windows.Forms.ComboBox();
             this.cboCursos = new System.Windows.Forms.ComboBox();
             this.lblUsuarios = new System.Windows.Forms.Label();
             this.lblCurso = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cboUsuarios
@@ -149,9 +160,24 @@ namespace BugTracker.GUILayer
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(622, 526);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(60, 55);
+            this.btnSalir.TabIndex = 38;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // frmConsultarProgreso
             // 
             this.ClientSize = new System.Drawing.Size(694, 593);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.lblCurso);
             this.Controls.Add(this.lblUsuarios);
@@ -166,6 +192,9 @@ namespace BugTracker.GUILayer
 
         }
 
-        
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

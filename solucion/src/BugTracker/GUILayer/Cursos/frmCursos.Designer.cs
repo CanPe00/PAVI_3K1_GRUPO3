@@ -44,6 +44,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnReiniciarCombos = new System.Windows.Forms.Button();
             this.pnlFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFiltros.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.pnlFiltros.Controls.Add(this.btnReiniciarCombos);
             this.pnlFiltros.Controls.Add(this.dgvCursos);
             this.pnlFiltros.Controls.Add(this.chkTodos);
             this.pnlFiltros.Controls.Add(this.lblNombre);
@@ -161,7 +163,7 @@
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(407, 46);
+            this.btnConsultar.Location = new System.Drawing.Point(421, 46);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(129, 50);
             this.btnConsultar.TabIndex = 3;
@@ -249,6 +251,20 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
+            // btnReiniciarCombos
+            // 
+            this.btnReiniciarCombos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnReiniciarCombos.BackColor = System.Drawing.Color.Transparent;
+            this.btnReiniciarCombos.FlatAppearance.BorderSize = 0;
+            this.btnReiniciarCombos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReiniciarCombos.Image = ((System.Drawing.Image)(resources.GetObject("btnReiniciarCombos.Image")));
+            this.btnReiniciarCombos.Location = new System.Drawing.Point(385, 55);
+            this.btnReiniciarCombos.Name = "btnReiniciarCombos";
+            this.btnReiniciarCombos.Size = new System.Drawing.Size(33, 30);
+            this.btnReiniciarCombos.TabIndex = 23;
+            this.btnReiniciarCombos.UseVisualStyleBackColor = false;
+            this.btnReiniciarCombos.Click += new System.EventHandler(this.btnReiniciarCombos_Click);
+            // 
             // frmCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,5 +303,6 @@
         internal System.Windows.Forms.Label lblCategoria;
         internal System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridView dgvCursos;
+        internal System.Windows.Forms.Button btnReiniciarCombos;
     }
 }

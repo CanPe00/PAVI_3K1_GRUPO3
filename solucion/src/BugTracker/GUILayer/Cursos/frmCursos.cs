@@ -72,10 +72,10 @@ namespace BugTracker.Cursos
             dgvCursos.Columns[0].DataPropertyName = "Nombre";
             // Definimos el ancho de la columna.
 
-            dgvCursos.Columns[1].Name = "Descripcion";
+            dgvCursos.Columns[1].Name = "Descripción";
             dgvCursos.Columns[1].DataPropertyName = "Descripcion";
 
-            dgvCursos.Columns[2].Name = "Categoria";
+            dgvCursos.Columns[2].Name = "Categoría";
             dgvCursos.Columns[2].DataPropertyName = "Categoria";
 
 
@@ -128,7 +128,7 @@ namespace BugTracker.Cursos
                     //si agrego alguna condicion
                     //SIN PARAMETROS
 
-                    MessageBox.Show("condiciones para el where del sql " + condiciones, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("condiciones para el where del sql " + condiciones, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                     dgvCursos.DataSource = oCursoService.ConsultarConFiltrosSinParametros(condiciones);
                     int filas = dgvCursos.RowCount;
@@ -145,7 +145,7 @@ namespace BugTracker.Cursos
                     //dgvCursos.DataSource = oCursoService.ConsultarConFiltrosConParametros(filters);
                 }
                 else
-                    MessageBox.Show("Debe ingresar al menos un criterio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe ingresar al menos un criterio.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -211,11 +211,10 @@ namespace BugTracker.Cursos
             this.Close();
         }
 
-        private void dgvCursos_CellContentClick(object sender, EventArgs e)
+        private void btnReiniciarCombos_Click(object sender, EventArgs e)
         {
-
+            txtNombre.Text = "";
+            cboCategoria.SelectedIndex = -1;
         }
-
-        
     }
 }

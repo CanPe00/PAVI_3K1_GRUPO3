@@ -23,8 +23,8 @@ namespace BugTracker.GUILayer.Reportes
 
         private void ReporteCursosPorUsuario_Load(object sender, EventArgs e)
         {
-            this.cursosPorUsuarioTableAdapter.Fill(this.dataSet1.CursosPorUsuario, idUsuario);
-            this.reportViewer1.RefreshReport();
+            //this.cursosPorUsuarioTableAdapter.Fill(this.dataSet1.CursosPorUsuario, idUsuario);
+            //this.reportViewer1.RefreshReport();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

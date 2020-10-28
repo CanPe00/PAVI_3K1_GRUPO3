@@ -117,7 +117,8 @@ namespace BugTracker.DataAccessLayer
 
                 string str_sql = "UPDATE UsuariosCursoAvance" +
                                 " SET " +
-                                " finalizado = 1" +
+                                " finalizado = 1," +
+                                " fin = Cast(GETDATE() As Date)" +
                                 " WHERE id_usuario=" + id_usuario + " AND id_curso=" + id_curso + " AND id_actividad =" + id_actividad + "AND borrado=0";
                 //return (DBHelper.GetDBHelper().EjecutarSQL(str_sql)==1);
 

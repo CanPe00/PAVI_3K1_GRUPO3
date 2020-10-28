@@ -18,7 +18,6 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
     public partial class frmUsuarioCursoAvance : Form
     {
         private UsuarioCursoAvanceService oUsuarioCursoAvanceService;
-        private UsuarioCursoAvance oUsuarioCursoAvance;
         public int idCurso;
         public int idUsuario;
         
@@ -28,8 +27,6 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
         {
             InitializeComponent();
             InitializeDataGridView();
-            this.idCurso = idCurso;
-            this.idUsuario = idUsuario;
             oUsuarioCursoAvanceService = new UsuarioCursoAvanceService();
 
         }
@@ -63,7 +60,7 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
             dgvUsuarioCursoAvance.Columns[0].Name = "Actividades";
             dgvUsuarioCursoAvance.Columns[0].DataPropertyName = "Actividad";
             // Definimos el ancho de la columna.;
-            dgvUsuarioCursoAvance.Columns[1].Name = "Descripcion";
+            dgvUsuarioCursoAvance.Columns[1].Name = "Descripción";
             dgvUsuarioCursoAvance.Columns[1].DataPropertyName = "Descripcion";
 
             dgvUsuarioCursoAvance.Columns[2].Name = "Finalizado";
@@ -127,7 +124,7 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
             if ((filas_totales == filas_true) && (filas_totales != 0))
             {
                 oUsuarioCursoAvanceService.ActualizarFechaFin(idCurso,idUsuario);
-                MessageBox.Show("Curso finalizado con exito!");
+                MessageBox.Show("Curso finalizado con éxito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }
