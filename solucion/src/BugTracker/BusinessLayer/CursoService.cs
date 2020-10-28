@@ -48,8 +48,6 @@ namespace BugTracker.BusinessLayer
             // return oUsuarioDao.GetUserConParametros(usuario);
         }
 
-      
-
         internal IList<Curso> ConsultarConFiltrosConParametros(Dictionary<string, object> filtros)
         {
             return oCursoDao.GetByFiltersConParametros(filtros);

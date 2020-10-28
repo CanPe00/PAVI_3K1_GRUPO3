@@ -30,25 +30,11 @@ namespace BugTracker.DataAccessLayer
         {
 
             List<Categoria> lst = new List<Categoria>();
-            //String strSql = string.Concat("  SELECT ca.id_categoria, ",
-            //                              "        ca.nombre, ",
-            //                              "        ca.descripcion, ",
-            //                              "        ca.borrado, ",
-            //                              "   FROM Categorias ca ",
-            //                              "   WHERE ca.borrado=0 " );
+
             String strSql = ("SELECT ca.id_categoria, ca.nombre, ca.descripcion, ca.borrado FROM Categorias ca WHERE ca.borrado=0 ");
             //agrego condiciones
             strSql += condiciones;
 
-
-            // if (parametros.ContainsKey("idPerfil"))
-            //   strSql += " AND (u.id_perfil = @idPerfil) ";
-
-
-            // if (parametros.ContainsKey("usuario"))
-            //    strSql += " AND (u.usuario LIKE '%' + @usuario + '%') ";
-
-            //var resultado = DBHelper.GetDBHelper().ConsultaSQL(strSql);
             DataManager dm = new DataManager();
             dm.Open();
             var resultado = dm.ConsultaSQL(strSql);
