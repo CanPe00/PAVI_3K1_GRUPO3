@@ -48,10 +48,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>8.38575cm</Width>
+                  <Width>8.24328cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>7.44862cm</Width>
+                  <Width>6.73424cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -222,21 +222,74 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>10.65954cm</Top>
-            <Left>0.81703cm</Left>
+            <Top>10.69482cm</Top>
+            <Left>1.19405cm</Left>
             <Height>1.2cm</Height>
-            <Width>15.83436cm</Width>
+            <Width>14.97753cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
-          <Chart Name="Chart3">
+          <Image Name="Image1">
+            <Source>Embedded</Source>
+            <Value>LOGOCOPACIDAD</Value>
+            <Sizing>FitProportional</Sizing>
+            <Top>0.22586cm</Top>
+            <Left>8.21972cm</Left>
+            <Height>0.85135cm</Height>
+            <Width>1.82752cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Textbox Name="Textbox8">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!prFechaDesde.Value</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve">  </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Parameters!prFechaHasta.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox4</rd:DefaultName>
+            <Top>10.1301cm</Top>
+            <Left>5.47604cm</Left>
+            <Height>0.6cm</Height>
+            <Width>10.69554cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Chart Name="Chart1">
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="Chart3_CategoryGroup">
+                  <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
                       <GroupExpression>=Fields!nombre.Value</GroupExpression>
                     </GroupExpressions>
@@ -267,18 +320,17 @@
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
+                        <UseValueAsLabel>true</UseValueAsLabel>
+                        <Visible>true</Visible>
                       </ChartDataLabel>
-                      <Style>
-                        <Color>#ffb542</Color>
-                        <BackgroundGradientEndColor>Orange</BackgroundGradientEndColor>
-                      </Style>
+                      <Style />
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
                       <DataElementOutput>Output</DataElementOutput>
                     </ChartDataPoint>
                   </ChartDataPoints>
-                  <Subtype>Stacked</Subtype>
+                  <Type>Shape</Type>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />
@@ -307,8 +359,7 @@
                         <Color>Gainsboro</Color>
                         <Style>None</Style>
                       </Border>
-                      <FontStyle>Italic</FontStyle>
-                      <FontSize>7pt</FontSize>
+                      <FontSize>8pt</FontSize>
                       <Color>#5c5c5c</Color>
                     </Style>
                     <ChartAxisTitle>
@@ -318,7 +369,6 @@
                         <Color>#5c5c5c</Color>
                       </Style>
                     </ChartAxisTitle>
-                    <Margin>False</Margin>
                     <ChartMajorGridLines>
                       <Enabled>False</Enabled>
                       <Style>
@@ -354,8 +404,6 @@
                     <CrossAt>NaN</CrossAt>
                     <Minimum>NaN</Minimum>
                     <Maximum>NaN</Maximum>
-                    <AllowLabelRotation>Rotate30</AllowLabelRotation>
-                    <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
                     <ChartAxisScaleBreak>
                       <Style />
                     </ChartAxisScaleBreak>
@@ -530,7 +578,6 @@
                 </ChartValueAxes>
                 <ChartThreeDProperties>
                   <Enabled>true</Enabled>
-                  <Rotation>9</Rotation>
                 </ChartThreeDProperties>
                 <Style>
                   <BackgroundColor>#00ffffff</BackgroundColor>
@@ -544,7 +591,7 @@
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
                 </Style>
-                <Position>TopRight</Position>
+                <DockOutsideChartArea>true</DockOutsideChartArea>
                 <ChartLegendTitle>
                   <Caption />
                   <Style>
@@ -565,12 +612,10 @@
                   <FontFamily>Arial Black</FontFamily>
                   <FontSize>14pt</FontSize>
                   <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
                   <TextAlign>Left</TextAlign>
                   <VerticalAlign>Top</VerticalAlign>
                   <Color>#ffb542</Color>
                 </Style>
-                <DockOutsideChartArea>true</DockOutsideChartArea>
               </ChartTitle>
             </ChartTitles>
             <Palette>Pacific</Palette>
@@ -591,72 +636,19 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
-            <Top>1.2536cm</Top>
-            <Height>8.65126cm</Height>
-            <Width>17.35254cm</Width>
-            <ZIndex>1</ZIndex>
+            <Top>1.40829cm</Top>
+            <Height>8.54542cm</Height>
+            <Width>17.68488cm</Width>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
                 <Style>None</Style>
               </Border>
-              <BackgroundColor>#fafafa</BackgroundColor>
+              <BackgroundColor>White</BackgroundColor>
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
-          <Image Name="Image1">
-            <Source>Embedded</Source>
-            <Value>LOGOCOPACIDAD</Value>
-            <Sizing>FitProportional</Sizing>
-            <Top>0.22586cm</Top>
-            <Left>7.72583cm</Left>
-            <Height>0.85135cm</Height>
-            <Width>1.82752cm</Width>
-            <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Image>
-          <Textbox Name="Textbox8">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!prFechaDesde.Value</Value>
-                    <Style />
-                  </TextRun>
-                  <TextRun>
-                    <Value xml:space="preserve">  </Value>
-                    <Style />
-                  </TextRun>
-                  <TextRun>
-                    <Value>=Parameters!prFechaHasta.Value</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>9.95371cm</Top>
-            <Left>5.48486cm</Left>
-            <Height>0.6cm</Height>
-            <Width>10.69554cm</Width>
-            <ZIndex>3</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
         </ReportItems>
         <Height>4.90869in</Height>
         <Style>
@@ -666,7 +658,7 @@
           <BackgroundColor>#faf1d6</BackgroundColor>
         </Style>
       </Body>
-      <Width>6.83171in</Width>
+      <Width>6.96255in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

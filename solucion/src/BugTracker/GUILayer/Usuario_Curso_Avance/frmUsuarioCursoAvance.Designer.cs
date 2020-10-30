@@ -115,7 +115,7 @@
             this.dgvUsuarioCursoAvance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvUsuarioCursoAvance.EnableHeadersVisualStyles = false;
             this.dgvUsuarioCursoAvance.GridColor = System.Drawing.Color.Black;
-            this.dgvUsuarioCursoAvance.Location = new System.Drawing.Point(6, 19);
+            this.dgvUsuarioCursoAvance.Location = new System.Drawing.Point(4, 19);
             this.dgvUsuarioCursoAvance.Name = "dgvUsuarioCursoAvance";
             this.dgvUsuarioCursoAvance.ReadOnly = true;
             this.dgvUsuarioCursoAvance.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;

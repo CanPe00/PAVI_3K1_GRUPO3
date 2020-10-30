@@ -44,10 +44,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>8.20177cm</Width>
+                  <Width>12.93781cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>8.20177cm</Width>
+                  <Width>3.62448cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -219,7 +219,7 @@
             <Top>11.46975cm</Top>
             <Left>0.76412cm</Left>
             <Height>1.2cm</Height>
-            <Width>16.40354cm</Width>
+            <Width>16.56229cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -555,6 +555,16 @@
                 </Style>
                 <DockOutsideChartArea>true</DockOutsideChartArea>
               </ChartTitle>
+              <ChartTitle Name="Title1">
+                <Caption>(se busca segun fecha vigencia del curso)</Caption>
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontWeight>Normal</FontWeight>
+                  <TextAlign>Left</TextAlign>
+                  <VerticalAlign>Top</VerticalAlign>
+                </Style>
+                <DockOutsideChartArea>true</DockOutsideChartArea>
+              </ChartTitle>
             </ChartTitles>
             <Palette>Pacific</Palette>
             <ChartBorderSkin>
@@ -611,7 +621,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
             <Top>10.60599cm</Top>
-            <Left>5.85735cm</Left>
+            <Left>7.49045cm</Left>
             <Height>0.6cm</Height>
             <Width>10.69554cm</Width>
             <ZIndex>2</ZIndex>
@@ -631,7 +641,7 @@
           <BackgroundColor>#faf1d6</BackgroundColor>
         </Style>
       </Body>
-      <Width>7.04526in</Width>
+      <Width>7.15984in</Width>
       <Page>
         <PageHeader>
           <Height>1.48635cm</Height>

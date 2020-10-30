@@ -43,7 +43,7 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
         private void InitializeDataGridView()
         {
             // Cree un DataGridView no vinculado declarando un recuento de columnas.
-            dgvUsuarioCursoAvance.ColumnCount = 3;
+            dgvUsuarioCursoAvance.ColumnCount = 2;
             dgvUsuarioCursoAvance.ColumnHeadersVisible = true;
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
@@ -60,11 +60,11 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
             dgvUsuarioCursoAvance.Columns[0].Name = "Actividades";
             dgvUsuarioCursoAvance.Columns[0].DataPropertyName = "Actividad";
             // Definimos el ancho de la columna.;
-            dgvUsuarioCursoAvance.Columns[1].Name = "Descripción";
-            dgvUsuarioCursoAvance.Columns[1].DataPropertyName = "Descripcion";
+            //dgvUsuarioCursoAvance.Columns[1].Name = "Descripción";
+            //dgvUsuarioCursoAvance.Columns[1].DataPropertyName = "Descripcion";
 
-            dgvUsuarioCursoAvance.Columns[2].Name = "Finalizado";
-            dgvUsuarioCursoAvance.Columns[2].DataPropertyName = "Finalizado";
+            dgvUsuarioCursoAvance.Columns[1].Name = "Finalizado";
+            dgvUsuarioCursoAvance.Columns[1].DataPropertyName = "Finalizado";
 
 
             // Cambia el tamaño de la altura de los encabezados de columna.
@@ -99,7 +99,7 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
             for (int fila = 0; fila < filas_totales ; fila++)
             {
 
-                if (dgvUsuarioCursoAvance.Rows[fila].Cells[2].Value is true)
+                if (dgvUsuarioCursoAvance.Rows[fila].Cells[1].Value is true)
                 {
                     count += 1;
                 }
@@ -165,11 +165,7 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
 
         }
 
-        private void btnGrafico_Click(object sender, EventArgs e)
-        {
-            GraficoAvance avance = new GraficoAvance(idCurso, idUsuario);
-            avance.ShowDialog();
-        }
+
 
         private void dgvUsuarioCursoAvance_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
@@ -192,7 +188,7 @@ namespace BugTracker.GUILayer.Usuario_Curso_Avance
                     e.CellStyle.ForeColor = Color.White;
                 }
             }
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex == 1)
             {
                 if (e.Value is bool)
                 {

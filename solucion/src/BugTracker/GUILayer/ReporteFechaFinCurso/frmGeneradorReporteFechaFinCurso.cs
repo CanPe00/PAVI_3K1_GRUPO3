@@ -17,6 +17,8 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
 {
     public partial class frmGeneradorReporteFechaFinCurso : Form
     {
+        
+
         private CursoService oCursoService;
 
         private UsuarioService oUsuarioService;
@@ -30,13 +32,25 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
         
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            DataManager oDm = new DataManager();
+            oDm.Open();
+            string sql = " SELECT U.usuario, C.nombre, CAST(UC.fecha_inicio AS Date) AS fecha_inicio, CAST(UC.fecha_fin AS Date) AS fecha_fin " +
+                        " FROM UsuariosCurso AS UC INNER JOIN Usuarios AS U ON UC.id_usuario = U.id_usuario INNER JOIN Cursos AS C ON UC.id_curso = C.id_curso " +
+                        " WHERE(UC.fecha_fin IS NOT NULL) ";
 
 
             if (chkTodo.Checked)
             {
-                this.dataTable1TableAdapter.FillBy(this.dataSet1.DataTable1);
-                this.reportViewer1.RefreshReport();
+                //this.dataTable1TableAdapter.FillBy(this.dataSet1.DataTable1);
+                //this.reportViewer1.RefreshReport();
+                reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                        new ReportParameter("prFechaDesde", " "),
+                        new ReportParameter("prFechaHasta", " ") });
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", oDm.ConsultaSQL(sql)));
+                reportViewer1.RefreshReport();
             }
+        
 
             else
             {
@@ -51,30 +65,75 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
                 {
                     if ((cbcCurso.SelectedIndex == -1) && (cbcUsuario.SelectedIndex == -1) && (!chkTodo.Checked))
                     {
-                        this.dataTable1TableAdapter.FillByFechas(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value);
-                        this.reportViewer1.RefreshReport();
+                        //this.dataTable1TableAdapter.FillByFechas(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value);
+                        //this.reportViewer1.RefreshReport();
+                        sql += " AND (UC.fecha_fin BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd")  + "')  ";
+
+                        reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                            new ReportParameter("prFechaDesde", "Período Desde: " + dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
+                            new ReportParameter("prFechaHasta", "  Hasta: " + dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
+
+
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", oDm.ConsultaSQL(sql)));
+                        reportViewer1.RefreshReport();
+
+
                     }
 
                     else
                     {
                         if ((cbcCurso.SelectedIndex == -1) && (cbcUsuario.SelectedIndex != -1) && (!chkTodo.Checked))
                         {
-                            this.dataTable1TableAdapter.FillBy1(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value, Convert.ToInt32(cbcUsuario.SelectedValue));
-                            this.reportViewer1.RefreshReport();
+                            //this.dataTable1TableAdapter.FillBy1(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value, Convert.ToInt32(cbcUsuario.SelectedValue));
+                            //this.reportViewer1.RefreshReport();
+
+                            sql += " AND (UC.fecha_fin BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd") + "') AND (U.id_usuario = " + Convert.ToInt32(cbcUsuario.SelectedValue) + ") ";
+
+                            reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                            new ReportParameter("prFechaDesde", "Período Desde: " + dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
+                            new ReportParameter("prFechaHasta", "  Hasta: " + dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
+
+
+                            reportViewer1.LocalReport.DataSources.Clear();
+                            reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", oDm.ConsultaSQL(sql)));
+                            reportViewer1.RefreshReport();
                         }
 
                         else
                         {
                             if ((cbcUsuario.SelectedIndex == -1) && (cbcCurso.SelectedIndex != -1) && (!chkTodo.Checked))
                             {
-                                this.dataTable1TableAdapter.FillBy2(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value, Convert.ToInt32(cbcCurso.SelectedValue));
-                                this.reportViewer1.RefreshReport();
+                                //this.dataTable1TableAdapter.FillBy2(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value, Convert.ToInt32(cbcCurso.SelectedValue));
+                                //this.reportViewer1.RefreshReport();
+
+                                sql += " AND (UC.fecha_fin BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd") + "') AND (C.id_curso = " + Convert.ToInt32(cbcCurso.SelectedValue) + ") ";
+
+                                reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                                    new ReportParameter("prFechaDesde", "Período Desde: " + dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
+                                    new ReportParameter("prFechaHasta", "  Hasta: " + dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
+
+
+                                reportViewer1.LocalReport.DataSources.Clear();
+                                reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", oDm.ConsultaSQL(sql)));
+                                reportViewer1.RefreshReport();
                             }
 
                             else
                             {
-                                this.dataTable1TableAdapter.FillTodos(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value, Convert.ToInt32(cbcUsuario.SelectedValue), Convert.ToInt32(cbcCurso.SelectedValue));
-                                this.reportViewer1.RefreshReport();
+                                sql += " AND (UC.fecha_fin BETWEEN '" + dtpFechaDesde.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFechaHasta.Value.ToString("yyyy-MM-dd") + "') AND (C.id_curso = " + Convert.ToInt32(cbcCurso.SelectedValue) + ") AND (U.id_usuario = " + Convert.ToInt32(cbcUsuario.SelectedValue) + ") ";
+
+                                reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+                                    new ReportParameter("prFechaDesde", "Período Desde: " + dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
+                                    new ReportParameter("prFechaHasta", "  Hasta: " + dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
+
+
+                                reportViewer1.LocalReport.DataSources.Clear();
+                                reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", oDm.ConsultaSQL(sql)));
+                                reportViewer1.RefreshReport();
+
+                                //this.dataTable1TableAdapter.FillTodos(this.dataSet1.DataTable1, dtpFechaDesde.Value, dtpFechaHasta.Value, Convert.ToInt32(cbcUsuario.SelectedValue), Convert.ToInt32(cbcCurso.SelectedValue));
+                                //this.reportViewer1.RefreshReport();
                             }
                         }
                     }
@@ -82,19 +141,19 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
 
             }
 
-            if (!chkTodo.Checked)
-            {
-                reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
-                new ReportParameter("prFechaDesde", "Período Desde: " + dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
-                new ReportParameter("prFechaHasta", "  Hasta: " + dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
-            }
+            //if (!chkTodo.Checked)
+            //{
+            //    reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+            //    new ReportParameter("prFechaDesde", "Período Desde: " + dtpFechaDesde.Value.ToString("dd/MM/yyyy")),
+            //    new ReportParameter("prFechaHasta", "  Hasta: " + dtpFechaHasta.Value.ToString("dd/MM/yyyy")) });
+            //}
 
-            else
-            {
-                reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
-                new ReportParameter("prFechaDesde", " "),
-                new ReportParameter("prFechaHasta", " ") });
-            }
+            //else
+            //{
+            //    reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
+            //    new ReportParameter("prFechaDesde", " "),
+            //    new ReportParameter("prFechaHasta", " ") });
+            //}
         }
 
         private void frmGeneradorReporteFechaFinCurso_Load(object sender, EventArgs e)
@@ -164,11 +223,23 @@ namespace BugTracker.GUILayer.ReporteFechaFinCurso
         private void button1_Click(object sender, EventArgs e)
         {
             Grafico gra = new Grafico();
+            gra.Todos = chkTodo.Checked;
             gra.FechaDesde = dtpFechaDesde.Value; 
             gra.FechaHasta = dtpFechaHasta.Value;
             gra.Curso = Convert.ToInt32(cbcCurso.SelectedValue);
             gra.Usuario = Convert.ToInt32(cbcUsuario.SelectedValue);
-            gra.ShowDialog();
+
+            if ((dtpFechaDesde.Value > dtpFechaHasta.Value) && !chkTodo.Checked)
+            {
+                MessageBox.Show("Fechas erróneas, por favor ingrese fechas válidas.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;
+                dtpFechaDesde.Focus();
+                return;
+            }
+            else
+            {
+                gra.ShowDialog();
+            }
+                
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)

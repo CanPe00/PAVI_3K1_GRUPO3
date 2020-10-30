@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EstadisticoCantUsuariosCursos));
+            this.estadisticoUsuariosCursosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new BugTracker.DataSet1();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
@@ -38,14 +40,11 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnGrafico = new System.Windows.Forms.Button();
             this.chkTodos = new System.Windows.Forms.CheckBox();
-            this.estadisticoUsuariosCursosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new BugTracker.DataSet1();
             this.EstadisticoPerfilesEnCursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estadisticoUsuariosCursosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.estadisticoUsuariosCursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estadisticoUsuariosCursosTableAdapter = new BugTracker.DataSet1TableAdapters.EstadisticoUsuariosCursosTableAdapter();
             this.graficoCursosTerminadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.graficoCursosTerminadosTableAdapter = new BugTracker.DataSet1TableAdapters.GraficoCursosTerminadosTableAdapter();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.estadisticoUsuariosCursosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EstadisticoPerfilesEnCursosBindingSource)).BeginInit();
@@ -53,6 +52,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.estadisticoUsuariosCursosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.graficoCursosTerminadosBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // estadisticoUsuariosCursosBindingSource2
+            // 
+            this.estadisticoUsuariosCursosBindingSource2.DataMember = "EstadisticoUsuariosCursos";
+            this.estadisticoUsuariosCursosBindingSource2.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -85,7 +94,7 @@
             this.dtpFechaHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaHasta.Location = new System.Drawing.Point(390, 32);
-            this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(132, 22);
             this.dtpFechaHasta.TabIndex = 6;
@@ -96,7 +105,7 @@
             this.dtpFechaDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaDesde.Location = new System.Drawing.Point(133, 32);
-            this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(132, 22);
             this.dtpFechaDesde.TabIndex = 5;
@@ -115,6 +124,7 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(626, 318);
             this.reportViewer1.TabIndex = 17;
+            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // btnGrafico
@@ -144,16 +154,6 @@
             this.chkTodos.UseVisualStyleBackColor = true;
             this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
             // 
-            // estadisticoUsuariosCursosBindingSource2
-            // 
-            this.estadisticoUsuariosCursosBindingSource2.DataMember = "EstadisticoUsuariosCursos";
-            this.estadisticoUsuariosCursosBindingSource2.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // EstadisticoPerfilesEnCursosBindingSource
             // 
             this.EstadisticoPerfilesEnCursosBindingSource.DataMember = "EstadisticoPerfilesEnCursos";
@@ -169,18 +169,27 @@
             this.estadisticoUsuariosCursosBindingSource.DataMember = "EstadisticoUsuariosCursos";
             this.estadisticoUsuariosCursosBindingSource.DataSource = this.dataSet1;
             // 
-            // estadisticoUsuariosCursosTableAdapter
-            // 
-            this.estadisticoUsuariosCursosTableAdapter.ClearBeforeFill = true;
-            // 
             // graficoCursosTerminadosBindingSource
             // 
             this.graficoCursosTerminadosBindingSource.DataMember = "GraficoCursosTerminados";
             this.graficoCursosTerminadosBindingSource.DataSource = this.dataSet1;
             // 
-            // graficoCursosTerminadosTableAdapter
+            // btnSalir
             // 
-            this.graficoCursosTerminadosTableAdapter.ClearBeforeFill = true;
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(593, 369);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(45, 45);
+            this.btnSalir.TabIndex = 40;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // EstadisticoCantUsuariosCursos
             // 
@@ -188,6 +197,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(650, 426);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.chkTodos);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnGrafico);
@@ -219,12 +229,13 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource estadisticoUsuariosCursosBindingSource;
         private DataSet1 dataSet1;
-        private DataSet1TableAdapters.EstadisticoUsuariosCursosTableAdapter estadisticoUsuariosCursosTableAdapter;
+        //private DataSet1TableAdapters.EstadisticoUsuariosCursosTableAdapter estadisticoUsuariosCursosTableAdapter;
         private System.Windows.Forms.BindingSource graficoCursosTerminadosBindingSource;
-        private DataSet1TableAdapters.GraficoCursosTerminadosTableAdapter graficoCursosTerminadosTableAdapter;
+        //private DataSet1TableAdapters.GraficoCursosTerminadosTableAdapter graficoCursosTerminadosTableAdapter;
         private System.Windows.Forms.BindingSource estadisticoUsuariosCursosBindingSource1;
         private System.Windows.Forms.BindingSource EstadisticoPerfilesEnCursosBindingSource;
         private System.Windows.Forms.BindingSource estadisticoUsuariosCursosBindingSource2;
         public System.Windows.Forms.CheckBox chkTodos;
+        internal System.Windows.Forms.Button btnSalir;
     }
 }

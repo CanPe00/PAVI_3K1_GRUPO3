@@ -4,9 +4,17 @@
 
     partial class DataSet1
     {
-        partial class AvanceDataTable
+        partial class ListadoActividadesDataTable
         {
         }
+
+        partial class EstadisticoPerfilesEnCursosDataTable
+        {
+        }
+
+        partial class AvanceDataTable
+        { }
+
 
         partial class DataTable1DataTable
         {

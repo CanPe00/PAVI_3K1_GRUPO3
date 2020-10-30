@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.75358cm</Width>
+              <Width>1.82752cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.75358cm</Width>
+              <Width>4.93879cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.75358cm</Width>
+              <Width>8.28818cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -30,7 +30,6 @@
                             <TextRun>
                               <Value>Id Curso</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -66,7 +65,6 @@
                             <TextRun>
                               <Value>Nombre</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -102,7 +100,6 @@
                             <TextRun>
                               <Value>Descripción</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -207,12 +204,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
+                              <Value xml:space="preserve">   </Value>
+                              <Style />
+                            </TextRun>
+                            <TextRun>
                               <Value>=Fields!descripcion.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -253,10 +254,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.7112cm</Top>
-        <Left>0.90964cm</Left>
+        <Top>1.08162cm</Top>
+        <Left>1.5711cm</Left>
         <Height>1.72916cm</Height>
-        <Width>14.26074cm</Width>
+        <Width>15.05449cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -266,13 +267,16 @@
     </ReportItems>
     <Height>2.22917in</Height>
     <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
       <BackgroundColor>#fafafa</BackgroundColor>
     </Style>
   </Body>
-  <Width>6.34746in</Width>
+  <Width>7.04538in</Width>
   <Page>
     <PageHeader>
-      <Height>2.13964cm</Height>
+      <Height>2.1661cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -285,7 +289,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Listado de Cursos</Value>
+                      <Value>Listado de Cursos Activos</Value>
                       <Style>
                         <FontFamily>Arial Black</FontFamily>
                         <FontSize>14pt</FontSize>
@@ -299,7 +303,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Left>2.55323cm</Left>
+              <Left>3.13531cm</Left>
               <Height>1.19531cm</Height>
               <Width>8.33406cm</Width>
               <Style>
@@ -316,6 +320,7 @@
               <Source>Embedded</Source>
               <Value>LOGONB1</Value>
               <Sizing>FitProportional</Sizing>
+              <Top>0.01323cm</Top>
               <Height>1.18208cm</Height>
               <Width>1.82752cm</Width>
               <ZIndex>1</ZIndex>
@@ -327,10 +332,10 @@
             </Image>
           </ReportItems>
           <KeepTogether>true</KeepTogether>
-          <Top>0.47776cm</Top>
-          <Left>0.90964cm</Left>
-          <Height>1.19531cm</Height>
-          <Width>14.26073cm</Width>
+          <Top>0.46453cm</Top>
+          <Left>1.5711cm</Left>
+          <Height>1.20854cm</Height>
+          <Width>15.05449cm</Width>
           <Style>
             <Border>
               <Style>None</Style>

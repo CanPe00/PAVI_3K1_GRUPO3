@@ -2,20 +2,20 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.56518cm</Width>
+              <Width>1.82752cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.56518cm</Width>
+              <Width>3.61339cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.56518cm</Width>
+              <Width>3.15484cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.56518cm</Width>
+              <Width>5.66497cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -33,7 +33,6 @@
                             <TextRun>
                               <Value>Id Usuario</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -67,9 +66,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Perfil</Value>
+                              <Value>Nombre</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -96,6 +94,41 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Textbox21">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Perfil</Value>
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox21</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>#ffb542</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Textbox5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -103,9 +136,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Usuario</Value>
+                              <Value>Email</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -130,42 +162,6 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox7">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Email</Value>
-                              <Style>
-                                <FontSize>12pt</FontSize>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>#ffb542</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
@@ -173,7 +169,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="id_usuario">
+                    <Textbox Name="id_usuario1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -189,7 +185,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>id_usuario</rd:DefaultName>
+                      <rd:DefaultName>id_usuario1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -206,40 +202,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="perfil">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!perfil.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>perfil</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>#faf1d6</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="usuario">
+                    <Textbox Name="usuario2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -255,7 +218,40 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>usuario</rd:DefaultName>
+                      <rd:DefaultName>usuario2</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>#faf1d6</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="perfil1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!perfil.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>perfil1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -321,13 +317,13 @@
               <KeepWithGroup>After</KeepWithGroup>
             </TablixMember>
             <TablixMember>
-              <Group Name="Detalles" />
+              <Group Name="Detalles2" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>Usuarios</DataSetName>
-        <Top>2.29195cm</Top>
-        <Left>1.45992cm</Left>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>1.48855cm</Top>
+        <Left>1.77745cm</Left>
         <Height>1.72916cm</Height>
         <Width>14.26072cm</Width>
         <Style>
@@ -337,15 +333,15 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.45568in</Height>
+    <Height>2.22917in</Height>
     <Style>
       <BackgroundColor>#fafafa</BackgroundColor>
     </Style>
   </Body>
-  <Width>7.18092in</Width>
+  <Width>7.04538in</Width>
   <Page>
     <PageHeader>
-      <Height>2.99682cm</Height>
+      <Height>2.28244cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -358,7 +354,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Listado de Usuarios</Value>
+                      <Value>Listado de Usuarios Activos</Value>
                       <Style>
                         <FontFamily>Arial Black</FontFamily>
                         <FontSize>14pt</FontSize>
@@ -389,6 +385,7 @@
               <Source>Embedded</Source>
               <Value>LOGONB1</Value>
               <Sizing>FitProportional</Sizing>
+              <Top>0.01323cm</Top>
               <Left>0.00001cm</Left>
               <Height>1.18208cm</Height>
               <Width>1.82752cm</Width>
@@ -401,9 +398,9 @@
             </Image>
           </ReportItems>
           <KeepTogether>true</KeepTogether>
-          <Top>0.86458cm</Top>
-          <Left>1.45991cm</Left>
-          <Height>1.19531cm</Height>
+          <Top>0.52062cm</Top>
+          <Left>1.77744cm</Left>
+          <Height>1.20854cm</Height>
           <Width>14.26073cm</Width>
           <Style>
             <Border>
@@ -442,7 +439,7 @@
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
           <Top>0.34078cm</Top>
-          <Left>15.05162cm</Left>
+          <Left>13.22064cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -483,7 +480,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="Usuarios">
+    <DataSet Name="DataSet1">
       <Query>
         <DataSourceName>DataSet1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -508,11 +505,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\franc\OneDrive\Escritorio\REPO_PAV_3K1_2020\PAV_3K1_2020\PAVI_3K1_2020_TRABAJO\solucion\src\BugTracker\DataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\franc\OneDrive\Escritorio\PAVFINAL\PAVI_3K1_GRUPO3\solucion\src\BugTracker\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>Usuarios</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>UsuariosTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

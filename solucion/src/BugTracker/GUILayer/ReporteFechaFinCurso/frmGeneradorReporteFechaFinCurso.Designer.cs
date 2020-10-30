@@ -47,7 +47,6 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnGrafico = new System.Windows.Forms.Button();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTable1TableAdapter = new BugTracker.DataSet1TableAdapters.DataTable1TableAdapter();
             this.btnReiniciarCombos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -198,6 +197,7 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(695, 430);
             this.reportViewer1.TabIndex = 10;
+            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // btnSalir
@@ -209,10 +209,10 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(597, 523);
+            this.btnSalir.Location = new System.Drawing.Point(634, 533);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(6);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(60, 55);
+            this.btnSalir.Size = new System.Drawing.Size(45, 45);
             this.btnSalir.TabIndex = 14;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -235,10 +235,6 @@
             // 
             this.dataTable1BindingSource.DataMember = "DataTable1";
             this.dataTable1BindingSource.DataSource = this.dataSet1;
-            // 
-            // dataTable1TableAdapter
-            // 
-            this.dataTable1TableAdapter.ClearBeforeFill = true;
             // 
             // btnReiniciarCombos
             // 
@@ -299,13 +295,13 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource dataTable1BindingSource;
         private DataSet1 dataSet1;
-        private DataSet1TableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
+        //private DataSet1TableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
         private System.Windows.Forms.BindingSource dataTable1BindingSource1;
         internal System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnGrafico;
-        public System.Windows.Forms.CheckBox chkTodo;
         public System.Windows.Forms.ComboBox cbcCurso;
         public System.Windows.Forms.ComboBox cbcUsuario;
         internal System.Windows.Forms.Button btnReiniciarCombos;
+        public System.Windows.Forms.CheckBox chkTodo;
     }
 }

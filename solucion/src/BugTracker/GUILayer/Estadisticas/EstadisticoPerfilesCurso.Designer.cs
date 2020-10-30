@@ -40,10 +40,10 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnGrafico = new System.Windows.Forms.Button();
             this.estadisticoPerfilesEnCursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estadisticoPerfilesEnCursosTableAdapter = new BugTracker.DataSet1TableAdapters.EstadisticoPerfilesEnCursosTableAdapter();
             this.EstadisticoCategoriasCursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chkTodos = new System.Windows.Forms.CheckBox();
             this.dtpFecha_Desde = new System.Windows.Forms.DateTimePicker();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.estadisticoPerfilesEnCursosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadisticoCategoriasCursosBindingSource1)).BeginInit();
@@ -116,6 +116,7 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(660, 455);
             this.reportViewer1.TabIndex = 22;
+            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // btnGrafico
             // 
@@ -135,10 +136,6 @@
             // 
             this.estadisticoPerfilesEnCursosBindingSource.DataMember = "EstadisticoPerfilesEnCursos";
             this.estadisticoPerfilesEnCursosBindingSource.DataSource = this.dataSet1;
-            // 
-            // estadisticoPerfilesEnCursosTableAdapter
-            // 
-            this.estadisticoPerfilesEnCursosTableAdapter.ClearBeforeFill = true;
             // 
             // EstadisticoCategoriasCursosBindingSource
             // 
@@ -168,12 +165,30 @@
             this.dtpFecha_Desde.Size = new System.Drawing.Size(124, 22);
             this.dtpFecha_Desde.TabIndex = 24;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(66)))));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(627, 504);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(45, 45);
+            this.btnSalir.TabIndex = 40;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // EstadisticoPerfilesCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(684, 561);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dtpFecha_Desde);
             this.Controls.Add(this.chkTodos);
             this.Controls.Add(this.reportViewer1);
@@ -210,5 +225,6 @@
         private System.Windows.Forms.BindingSource estadisticoPerfilesEnCursosBindingSource1;
         public System.Windows.Forms.CheckBox chkTodos;
         private System.Windows.Forms.DateTimePicker dtpFecha_Desde;
+        internal System.Windows.Forms.Button btnSalir;
     }
 }

@@ -114,5 +114,10 @@ namespace BugTracker.GUILayer.NewFolder1
                 dtpFechaHasta.Enabled = true;
             }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -161,12 +161,6 @@
     <Compile Include="GUILayer\Estadisticas\EstadisticoCategoriasCursos.Designer.cs">
       <DependentUpon>EstadisticoCategoriasCursos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\frmConsultaBugs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUILayer\frmConsultaBugs.designer.cs">
-      <DependentUpon>frmConsultaBugs.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUILayer\ConsultarProgreso\frmConsultarProgreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,12 +284,6 @@
     <Compile Include="GUILayer\Usuarios\frmUsuarios.designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\Usuario_Curso_Avance\GraficoAvance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUILayer\Usuario_Curso_Avance\GraficoAvance.Designer.cs">
-      <DependentUpon>GraficoAvance.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Avance.rdlc" />
@@ -322,9 +310,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Estadisticas\EstadisticoCategoriasCursos.resx">
       <DependentUpon>EstadisticoCategoriasCursos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\frmConsultaBugs.resx">
-      <DependentUpon>frmConsultaBugs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\ConsultarProgreso\frmConsultarProgreso.resx">
       <DependentUpon>frmConsultarProgreso.cs</DependentUpon>
@@ -388,9 +373,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Usuarios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\Usuario_Curso_Avance\GraficoAvance.resx">
-      <DependentUpon>GraficoAvance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoActividades.rdlc" />
     <EmbeddedResource Include="ListadoCursos.rdlc" />

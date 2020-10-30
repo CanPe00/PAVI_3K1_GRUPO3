@@ -79,7 +79,7 @@
             // 
             // usuariosTableAdapter
             // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
+            //this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
             // usuariosEnCursoTableAdapter
             // 

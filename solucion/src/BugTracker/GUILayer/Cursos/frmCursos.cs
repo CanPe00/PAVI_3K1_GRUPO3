@@ -31,7 +31,7 @@ namespace BugTracker.Cursos
         {
             this.habilitar(false);
             this.CenterToParent();
-            LlenarCombo(cboCategoria,oCategoriaService.ObtenerTodos(), "nombre", "id_categoria");
+            LlenarCombo(cboPerfil,oCategoriaService.ObtenerTodos(), "nombre", "id_categoria");
         }
 
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
@@ -107,11 +107,11 @@ namespace BugTracker.Cursos
             if (!chkTodos.Checked)
             {
                 // Validar si el combo 'Categoria' esta seleccionado.
-                if (cboCategoria.Text != string.Empty)
+                if (cboPerfil.Text != string.Empty)
                 {
                     // Si el cbo tiene un texto no vacìo entonces recuperamos el valor de la propiedad ValueMember
-                    filters.Add("c.id_categoria", cboCategoria.SelectedValue);
-                    condiciones += " AND ca.id_categoria=" + cboCategoria.SelectedValue.ToString();
+                    filters.Add("c.id_categoria", cboPerfil.SelectedValue);
+                    condiciones += " AND ca.id_categoria=" + cboPerfil.SelectedValue.ToString();
 
                 }
 
@@ -162,12 +162,12 @@ namespace BugTracker.Cursos
                 if (chkTodos.Checked)
                 {
                     txtNombre.Enabled = false;
-                    cboCategoria.Enabled = false;
+                    cboPerfil.Enabled = false;
                 }
                 else
                 {
                     txtNombre.Enabled = true;
-                    cboCategoria.Enabled = true;
+                    cboPerfil.Enabled = true;
                 }
             }
 
@@ -214,7 +214,12 @@ namespace BugTracker.Cursos
         private void btnReiniciarCombos_Click(object sender, EventArgs e)
         {
             txtNombre.Text = "";
-            cboCategoria.SelectedIndex = -1;
+            cboPerfil.SelectedIndex = -1;
+        }
+
+        private void cboPerfil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -23,7 +23,7 @@ namespace BugTracker.DataAccessLayer
         {
             List<Perfil> listadoBugs = new List<Perfil>();
 
-            var strSql = "SELECT * From Perfiles WHERE id_perfil <> 1 AND borrado=0" ;
+            var strSql = "SELECT * From Perfiles WHERE borrado=0" ;
 
             var resultadoConsulta = DBHelper.GetDBHelper().ConsultaSQL(strSql);
 
