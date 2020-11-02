@@ -122,11 +122,11 @@ namespace BugTracker.GUILayer.Reportes
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblUsuario.Location = new System.Drawing.Point(101, 20);
+            this.lblUsuario.Location = new System.Drawing.Point(112, 20);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(53, 15);
+            this.lblUsuario.Size = new System.Drawing.Size(42, 15);
             this.lblUsuario.TabIndex = 28;
-            this.lblUsuario.Text = "Usuario:";
+            this.lblUsuario.Text = "Curso:";
             this.lblUsuario.Click += new System.EventHandler(this.lblUsuario_Click);
             // 
             // txtUsuario

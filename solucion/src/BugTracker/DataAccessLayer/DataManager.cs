@@ -16,8 +16,8 @@ public class DataManager
         // var dataBaseName = ConfigurationManager.AppSettings["dataBaseName"];
         // var string_conexion = ConfigurationManager.ConnectionStrings[dataBaseName].ConnectionString;
         //dbConnection.ConnectionString = @"Data Source=DESKTOP-E8GGP6P\SQLEXPRESS;Initial Catalog=BoteBugs3.0;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-        //dbConnection.ConnectionString = @"Data Source=DESKTOP-E8GGP6P\SQLEXPRESS;Initial Catalog=NoteBugs;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-        dbConnection.ConnectionString = @"Data Source=sql5080.site4now.net;Initial Catalog=DB_A674C1_labanda;User ID=DB_A674C1_labanda_admin;Password=Ardacos73;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        dbConnection.ConnectionString = @"Data Source=sql5097.site4now.net;Initial Catalog=DB_A69D2C_NoteBugs;User ID=DB_A69D2C_NoteBugs_admin;Password=Ardacos73;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        //dbConnection.ConnectionString = @"Data Source=sql5080.site4now.net;Initial Catalog=DB_A674C1_labanda;User ID=DB_A674C1_labanda_admin;Password=Ardacos73;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
     }
 

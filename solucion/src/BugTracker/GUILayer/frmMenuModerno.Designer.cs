@@ -60,6 +60,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelConenedor = new System.Windows.Forms.Panel();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lbFecha = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -553,6 +554,7 @@
             // panelConenedor
             // 
             this.panelConenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.panelConenedor.Controls.Add(this.lblVersion);
             this.panelConenedor.Controls.Add(this.lblHora);
             this.panelConenedor.Controls.Add(this.lbFecha);
             this.panelConenedor.Controls.Add(this.pictureBox2);
@@ -562,6 +564,18 @@
             this.panelConenedor.Size = new System.Drawing.Size(694, 593);
             this.panelConenedor.TabIndex = 1;
             this.panelConenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelConenedor_Paint);
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblVersion.Location = new System.Drawing.Point(638, 571);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(44, 13);
+            this.lblVersion.TabIndex = 7;
+            this.lblVersion.Text = "V.01.00";
+            this.lblVersion.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblHora
             // 
@@ -581,7 +595,7 @@
             this.lbFecha.AutoSize = true;
             this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFecha.ForeColor = System.Drawing.Color.DimGray;
-            this.lbFecha.Location = new System.Drawing.Point(530, 38);
+            this.lbFecha.Location = new System.Drawing.Point(519, 40);
             this.lbFecha.Name = "lbFecha";
             this.lbFecha.Size = new System.Drawing.Size(150, 13);
             this.lbFecha.TabIndex = 6;
@@ -669,5 +683,6 @@
         private System.Windows.Forms.Timer tmFechaHora;
         private System.Windows.Forms.Panel panelBienvenido;
         private System.Windows.Forms.Label lblBienvenido;
+        private System.Windows.Forms.Label lblVersion;
     }
 }
