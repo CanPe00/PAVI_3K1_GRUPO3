@@ -29,29 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.cursosPorUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new BugTracker.DataSet1();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.cursosPorUsuarioTableAdapter = new BugTracker.DataSet1TableAdapters.CursosPorUsuarioTableAdapter();
             this.lblFecha_desde = new System.Windows.Forms.Label();
             this.lblFecha_hasta = new System.Windows.Forms.Label();
             this.dtpFecha_Desde = new System.Windows.Forms.DateTimePicker();
             this.dtpFecha_Hasta = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.chkTodos = new System.Windows.Forms.CheckBox();
+            this.cursosPorUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new BugTracker.DataSet1();
+            
             ((System.ComponentModel.ISupportInitialize)(this.cursosPorUsuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cursosPorUsuarioBindingSource
-            // 
-            this.cursosPorUsuarioBindingSource.DataMember = "CursosPorUsuario";
-            this.cursosPorUsuarioBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -59,19 +50,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.cursosPorUsuarioBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.cursosPorUsuarioBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "BugTracker.ReporteCursosPorUsuario.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(1, 84);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(616, 356);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // cursosPorUsuarioTableAdapter
-            // 
-            this.cursosPorUsuarioTableAdapter.ClearBeforeFill = true;
             // 
             // lblFecha_desde
             // 
@@ -124,12 +111,37 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // chkTodos
+            // 
+            this.chkTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chkTodos.AutoSize = true;
+            this.chkTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTodos.Location = new System.Drawing.Point(512, 54);
+            this.chkTodos.Name = "chkTodos";
+            this.chkTodos.Size = new System.Drawing.Size(67, 21);
+            this.chkTodos.TabIndex = 30;
+            this.chkTodos.Text = "Todos";
+            this.chkTodos.UseVisualStyleBackColor = true;
+            this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
+            // 
+            // cursosPorUsuarioBindingSource
+            // 
+            this.cursosPorUsuarioBindingSource.DataMember = "CursosPorUsuario";
+            this.cursosPorUsuarioBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+           
             // ReporteCursosPorUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(616, 389);
+            this.Controls.Add(this.chkTodos);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dtpFecha_Hasta);
             this.Controls.Add(this.dtpFecha_Desde);
@@ -151,11 +163,12 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource cursosPorUsuarioBindingSource;
         private DataSet1 dataSet1;
-        private DataSet1TableAdapters.CursosPorUsuarioTableAdapter cursosPorUsuarioTableAdapter;
+        
         private System.Windows.Forms.Label lblFecha_desde;
         private System.Windows.Forms.Label lblFecha_hasta;
         private System.Windows.Forms.DateTimePicker dtpFecha_Desde;
         private System.Windows.Forms.DateTimePicker dtpFecha_Hasta;
         private System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.CheckBox chkTodos;
     }
 }
