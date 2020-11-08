@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0432A95F-E338-4AF2-ABBF-85DA46FBDE83}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BugTracker</RootNamespace>
+    <AssemblyName>BugTracker</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BugTracker.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLayer\ActividadService.cs" />
+    <Compile Include="BusinessLayer\CategoriaService.cs" />
+    <Compile Include="BusinessLayer\CursoService.cs" />
+    <Compile Include="BusinessLayer\ObjetivoService.cs" />
+    <Compile Include="BusinessLayer\PerfilService.cs" />
+    <Compile Include="BusinessLayer\EstadoService.cs" />
+    <Compile Include="BusinessLayer\UsuarioCursoAvanceService.cs" />
+    <Compile Include="BusinessLayer\UsuariosCursoService.cs" />
+    <Compile Include="BusinessLayer\UsuarioService.cs" />
+    <Compile Include="DataAccessLayer\ActividadDao.cs" />
+    <Compile Include="DataAccessLayer\CategoriaDao.cs" />
+    <Compile Include="DataAccessLayer\CursoDao.cs" />
+    <Compile Include="DataAccessLayer\DataManager.cs" />
+    <Compile Include="DataAccessLayer\ObjetivoDao.cs" />
+    <Compile Include="DataAccessLayer\PerfilDao.cs" />
+    <Compile Include="DataAccessLayer\UsuarioCursoAvanceDao.cs" />
+    <Compile Include="DataAccessLayer\UsuarioDao.cs" />
+    <Compile Include="DataAccessLayer\UsuariosCursoDao.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Actividad.cs" />
+    <Compile Include="Entities\Categoria.cs" />
+    <Compile Include="Entities\Curso.cs" />
+    <Compile Include="Entities\Objetivo.cs" />
+    <Compile Include="Entities\UsuarioCursoAvance.cs" />
+    <Compile Include="Entities\UsuariosCurso.cs" />
+    <Compile Include="GUILayer\Actividades\frmABMActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Actividades\frmABMActividad.Designer.cs">
+      <DependentUpon>frmABMActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Actividades\frmActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Actividades\frmActividades.Designer.cs">
+      <DependentUpon>frmActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Categorias\frmABMCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Categorias\frmABMCategoria.Designer.cs">
+      <DependentUpon>frmABMCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Categorias\frmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Categorias\frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Cursos\frmABMCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Cursos\frmABMCurso.Designer.cs">
+      <DependentUpon>frmABMCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Cursos\frmCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Cursos\frmCursos.Designer.cs">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\EstadoDao.cs" />
+    <Compile Include="DataAccessLayer\DBHelper.cs" />
+    <Compile Include="Entities\Perfil.cs" />
+    <Compile Include="Entities\Estado.cs" />
+    <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="GUILayer\Estadisticas\EstadisticoCategoriasCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Estadisticas\EstadisticoCategoriasCursos.Designer.cs">
+      <DependentUpon>EstadisticoCategoriasCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ConsultarProgreso\frmConsultarProgreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmMenuModerno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmMenuModerno.Designer.cs">
+      <DependentUpon>frmMenuModerno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Estadisticas\EstadisticoCantUsuariosCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Estadisticas\EstadisticoCantUsuariosCursos.Designer.cs">
+      <DependentUpon>EstadisticoCantUsuariosCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Estadisticas\EstadisticoPerfilesCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Estadisticas\EstadisticoPerfilesCurso.Designer.cs">
+      <DependentUpon>EstadisticoPerfilesCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Objetivos\frmABMObjetivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Objetivos\frmABMObjetivos.designer.cs">
+      <DependentUpon>frmABMObjetivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Objetivos\frmObjetivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Objetivos\frmObjetivos.designer.cs">
+      <DependentUpon>frmObjetivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ReporteFechaFinCurso\frmGeneradorReporteFechaFinCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ReporteFechaFinCurso\frmGeneradorReporteFechaFinCurso.Designer.cs">
+      <DependentUpon>frmGeneradorReporteFechaFinCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ReporteFechaFinCurso\Grafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ReporteFechaFinCurso\Grafico.Designer.cs">
+      <DependentUpon>Grafico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\AvanceCursoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\AvanceCursoUsuario.Designer.cs">
+      <DependentUpon>AvanceCursoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\ListadoActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\ListadoActividades.Designer.cs">
+      <DependentUpon>ListadoActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\ListadoCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\ListadoCursos.Designer.cs">
+      <DependentUpon>ListadoCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\ListadoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\ListadoUsuarios.Designer.cs">
+      <DependentUpon>ListadoUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\ReporteCursosPorUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\ReporteCursosPorUsuario.Designer.cs">
+      <DependentUpon>ReporteCursosPorUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\ReporteUsuariosEnCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Reportes\ReporteUsuariosEnCurso.Designer.cs">
+      <DependentUpon>ReporteUsuariosEnCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Usuario_Curso_Avance\frmUsuarioCursoAvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Usuario_Curso_Avance\frmUsuarioCursoAvance.Designer.cs">
+      <DependentUpon>frmUsuarioCursoAvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Usuarios_Curso\frmAMBUsuarioCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Usuarios_Curso\frmAMBUsuarioCurso.Designer.cs">
+      <DependentUpon>frmAMBUsuarioCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Usuarios_Curso\frmUsuarioCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Usuarios_Curso\frmUsuarioCurso.Designer.cs">
+      <DependentUpon>frmUsuarioCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Usuarios\frmABMUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Usuarios\frmABMUsuario.Designer.cs">
+      <DependentUpon>frmABMUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Usuarios\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Usuarios\frmUsuarios.designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Avance.rdlc" />
+    <EmbeddedResource Include="CantUsuarios.rdlc" />
+    <EmbeddedResource Include="EstadisticoCategoriasCurso.rdlc" />
+    <EmbeddedResource Include="GraficoCursosFinalizados.rdlc" />
+    <EmbeddedResource Include="GUILayer\Actividades\frmABMActividad.resx">
+      <DependentUpon>frmABMActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Actividades\frmActividades.resx">
+      <DependentUpon>frmActividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Categorias\frmABMCategoria.resx">
+      <DependentUpon>frmABMCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Categorias\frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Cursos\frmABMCurso.resx">
+      <DependentUpon>frmABMCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Cursos\frmCursos.resx">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Estadisticas\EstadisticoCategoriasCursos.resx">
+      <DependentUpon>EstadisticoCategoriasCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\ConsultarProgreso\frmConsultarProgreso.resx">
+      <DependentUpon>frmConsultarProgreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmMenuModerno.resx">
+      <DependentUpon>frmMenuModerno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Estadisticas\EstadisticoCantUsuariosCursos.resx">
+      <DependentUpon>EstadisticoCantUsuariosCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Estadisticas\EstadisticoPerfilesCurso.resx">
+      <DependentUpon>EstadisticoPerfilesCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Objetivos\frmABMObjetivos.resx">
+      <DependentUpon>frmABMObjetivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Objetivos\frmObjetivos.resx">
+      <DependentUpon>frmObjetivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\ReporteFechaFinCurso\frmGeneradorReporteFechaFinCurso.resx">
+      <DependentUpon>frmGeneradorReporteFechaFinCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\ReporteFechaFinCurso\Grafico.resx">
+      <DependentUpon>Grafico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Reportes\AvanceCursoUsuario.resx">
+      <DependentUpon>AvanceCursoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Reportes\ListadoActividades.resx">
+      <DependentUpon>ListadoActividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Reportes\ListadoCursos.resx">
+      <DependentUpon>ListadoCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Reportes\ListadoUsuarios.resx">
+      <DependentUpon>ListadoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Reportes\ReporteCursosPorUsuario.resx">
+      <DependentUpon>ReporteCursosPorUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Reportes\ReporteUsuariosEnCurso.resx">
+      <DependentUpon>ReporteUsuariosEnCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Usuario_Curso_Avance\frmUsuarioCursoAvance.resx">
+      <DependentUpon>frmUsuarioCursoAvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Usuarios_Curso\frmAMBUsuarioCurso.resx">
+      <DependentUpon>frmAMBUsuarioCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Usuarios_Curso\frmUsuarioCurso.resx">
+      <DependentUpon>frmUsuarioCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Usuarios\frmABMUsuario.resx">
+      <DependentUpon>frmABMUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Usuarios\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoActividades.rdlc" />
+    <EmbeddedResource Include="ListadoCursos.rdlc" />
+    <EmbeddedResource Include="ListadoUsuarios.rdlc" />
+    <EmbeddedResource Include="PerfilesCurso.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReporteCursosFinalizadosFecha.rdlc" />
+    <EmbeddedResource Include="ReporteCursosPorUsuario.rdlc" />
+    <EmbeddedResource Include="UsuariosEnCurso.rdlc" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUSCAR01.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cabecera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrarBug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comentar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty Recycle Bin 2000.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16116.png" />
+    <None Include="Resources\3643764-back-backward-left-reply-turn_113415.png" />
+    <None Include="Resources\3643764-back-backward-left-reply-turn_1134151.png" />
+    <None Include="Resources\3643764-back-backward-left-reply-turn_113415 %281%29.png" />
+    <None Include="Resources\atras.png" />
+    <None Include="Resources\atras1.png" />
+    <None Include="Resources\replyback_87524.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUILayer\Actividades_Curso\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
